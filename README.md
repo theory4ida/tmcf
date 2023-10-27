@@ -1,2 +1,2 @@
 # tmcf
-Code, data and ideas to support 2024 Turing Theory and Methods Challenge Fortnight
+A website for our [Turing Methods Fortnight Challenge](https://www.turing.ac.uk/research/theory-and-method-challenge-fortnights/navigating-garden-forking-paths-theoretical).

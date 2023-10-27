@@ -1,0 +1,37 @@
+---
+pagetitle: "{{< meta website.title >}}"
+title: "Challenge Statement"
+subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute" 
+title-block-banner: "#495057"
+---
+
+## The Challenge
+
+An expanding array of observational data now enables social, economic and environmental behaviours to be researched in a large-scale and empirical way. This is exciting as there are increasing opportunities to effect evidence-based decision making in science, government and industry. In order to generate insights and draw conclusions, however, such data-intensive research relies on reasonably informal, interactive data analysis approaches: those that combine data graphics and statistics via computational notebooks (Observable, Quarto, Jupyter) or interactive data analysis tools such as Tableau and PowerBI. Unlike traditional scientific processes, we don’t know what an optimal and rigorous interactive analysis should look like and their success more often than not relies on the expertise and skills of the data scientist.
+
+Our proposed Theory & Methods Challenge will develop proposals for conducting and reporting data-intensive research in a more formal way. Our hope is that this activity will lay the foundations for rigorous interactive data analysis practices and guidelines for computational tools that underpin the next generation of analysis platforms. Through the workshop, we aim to explore three sub-challenges:
+
+1. [Modelling paradigms](modelling/) for data-driven science: establish what is distinctive about modelling in data-driven science by mapping out existing data-driven projects and the analysis practices they use
+2. [Inference and replicability](inference/) in data-driven science: develop systematic ways of documenting the context under which analytical findings are made – a grammar for structuring exploratory research findings – so that inferences can be more formally reported.
+3. [Tools](tools/) for progressing from analysis to communication: explore tools and technologies for documenting interactive data analysis processes with integrity – balancing claims to knowledge with informational complexity.
+
+## Outcomes and potential for impact 
+
+The Challenge will aim for the following outcomes:
+
+* Foundations for theoretically-guided, transparent and replicable interactive data analysis, leading to more rigorous data-driven science 
+* A systematic framework –  a grammar – for describing interactive data-driven reasoning processes and the context under which inferences are made 
+* Guidelines for designing new generation data analysis tools and technologies that operationalise more formal, interactive data analysis practice
+
+We anticipate impact on the following:
+
+* *Advancing the science of data science* -- data science increasingly requires better established, formal forms of working. Our findings will contribute to the theoretical literature on how data-driven research practices could be better conducted and positioned to respond to the advances in data science and AI technologies. 
+
+* *Ecologically-valid, justified and plausible data-driven decisions* -- our work will support better documented analytical choices, e.g. model/assumptions that are justified and recorded along with contextual, background and researcher tacit knowledge. Such forms of practice will advance how data-driven artefacts can inform decisions and policies.
+
+*Tools and technologies for transparent, rigorous and reproducible data analysis practices* – we will develop guidelines and blueprints for new generations of analytical tools that can recognise and facilitate rigorous analysis processes, from hypothesis generation through to modeling and communication. 
+
+
+## Open practices and dissemination
+
+We will document all the activities, discussions and outcomes in openly available and transparent channels. All the discussion and working notes will be collated on a github repository, with blog and other items appearing on these webpages providing an accessible "front-end" to our work. 

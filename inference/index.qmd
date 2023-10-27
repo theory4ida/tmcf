@@ -1,0 +1,33 @@
+---
+pagetitle: "{{< meta website.title >}}"
+title: "Inference"
+subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute" 
+title-block-banner: "#495057"
+---
+
+## Inference and replicability in data-driven science: capturing context 
+
+
+A familiar challenge in data-driven science is that of inference. Generalising away from a sample to some target population is challenging when datasets are already large and population-level and observations subject to unknown confounding context. Replication is muddled by the number of analysis choices that are to be made and range of alternatives that could be pursued (the forking paths problem). How, then, can we ensure that the inferences and claims we make from exploratory analyses are properly contextualised?
+
+Drawing on expertise in Statistics, Human Computer Interaction and Spatial Econometrics, we will explore ways of systematically describing context in interactive data analysis. An outcome of this work may be to formulate a grammar for structuring exploratory research findings. For a stated finding, the grammar would require researchers to identify, using theory and prior knowledge:  confounding context that is present/absent in their analysis, the spatiotemporal scale at which their stated finding is observed and how it may generalise outside of this; the  weight of evidence in support of some theory implied by a finding relative to other plausible theories.
+
+## Related work (challenge team)
+
+* Beecham, R. and Lovelace, R. (2023) A Framework for Inserting Visually Supported Inferences into Geographical Analysis Workflow: Application to Road Safety Research, *Geographical Analysis*, 55(3): 345--366.
+
+* Beecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. (2017). “Map LineUps: Effects of Spatial Structure on Graphical Inference.” *IEEE Transactions on Visualization and Computer Graphics*, 23: 391--400.
+
+* Cook, D., Reid, N., & Tanaka, E. (2021) The Foundation Is Available for Thinking About Data Visualization Inferentially. Harvard Data Science Review, 3(3).
+
+* Franklin, R. (2023) Quantitative methods II: Big theory. Progress in Human Geography, 47(1), 178-186. 
+
+* Hullman, J., P. Resnick, and E. Adar. (2015). “Hypothetical Outcome Plots Outperform Error Bars And Violin Plots for Inferences About Reliability of Variable Ordering.” *PLoS One*, 10: e0142444.
+
+* Kale, A., Wu, Y. and Hullman, J. (2022) "Causal Support: Modeling Causal Inferences with Visualization", *IEEE Transactions on Visualization and Computer Graphics*, 28(1): 1150-1160.
+
+* H. Wickham, D. Cook, H. Hofmann and A. Buja (2010) "Graphical inference for infovis," *IEEE Transactions on Visualization and Computer Graphics*, 16(6): 973--979.
+
+* Wolf, L.J. et al. (2021) Quantitative geography III: Future challenges and challenging futures. Progress in Human Geography, 45(3): 596--608.
+
+* Zhang, J. and Wolf, L. (2023) Rethinking "causality" in Quantitative Human Geography. doi: 10.31235/osf.io/7yncm.

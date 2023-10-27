@@ -1,0 +1,56 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "*.md"
+  output-dir: docs
+
+execute:
+  freeze: auto
+
+resources:
+  - "files/**"
+
+bibliography: files/bib/references.bib
+csl: files/bib/chicago-author-date.csl
+
+website:
+  title: "TMCF 2024"
+  favicon: ""
+  navbar:
+    pinned: true
+    logo: ""
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Challenge
+        menu: 
+          - href: challenge/
+            text: Challenge
+          - href: modelling/
+            text: Modelling
+          - href: inference/
+            text: Inference
+          - href: tools/
+            text: Tools
+      - href: programme/
+        text: Programme
+      - href: organisation/
+        text: Organisation
+    tools:
+      - icon: twitter
+        href: https://twitter.com/gisruk/
+  page-footer:
+    right:
+      - icon: github
+        href: https://github.com/theory4ida/tmcf
+format:
+  html:
+    theme: custom.scss
+    toc: true
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
+    highlight-style: monokai

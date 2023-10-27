@@ -1,0 +1,34 @@
+---
+pagetitle: "{{< meta website.title >}}"
+title: "Modelling Paradigms"
+subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute" 
+title-block-banner: "#495057"
+---
+
+## Modelling paradigms for data-driven science: learning from example
+
+Model-building praxis in data-driven science is quite distinctive. As well as predicting and explaining outcomes, models are often used as containers for structuring information and learning within the data space.  
+
+Through the Challenge we will link with research projects in the wider Turing network to consider the ways in which models are incorporated into interactive data analysis.  We will ask:
+
+* How relevant models are identified and selected; 
+* How they are developed and refined; and 
+* The processes through which they are analysed and evaluated. 
+
+From these examples, we will document what is distinctive about model building in data-driven science.
+
+## Related work (challenge team)
+
+* Beecham, R. and Lovelace, R. (2023) A Framework for Inserting Visually Supported Inferences into Geographical Analysis Workflow: Application to Road Safety Research, *Geographical Analysis*, 55(3): 345--366.
+
+* Cook, D., Reid, N., and Tanaka, E. (2021) The Foundation Is Available for Thinking About Data Visualization Inferentially. *Harvard Data Science Review*, 3(3).
+
+* Franklin, R. (2023) Quantitative methods II: Big theory. *Progress in Human Geography*, 47(1): 178-186.
+
+* Gelman, A. (2004) “Exploratory Data Analysis for Complex Models.” *Journal of Computational and Graphical Statistics*, 13: 755--79.
+
+* Hullman, J., and Gelman, A. (2021) Designing for Interactive Exploratory Data Analysis Requires Theories of Graphical Inference. *Harvard Data Science Review*, 3(3).
+
+* Wolf, L.J. (2022) “The Right to Rule by Thumb: A Comment on Epistemology in A Route Map for Successful Applications of Geographically-Weighted Regression, *Geographical Analysis*, 55(1): 184--190.
+
+* Wood, J., D. Badawood, J. Dykes, and A. Slingsby. (2011). “BallotMaps: Detecting Name Bias in Alphabetically Ordered Ballot Papers.” *IEEE Transactions on Visualization and Computer Graphics*, 17: 2384–91.

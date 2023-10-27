@@ -1,0 +1,22 @@
+---
+pagetitle: "{{< meta website.title >}}"
+title: "Tools"
+subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute" 
+title-block-banner: "#495057"
+---
+ 
+## From analysis-to-communication: tools for data-driven science with integrity
+
+Interactive data analysis has been made possible by coding ecosystems, such as tidyverse in R and pandas in Python, that support iterative dialogue between data and models. The analysis process leaves behind a diverse trail of pathways explored, decisions made, failed attempts and also conclusions that satisfactory outcomes have been reached, i.e., when to stop an exploration? How can these analysis trails be documented, how can the provenance of these processes be recorded and serve as evidence and eventually as communicative artefacts?
+
+This theme will focus on tools and technologies through which exploratory data analysis workflows can be documented, communicated and shared. Here we will explore the space of computational notebook environments – how they can be used to record and communicate interactive data analysis processes. Drawing on work from themes [#1](modelling/) and [#2](inference/) we will identify examples of interactive data analyses, documented via computational notebooks, that balance complexity of information with claims to knowledge. 
+
+## Related work (challenge team)
+
+* Pu, X. and Kay, M. (2018) The garden of forking paths in visualization: A design space for reliable exploratory visual analytics: Position paper. In 2018 *IEEE Evaluation and Beyond-Methodological Approaches for Visualization (beliv)*.
+
+* Turkay, C. et al. (2017) Supporting theoretically-grounded model building in the social sciences through interactive visualisation, *Neurocomputing*, 268:153–163.
+
+* Wickham, H. and Grolemund, G. (2019) *R for Data Science*, Orielly.
+
+* Wood, J., Kachkaev, A. and Dykes, J. (2018) Design exposition with literate visualization. *IEEE Transactions on Visualization and Computer Graphics*, 25(1): 751--768.
