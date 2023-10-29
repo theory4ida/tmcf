@@ -1,52 +1,52 @@
 [
   {
-    "objectID": "tools/index.html",
-    "href": "tools/index.html",
-    "title": "Tools",
+    "objectID": "programme/index.html",
+    "href": "programme/index.html",
+    "title": "Program",
     "section": "",
-    "text": "Interactive data analysis has been made possible by coding ecosystems, such as tidyverse in R and pandas in Python, that support iterative dialogue between data and models. The analysis process leaves behind a diverse trail of pathways explored, decisions made, failed attempts and also conclusions that satisfactory outcomes have been reached, i.e., when to stop an exploration? How can these analysis trails be documented, how can the provenance of these processes be recorded and serve as evidence and eventually as communicative artefacts?\nThis theme will focus on tools and technologies through which exploratory data analysis workflows can be documented, communicated and shared. Here we will explore the space of computational notebook environments – how they can be used to record and communicate interactive data analysis processes. Drawing on work from themes #1 and #2 we will identify examples of interactive data analyses, documented via computational notebooks, that balance complexity of information with claims to knowledge."
+    "text": "Detals to appear soon."
   },
   {
-    "objectID": "tools/index.html#from-analysis-to-communication-tools-for-data-driven-science-with-integrity",
-    "href": "tools/index.html#from-analysis-to-communication-tools-for-data-driven-science-with-integrity",
-    "title": "Tools",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Navigating the garden of forking paths: theoretical foundations for interactive data analysis in data-driven science",
     "section": "",
-    "text": "Interactive data analysis has been made possible by coding ecosystems, such as tidyverse in R and pandas in Python, that support iterative dialogue between data and models. The analysis process leaves behind a diverse trail of pathways explored, decisions made, failed attempts and also conclusions that satisfactory outcomes have been reached, i.e., when to stop an exploration? How can these analysis trails be documented, how can the provenance of these processes be recorded and serve as evidence and eventually as communicative artefacts?\nThis theme will focus on tools and technologies through which exploratory data analysis workflows can be documented, communicated and shared. Here we will explore the space of computational notebook environments – how they can be used to record and communicate interactive data analysis processes. Drawing on work from themes #1 and #2 we will identify examples of interactive data analyses, documented via computational notebooks, that balance complexity of information with claims to knowledge."
+    "text": "Theory & Methods Challenge Fortnights are intensive, two-week events where teams of 12 experts from across the Turing university partner network and external institutions worldwide collaborate to initiate work on tackling a foundational challenge in data science and artificial intelligence. Each event focuses on a specific theoretical or methodological challenge that has the potential to impact data science and artificial intelligence at a fundamental level.\nvia turing.ac.uk.\n\nWelcome to our upcoming Turing Theory & Methods Challenge Fortnight (TMCF). Our challenge will take place in the British Library in summer 2024.\nThe ambition behind TMCFs is nicely laid out on the Alan Turing Institute’s website (above). Ours seeks to a address a problem familiar to data-driven research: the garden of forking paths fallacy (Gelman and Loken 2013). We have assembled a stellar organising team, and a very exciting set of participants – world-leaders in data science engineering and practice (to be finalised shortly). Alongside the challenge we intend to host public lectures and seminars – more news on this to follow.\nWe will update these pages through 2024 as planning and other preparatory work develops.\n\n\nCagatay Turkay and Roger Beecham, Challenge Leads"
   },
   {
-    "objectID": "tools/index.html#related-work-challenge-team",
-    "href": "tools/index.html#related-work-challenge-team",
-    "title": "Tools",
+    "objectID": "index.html#our-tmcf",
+    "href": "index.html#our-tmcf",
+    "title": "Navigating the garden of forking paths: theoretical foundations for interactive data analysis in data-driven science",
+    "section": "",
+    "text": "Theory & Methods Challenge Fortnights are intensive, two-week events where teams of 12 experts from across the Turing university partner network and external institutions worldwide collaborate to initiate work on tackling a foundational challenge in data science and artificial intelligence. Each event focuses on a specific theoretical or methodological challenge that has the potential to impact data science and artificial intelligence at a fundamental level.\nvia turing.ac.uk.\n\nWelcome to our upcoming Turing Theory & Methods Challenge Fortnight (TMCF). Our challenge will take place in the British Library in summer 2024.\nThe ambition behind TMCFs is nicely laid out on the Alan Turing Institute’s website (above). Ours seeks to a address a problem familiar to data-driven research: the garden of forking paths fallacy (Gelman and Loken 2013). We have assembled a stellar organising team, and a very exciting set of participants – world-leaders in data science engineering and practice (to be finalised shortly). Alongside the challenge we intend to host public lectures and seminars – more news on this to follow.\nWe will update these pages through 2024 as planning and other preparatory work develops.\n\n\nCagatay Turkay and Roger Beecham, Challenge Leads"
+  },
+  {
+    "objectID": "index.html#key-dates",
+    "href": "index.html#key-dates",
+    "title": "Navigating the garden of forking paths: theoretical foundations for interactive data analysis in data-driven science",
+    "section": "Key Dates",
+    "text": "Key Dates\n\nWeek 1 (full team) : Monday 17th June – Friday 21st June 2024\nWeek 2 (UK-based team) : Monday 8th July – Friday 12th July 2024"
+  },
+  {
+    "objectID": "challenge/modelling/index.html",
+    "href": "challenge/modelling/index.html",
+    "title": "Modelling Paradigms",
+    "section": "",
+    "text": "Model-building praxis in data-driven science is quite distinctive. As well as predicting and explaining outcomes, models are often used as containers for structuring information and learning within the data space.\nThrough the Challenge we will link with research projects in the wider Turing network to consider the ways in which models are incorporated into interactive data analysis. We will ask:\n\nHow relevant models are identified and selected;\nHow they are developed and refined; and\nThe processes through which they are analysed and evaluated.\n\nFrom these examples, we will document what is distinctive about model building in data-driven science."
+  },
+  {
+    "objectID": "challenge/modelling/index.html#modelling-paradigms-for-data-driven-science-learning-from-example",
+    "href": "challenge/modelling/index.html#modelling-paradigms-for-data-driven-science-learning-from-example",
+    "title": "Modelling Paradigms",
+    "section": "",
+    "text": "Model-building praxis in data-driven science is quite distinctive. As well as predicting and explaining outcomes, models are often used as containers for structuring information and learning within the data space.\nThrough the Challenge we will link with research projects in the wider Turing network to consider the ways in which models are incorporated into interactive data analysis. We will ask:\n\nHow relevant models are identified and selected;\nHow they are developed and refined; and\nThe processes through which they are analysed and evaluated.\n\nFrom these examples, we will document what is distinctive about model building in data-driven science."
+  },
+  {
+    "objectID": "challenge/modelling/index.html#related-work-challenge-team",
+    "href": "challenge/modelling/index.html#related-work-challenge-team",
+    "title": "Modelling Paradigms",
     "section": "Related work (challenge team)",
-    "text": "Related work (challenge team)\n\nPu, X. and Kay, M. (2018) The garden of forking paths in visualization: A design space for reliable exploratory visual analytics: Position paper. In 2018 IEEE Evaluation and Beyond-Methodological Approaches for Visualization (beliv).\nTurkay, C. et al. (2017) Supporting theoretically-grounded model building in the social sciences through interactive visualisation, Neurocomputing, 268:153–163.\nWickham, H. and Grolemund, G. (2019) R for Data Science, Orielly.\nWood, J., Kachkaev, A. and Dykes, J. (2018) Design exposition with literate visualization. IEEE Transactions on Visualization and Computer Graphics, 25(1): 751–768."
-  },
-  {
-    "objectID": "organisation/index.html",
-    "href": "organisation/index.html",
-    "title": "Organisation",
-    "section": "",
-    "text": "We have assembled an interdisciplinary team of 12 world-leaders working in Information Visualization, Statistical Modelling, Human Computer Interaction, Communication Studies and Geography.\nChallenge Leads:\n\nCagatay Turkay, Professor of Visual Data Science, Centre for Interdisciplinary Methodologies, University of Warwick\nRoger Beecham, Associate Professor of Visual Data Science, School of Geography, University of Leeds\n\nChallenge Organisers:\n\nJessica Hullman, Ginni Rometty Associate Professor, Computer Science and Communication Studies, Northwestern University\nLevi Wolf, Senior Lecturer in Quantitative Human Geography, School of Geographical Sciences, University of Bristol\nDi Cook, Professor of Business Analytics, Econometrics and Business Statistics, Monash University\n\nChellege team Members (to be finalised):"
-  },
-  {
-    "objectID": "inference/index.html",
-    "href": "inference/index.html",
-    "title": "Inference",
-    "section": "",
-    "text": "A familiar challenge in data-driven science is that of inference. Generalising away from a sample to some target population is challenging when datasets are already large and population-level and observations subject to unknown confounding context. Replication is muddled by the number of analysis choices that are to be made and range of alternatives that could be pursued (the forking paths problem). How, then, can we ensure that the inferences and claims we make from exploratory analyses are properly contextualised?\nDrawing on expertise in Statistics, Human Computer Interaction and Spatial Econometrics, we will explore ways of systematically describing context in interactive data analysis. An outcome of this work may be to formulate a grammar for structuring exploratory research findings. For a stated finding, the grammar would require researchers to identify, using theory and prior knowledge: confounding context that is present/absent in their analysis, the spatiotemporal scale at which their stated finding is observed and how it may generalise outside of this; the weight of evidence in support of some theory implied by a finding relative to other plausible theories."
-  },
-  {
-    "objectID": "inference/index.html#inference-and-replicability-in-data-driven-science-capturing-context",
-    "href": "inference/index.html#inference-and-replicability-in-data-driven-science-capturing-context",
-    "title": "Inference",
-    "section": "",
-    "text": "A familiar challenge in data-driven science is that of inference. Generalising away from a sample to some target population is challenging when datasets are already large and population-level and observations subject to unknown confounding context. Replication is muddled by the number of analysis choices that are to be made and range of alternatives that could be pursued (the forking paths problem). How, then, can we ensure that the inferences and claims we make from exploratory analyses are properly contextualised?\nDrawing on expertise in Statistics, Human Computer Interaction and Spatial Econometrics, we will explore ways of systematically describing context in interactive data analysis. An outcome of this work may be to formulate a grammar for structuring exploratory research findings. For a stated finding, the grammar would require researchers to identify, using theory and prior knowledge: confounding context that is present/absent in their analysis, the spatiotemporal scale at which their stated finding is observed and how it may generalise outside of this; the weight of evidence in support of some theory implied by a finding relative to other plausible theories."
-  },
-  {
-    "objectID": "inference/index.html#related-work-challenge-team",
-    "href": "inference/index.html#related-work-challenge-team",
-    "title": "Inference",
-    "section": "Related work (challenge team)",
-    "text": "Related work (challenge team)\n\nBeecham, R. and Lovelace, R. (2023) A Framework for Inserting Visually Supported Inferences into Geographical Analysis Workflow: Application to Road Safety Research, Geographical Analysis, 55(3): 345–366.\nBeecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. (2017). “Map LineUps: Effects of Spatial Structure on Graphical Inference.” IEEE Transactions on Visualization and Computer Graphics, 23: 391–400.\nCook, D., Reid, N., & Tanaka, E. (2021) The Foundation Is Available for Thinking About Data Visualization Inferentially. Harvard Data Science Review, 3(3).\nFranklin, R. (2023) Quantitative methods II: Big theory. Progress in Human Geography, 47(1), 178-186.\nHullman, J., P. Resnick, and E. Adar. (2015). “Hypothetical Outcome Plots Outperform Error Bars And Violin Plots for Inferences About Reliability of Variable Ordering.” PLoS One, 10: e0142444.\nKale, A., Wu, Y. and Hullman, J. (2022) “Causal Support: Modeling Causal Inferences with Visualization”, IEEE Transactions on Visualization and Computer Graphics, 28(1): 1150-1160.\nH. Wickham, D. Cook, H. Hofmann and A. Buja (2010) “Graphical inference for infovis,” IEEE Transactions on Visualization and Computer Graphics, 16(6): 973–979.\nWolf, L.J. et al. (2021) Quantitative geography III: Future challenges and challenging futures. Progress in Human Geography, 45(3): 596–608.\nZhang, J. and Wolf, L. (2023) Rethinking “causality” in Quantitative Human Geography. doi: 10.31235/osf.io/7yncm."
+    "text": "Related work (challenge team)\n\nBeecham, R. and Lovelace, R. (2023) A Framework for Inserting Visually Supported Inferences into Geographical Analysis Workflow: Application to Road Safety Research, Geographical Analysis, 55(3): 345–366.\nCook, D., Reid, N., and Tanaka, E. (2021) The Foundation Is Available for Thinking About Data Visualization Inferentially. Harvard Data Science Review, 3(3).\nFranklin, R. (2023) Quantitative methods II: Big theory. Progress in Human Geography, 47(1): 178-186.\nGelman, A. (2004) “Exploratory Data Analysis for Complex Models.” Journal of Computational and Graphical Statistics, 13: 755–79.\nHullman, J., and Gelman, A. (2021) Designing for Interactive Exploratory Data Analysis Requires Theories of Graphical Inference. Harvard Data Science Review, 3(3).\nWolf, L.J. (2022) “The Right to Rule by Thumb: A Comment on Epistemology in A Route Map for Successful Applications of Geographically-Weighted Regression, Geographical Analysis, 55(1): 184–190.\nWood, J., D. Badawood, J. Dykes, and A. Slingsby. (2011). “BallotMaps: Detecting Name Bias in Alphabetically Ordered Ballot Papers.” IEEE Transactions on Visualization and Computer Graphics, 17: 2384–91."
   },
   {
     "objectID": "challenge/index.html",
@@ -77,52 +77,52 @@
     "text": "Open practices and dissemination\nWe will document all the activities, discussions and outcomes in openly available and transparent channels. All the discussion and working notes will be collated on a github repository, with blog and other items appearing on these webpages providing an accessible “front-end” to our work."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Navigating the garden of forking paths: theoretical foundations for interactive data analysis in data-driven science",
+    "objectID": "challenge/inference/index.html",
+    "href": "challenge/inference/index.html",
+    "title": "Inference",
     "section": "",
-    "text": "Welcome to our upcoming Turing Theory and Methods Challenge Fortnight (TMCF). Our challenge will take place in the British Library in summer 2024.\nThe ambition behind TMCFs is nicely laid out on the Alan Turing Institute’s web pages (below). Ours seeks to a address a problem familiar to data-driven research: the garden of forking paths fallacy (Gelman and Loken 2013).\n\nTheory and Methods Challenge Fortnights are intensive, two-week events where teams of 12 experts from across the Turing university partner network and external institutions worldwide collaborate to initiate work on tackling a foundational challenge in data science and artificial intelligence. Each event focuses on a specific theoretical or methodological challenge that has the potential to impact data science and artificial intelligence at a fundamental level.\nvia turing.ac.uk.\n\nWe have assembled a stellar organising team, and a very exciting set of participants – world-leaders in data science engineering and practice (to be finalised shortly). Alongside the challenge we intend to host public lectures and seminars – more news on this to follow.\nWe will update these pages through 2024 as planning and other preparatory work develops.\n\n\nCagatay Turkay and Roger Beecham, Challenge Leads"
+    "text": "A familiar challenge in data-driven science is that of inference. Generalising away from a sample to some target population is challenging when datasets are already large and population-level and observations subject to unknown confounding context. Replication is muddled by the number of analysis choices that are to be made and range of alternatives that could be pursued (the forking paths problem). How, then, can we ensure that the inferences and claims we make from exploratory analyses are properly contextualised?\nDrawing on expertise in Statistics, Human Computer Interaction and Spatial Econometrics, we will explore ways of systematically describing context in interactive data analysis. An outcome of this work may be to formulate a grammar for structuring exploratory research findings. For a stated finding, the grammar would require researchers to identify, using theory and prior knowledge: confounding context that is present/absent in their analysis, the spatiotemporal scale at which their stated finding is observed and how it may generalise outside of this; the weight of evidence in support of some theory implied by a finding relative to other plausible theories."
   },
   {
-    "objectID": "index.html#our-tmcf",
-    "href": "index.html#our-tmcf",
-    "title": "Navigating the garden of forking paths: theoretical foundations for interactive data analysis in data-driven science",
+    "objectID": "challenge/inference/index.html#inference-and-replicability-in-data-driven-science-capturing-context",
+    "href": "challenge/inference/index.html#inference-and-replicability-in-data-driven-science-capturing-context",
+    "title": "Inference",
     "section": "",
-    "text": "Welcome to our upcoming Turing Theory and Methods Challenge Fortnight (TMCF). Our challenge will take place in the British Library in summer 2024.\nThe ambition behind TMCFs is nicely laid out on the Alan Turing Institute’s web pages (below). Ours seeks to a address a problem familiar to data-driven research: the garden of forking paths fallacy (Gelman and Loken 2013).\n\nTheory and Methods Challenge Fortnights are intensive, two-week events where teams of 12 experts from across the Turing university partner network and external institutions worldwide collaborate to initiate work on tackling a foundational challenge in data science and artificial intelligence. Each event focuses on a specific theoretical or methodological challenge that has the potential to impact data science and artificial intelligence at a fundamental level.\nvia turing.ac.uk.\n\nWe have assembled a stellar organising team, and a very exciting set of participants – world-leaders in data science engineering and practice (to be finalised shortly). Alongside the challenge we intend to host public lectures and seminars – more news on this to follow.\nWe will update these pages through 2024 as planning and other preparatory work develops.\n\n\nCagatay Turkay and Roger Beecham, Challenge Leads"
+    "text": "A familiar challenge in data-driven science is that of inference. Generalising away from a sample to some target population is challenging when datasets are already large and population-level and observations subject to unknown confounding context. Replication is muddled by the number of analysis choices that are to be made and range of alternatives that could be pursued (the forking paths problem). How, then, can we ensure that the inferences and claims we make from exploratory analyses are properly contextualised?\nDrawing on expertise in Statistics, Human Computer Interaction and Spatial Econometrics, we will explore ways of systematically describing context in interactive data analysis. An outcome of this work may be to formulate a grammar for structuring exploratory research findings. For a stated finding, the grammar would require researchers to identify, using theory and prior knowledge: confounding context that is present/absent in their analysis, the spatiotemporal scale at which their stated finding is observed and how it may generalise outside of this; the weight of evidence in support of some theory implied by a finding relative to other plausible theories."
   },
   {
-    "objectID": "index.html#key-dates",
-    "href": "index.html#key-dates",
-    "title": "Navigating the garden of forking paths: theoretical foundations for interactive data analysis in data-driven science",
-    "section": "Key Dates",
-    "text": "Key Dates\n\nWeek 1 (full team) : Monday 17th June – Friday 21st June 2024\nWeek 2 (UK-based team) : Monday 8th July – Friday 12th July 2024"
-  },
-  {
-    "objectID": "modelling/index.html",
-    "href": "modelling/index.html",
-    "title": "Modelling Paradigms",
-    "section": "",
-    "text": "Model-building praxis in data-driven science is quite distinctive. As well as predicting and explaining outcomes, models are often used as containers for structuring information and learning within the data space.\nThrough the Challenge we will link with research projects in the wider Turing network to consider the ways in which models are incorporated into interactive data analysis. We will ask:\n\nHow relevant models are identified and selected;\nHow they are developed and refined; and\nThe processes through which they are analysed and evaluated.\n\nFrom these examples, we will document what is distinctive about model building in data-driven science."
-  },
-  {
-    "objectID": "modelling/index.html#modelling-paradigms-for-data-driven-science-learning-from-example",
-    "href": "modelling/index.html#modelling-paradigms-for-data-driven-science-learning-from-example",
-    "title": "Modelling Paradigms",
-    "section": "",
-    "text": "Model-building praxis in data-driven science is quite distinctive. As well as predicting and explaining outcomes, models are often used as containers for structuring information and learning within the data space.\nThrough the Challenge we will link with research projects in the wider Turing network to consider the ways in which models are incorporated into interactive data analysis. We will ask:\n\nHow relevant models are identified and selected;\nHow they are developed and refined; and\nThe processes through which they are analysed and evaluated.\n\nFrom these examples, we will document what is distinctive about model building in data-driven science."
-  },
-  {
-    "objectID": "modelling/index.html#related-work-challenge-team",
-    "href": "modelling/index.html#related-work-challenge-team",
-    "title": "Modelling Paradigms",
+    "objectID": "challenge/inference/index.html#related-work-challenge-team",
+    "href": "challenge/inference/index.html#related-work-challenge-team",
+    "title": "Inference",
     "section": "Related work (challenge team)",
-    "text": "Related work (challenge team)\n\nBeecham, R. and Lovelace, R. (2023) A Framework for Inserting Visually Supported Inferences into Geographical Analysis Workflow: Application to Road Safety Research, Geographical Analysis, 55(3): 345–366.\nCook, D., Reid, N., and Tanaka, E. (2021) The Foundation Is Available for Thinking About Data Visualization Inferentially. Harvard Data Science Review, 3(3).\nFranklin, R. (2023) Quantitative methods II: Big theory. Progress in Human Geography, 47(1): 178-186.\nGelman, A. (2004) “Exploratory Data Analysis for Complex Models.” Journal of Computational and Graphical Statistics, 13: 755–79.\nHullman, J., and Gelman, A. (2021) Designing for Interactive Exploratory Data Analysis Requires Theories of Graphical Inference. Harvard Data Science Review, 3(3).\nWolf, L.J. (2022) “The Right to Rule by Thumb: A Comment on Epistemology in A Route Map for Successful Applications of Geographically-Weighted Regression, Geographical Analysis, 55(1): 184–190.\nWood, J., D. Badawood, J. Dykes, and A. Slingsby. (2011). “BallotMaps: Detecting Name Bias in Alphabetically Ordered Ballot Papers.” IEEE Transactions on Visualization and Computer Graphics, 17: 2384–91."
+    "text": "Related work (challenge team)\n\nBeecham, R. and Lovelace, R. (2023) A Framework for Inserting Visually Supported Inferences into Geographical Analysis Workflow: Application to Road Safety Research, Geographical Analysis, 55(3): 345–366.\nBeecham, R., J. Dykes, W. Meulemans, A. Slingsby, C. Turkay, and J. Wood. (2017). “Map LineUps: Effects of Spatial Structure on Graphical Inference.” IEEE Transactions on Visualization and Computer Graphics, 23: 391–400.\nCook, D., Reid, N., & Tanaka, E. (2021) The Foundation Is Available for Thinking About Data Visualization Inferentially. Harvard Data Science Review, 3(3).\nFranklin, R. (2023) Quantitative methods II: Big theory. Progress in Human Geography, 47(1), 178-186.\nHullman, J., P. Resnick, and E. Adar. (2015). “Hypothetical Outcome Plots Outperform Error Bars And Violin Plots for Inferences About Reliability of Variable Ordering.” PLoS One, 10: e0142444.\nKale, A., Wu, Y. and Hullman, J. (2022) “Causal Support: Modeling Causal Inferences with Visualization”, IEEE Transactions on Visualization and Computer Graphics, 28(1): 1150-1160.\nH. Wickham, D. Cook, H. Hofmann and A. Buja (2010) “Graphical inference for infovis,” IEEE Transactions on Visualization and Computer Graphics, 16(6): 973–979.\nWolf, L.J. et al. (2021) Quantitative geography III: Future challenges and challenging futures. Progress in Human Geography, 45(3): 596–608.\nZhang, J. and Wolf, L. (2023) Rethinking “causality” in Quantitative Human Geography. doi: 10.31235/osf.io/7yncm."
   },
   {
-    "objectID": "programme/index.html",
-    "href": "programme/index.html",
-    "title": "Program",
+    "objectID": "challenge/tools/index.html",
+    "href": "challenge/tools/index.html",
+    "title": "Tools",
     "section": "",
-    "text": "Detals to appear soon."
+    "text": "Interactive data analysis has been made possible by coding ecosystems, such as tidyverse in R and pandas in Python, that support iterative dialogue between data and models. The analysis process leaves behind a diverse trail of pathways explored, decisions made, failed attempts and also conclusions that satisfactory outcomes have been reached, i.e., when to stop an exploration? How can these analysis trails be documented, how can the provenance of these processes be recorded and serve as evidence and eventually as communicative artefacts?\nThis theme will focus on tools and technologies through which exploratory data analysis workflows can be documented, communicated and shared. Here we will explore the space of computational notebook environments – how they can be used to record and communicate interactive data analysis processes. Drawing on work from themes #1 and #2 we will identify examples of interactive data analyses, documented via computational notebooks, that balance complexity of information with claims to knowledge."
+  },
+  {
+    "objectID": "challenge/tools/index.html#from-analysis-to-communication-tools-for-data-driven-science-with-integrity",
+    "href": "challenge/tools/index.html#from-analysis-to-communication-tools-for-data-driven-science-with-integrity",
+    "title": "Tools",
+    "section": "",
+    "text": "Interactive data analysis has been made possible by coding ecosystems, such as tidyverse in R and pandas in Python, that support iterative dialogue between data and models. The analysis process leaves behind a diverse trail of pathways explored, decisions made, failed attempts and also conclusions that satisfactory outcomes have been reached, i.e., when to stop an exploration? How can these analysis trails be documented, how can the provenance of these processes be recorded and serve as evidence and eventually as communicative artefacts?\nThis theme will focus on tools and technologies through which exploratory data analysis workflows can be documented, communicated and shared. Here we will explore the space of computational notebook environments – how they can be used to record and communicate interactive data analysis processes. Drawing on work from themes #1 and #2 we will identify examples of interactive data analyses, documented via computational notebooks, that balance complexity of information with claims to knowledge."
+  },
+  {
+    "objectID": "challenge/tools/index.html#related-work-challenge-team",
+    "href": "challenge/tools/index.html#related-work-challenge-team",
+    "title": "Tools",
+    "section": "Related work (challenge team)",
+    "text": "Related work (challenge team)\n\nPu, X. and Kay, M. (2018) The garden of forking paths in visualization: A design space for reliable exploratory visual analytics: Position paper. In 2018 IEEE Evaluation and Beyond-Methodological Approaches for Visualization (beliv).\nTurkay, C. et al. (2017) Supporting theoretically-grounded model building in the social sciences through interactive visualisation, Neurocomputing, 268:153–163.\nWickham, H. and Grolemund, G. (2019) R for Data Science, Orielly.\nWood, J., Kachkaev, A. and Dykes, J. (2018) Design exposition with literate visualization. IEEE Transactions on Visualization and Computer Graphics, 25(1): 751–768."
+  },
+  {
+    "objectID": "organisation/index.html",
+    "href": "organisation/index.html",
+    "title": "Organisation",
+    "section": "",
+    "text": "We have assembled an interdisciplinary team of 12 world-leaders working in Information Visualization, Statistical Modelling, Human Computer Interaction, Communication Studies and Geography.\nChallenge Leads:\n\nCagatay Turkay, Professor of Visual Data Science, Centre for Interdisciplinary Methodologies, University of Warwick\nRoger Beecham, Associate Professor of Visual Data Science, School of Geography, University of Leeds\n\nChallenge Organisers:\n\nJessica Hullman, Ginni Rometty Associate Professor, Computer Science and Communication Studies, Northwestern University\nLevi Wolf, Senior Lecturer in Quantitative Human Geography, School of Geographical Sciences, University of Bristol\nDi Cook, Professor of Business Analytics, Econometrics and Business Statistics, Monash University\n\nChellege team Members:\n\nTo be finalised"
   }
 ]

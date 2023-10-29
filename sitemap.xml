@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/theory4ida/tmcf/tools/index.html</loc>
-    <lastmod>2023-10-27T12:44:09.174Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/theory4ida/tmcf/organisation/index.html</loc>
-    <lastmod>2023-10-27T12:44:08.330Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/theory4ida/tmcf/inference/index.html</loc>
-    <lastmod>2023-10-27T12:44:07.446Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/theory4ida/tmcf/challenge/index.html</loc>
-    <lastmod>2023-10-27T12:44:06.030Z</lastmod>
+    <loc>https://github.com/theory4ida/tmcf/programme/index.html</loc>
+    <lastmod>2023-10-29T17:57:00.524Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/theory4ida/tmcf/index.html</loc>
-    <lastmod>2023-10-27T12:44:06.950Z</lastmod>
+    <lastmod>2023-10-29T17:56:59.860Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/theory4ida/tmcf/modelling/index.html</loc>
-    <lastmod>2023-10-27T12:44:07.910Z</lastmod>
+    <loc>https://github.com/theory4ida/tmcf/challenge/modelling/index.html</loc>
+    <lastmod>2023-10-29T17:56:59.136Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/theory4ida/tmcf/programme/index.html</loc>
-    <lastmod>2023-10-27T12:44:08.726Z</lastmod>
+    <loc>https://github.com/theory4ida/tmcf/challenge/index.html</loc>
+    <lastmod>2023-10-29T17:56:58.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/theory4ida/tmcf/challenge/inference/index.html</loc>
+    <lastmod>2023-10-29T17:56:58.764Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/theory4ida/tmcf/challenge/tools/index.html</loc>
+    <lastmod>2023-10-29T17:56:59.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/theory4ida/tmcf/organisation/index.html</loc>
+    <lastmod>2023-10-29T17:57:00.216Z</lastmod>
   </url>
 </urlset>
