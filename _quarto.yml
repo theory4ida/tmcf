@@ -24,7 +24,7 @@ website:
       - href: index.qmd
         text: Home
       - text: Challenge
-        menu: 
+        menu:
           - href: challenge/
             text: Challenge
           - href: modelling/

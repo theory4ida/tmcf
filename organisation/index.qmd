@@ -1,7 +1,7 @@
 ---
 pagetitle: "{{< meta website.title >}}"
 title: "Organisation"
-subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute" 
+subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute"
 title-block-banner: "#495057"
 ---
 
@@ -15,8 +15,10 @@ Challenge Leads:
 
 Challenge Organisers:
 
-* [Jessica Hullman](http://users.eecs.northwestern.edu/~jhullman/), Ginni Rometty Associate Professor, Computer Science and Communication Studies, Northwestern University 
+* [Jessica Hullman](http://users.eecs.northwestern.edu/~jhullman/), Ginni Rometty Associate Professor, Computer Science and Communication Studies, Northwestern University
 * [Levi Wolf](https://www.ljwolf.org/), Senior Lecturer in Quantitative Human Geography,  School of Geographical Sciences, University of Bristol
 * [Di Cook](http://www.dicook.org/), Professor of Business Analytics, Econometrics and Business Statistics, Monash University
 
-Chellege team Members (to be finalised):
+Chellege team Members:
+
+  * To be finalised
