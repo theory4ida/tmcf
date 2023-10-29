@@ -23,16 +23,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: Challenge
-        menu:
-          - href: challenge/
-            text: Challenge
-          - href: modelling/
-            text: Modelling
-          - href: inference/
-            text: Inference
-          - href: tools/
-            text: Tools
+      - href: challenge/
+        text: Challenge
       - href: programme/
         text: Programme
       - href: organisation/
