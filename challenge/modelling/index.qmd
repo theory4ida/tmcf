@@ -7,15 +7,13 @@ title-block-banner: "#495057"
 
 ## Modelling paradigms for data-driven science: learning from example
 
-Model-building praxis in data-driven science is quite distinctive. As well as predicting and explaining outcomes, models are often used as containers for structuring information and learning within the data space.  
-
-Through the Challenge we will link with research projects in the wider Turing network to consider the ways in which models are incorporated into interactive data analysis.  We will ask:
+Model-building praxis in data-driven science is quite distinctive. As well as predicting and explaining outcomes, models are often used as containers for structuring information and learning within the data space.  We will consider the ways in which models are incorporated into interactive data analysis by asking:
 
 * How relevant models are identified and selected; 
 * How they are developed and refined; and 
 * The processes through which they are analysed and evaluated. 
 
-From these examples, we will document what is distinctive about model building in data-driven science.
+From here, we will document what is distinctive about model building in data-driven science.
 
 ## Related work (challenge team)
 

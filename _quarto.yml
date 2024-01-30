@@ -27,8 +27,8 @@ website:
         text: Challenge
       - href: programme/
         text: Programme
-      - href: organisation/
-        text: Organisation
+      - href: team/
+        text: Team
     tools:
       - icon: twitter
         href: https://twitter.com/gisruk/

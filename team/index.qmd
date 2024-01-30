@@ -1,0 +1,33 @@
+---
+pagetitle: "{{< meta website.title >}}"
+title: "Team"
+subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute"
+title-block-banner: "#495057"
+---
+
+
+We have assembled an interdisciplinary team of 12 world-leaders working in Information Visualization, Statistical Modelling, Human Computer Interaction, Communication Studies and Geography.
+
+Challenge Leads:
+
+* [Cagatay Turkay](https://warwick.ac.uk/fac/cross_fac/cim/people/cagatay-turkay/), Professor of Visual Data Science, Centre for Interdisciplinary Methodologies, University of Warwick
+* [Roger Beecham](https://www.roger-beecham.com/),  Associate Professor of Visual Data Science, School of Geography, University of Leeds
+
+Challenge Team:
+
+* [Daniel Archambault](https://www.ncl.ac.uk/computing/staff/profile/danielarchambault.html), Professor of Data Science/Visualisation, School of Computing, Newcastle University
+* [Benjamin Bach](https://vishub.net/bach), Reader in Design Informatics and Visualization, School of Informatics, University of Edingburgh 
+* [Di Cook](http://www.dicook.org/), Professor of Business Analytics, Econometrics and Business Statistics, Monash University
+* [Rachel Franklin](https://www.rachelfranklin.org), Professor of Geographical Analysis, School of Geography, Politics and Sociology, Newcastle University
+* [Andrew Gelman](http://www.stat.columbia.edu/~gelman/), Professor of Statistics and Political Science, Department of Statistics, Columbia University
+* [Jessica Hullman](http://users.eecs.northwestern.edu/~jhullman/), Ginni Rometty Associate Professor, Computer Science and Communication Studies, Northwestern University
+* [Edwin Pos](https://www.uu.nl/staff/ETPos), Associate Professor, Utrecht University
+* [Hadley Wickham](https://hadley.nz/), Chief Scientist, Posit
+* [Levi Wolf](https://www.ljwolf.org/), Senior Lecturer in Quantitative Human Geography,  School of Geographical Sciences, University of Bristol
+* [Jo Wood](https://www.city.ac.uk/about/people/academics/joseph-wood), Professor of Visual Analytics, Department of Computing, City, University of London
+* [Kai Xu](https://kaixu.me), Associate Professor, School of Computer Science, University of Nottingham 
+
+
+
+
+

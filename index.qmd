@@ -14,7 +14,7 @@ title-block-banner: "#495057"
 
 Welcome to our upcoming Turing Theory & Methods Challenge Fortnight (TMCF). [Our challenge](challenge/) will take place in the **British Library** in **summer 2024**.
 
-The ambition behind TMCFs is nicely laid out on the Alan Turing Institute's website (above). Ours seeks to a address a problem familiar to data-driven research: *the garden of forking paths fallacy* [@gelman_garden_2013]. We have assembled a stellar [organising team](organisation/), and a very exciting set of participants -- world-leaders in data science engineering and practice (to be finalised shortly).  Alongside the challenge we intend to host public lectures and seminars -- more news on this to follow.
+The ambition behind TMCFs is nicely laid out on the Alan Turing Institute's website (above). Ours seeks to a address a problem familiar to data-driven research: *the garden of forking paths fallacy* [@gelman_garden_2013]. We have assembled a stellar [team](team/) to work on the challenge -- world-leaders in data science engineering and practice.  Alongside the challenge we intend to host public lectures and seminars -- more news on this to follow.
 
 We will update these pages through 2024 as planning and other preparatory work develops.
 
