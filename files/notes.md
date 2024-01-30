@@ -13,6 +13,8 @@
 * TMCF for *writing* outputs rather than open discussion / networking.
 * Pre-meeting activities that we ask participants to perform, and communications, should establish above, and enable participants to come with ideas for writing.
 
+
+
 ## Structure for 5 days
 
 *Note this is an initial plan to be iterated over.*
@@ -50,7 +52,9 @@
 
 ## Some themes that might form positions
 
-* Role of heuristics versus theory in data-driven research
+* Heuristics trumps theory in data-driven research.  Model-building in data-driven research is best approached by consulting data and domain praxis and commonsense rather than isolated theory/ theoretical mechanisms.
+
+
 * Knowledge claims can only be made through out-of-sample significance tests (extreme pre-registration).
 * Exploratory analysis induces p-hacking
 * Data graphics + visual analysis methods induce false discovery via unchecked multiple comparisons
