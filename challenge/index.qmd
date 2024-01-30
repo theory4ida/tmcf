@@ -34,4 +34,4 @@ We anticipate impact on the following:
 
 ## Open practices and dissemination
 
-We will document all the activities, discussions and outcomes in openly available and transparent channels. All the discussion and working notes will be collated on a github repository, with blog and other items appearing on these webpages providing an accessible "front-end" to our work.
+We will document the activities, discussions and outcomes in openly available and transparent channels. All the discussion and working notes will be collated on a github repository, with blog and other items appearing on these webpages providing an accessible "front-end" to our work.
