@@ -3,6 +3,7 @@ pagetitle: "{{< meta website.title >}}"
 title: "Tools"
 subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute" 
 title-block-banner: "#495057"
+title-block-banner-color: "#f8f9fa"
 ---
  
 ## From analysis-to-communication: tools for data-driven science with integrity
