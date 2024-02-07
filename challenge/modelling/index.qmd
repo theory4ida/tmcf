@@ -1,5 +1,4 @@
 ---
-pagetitle: "{{< meta website.title >}}"
 title: "Modelling Paradigms"
 subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute" 
 title-block-banner: "#495057"

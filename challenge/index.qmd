@@ -1,5 +1,4 @@
 ---
-pagetitle: "{{< meta website.title >}}"
 title: "Challenge Statement"
 subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute"
 title-block-banner: "#495057"
