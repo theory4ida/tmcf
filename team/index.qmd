@@ -23,6 +23,7 @@ Challenge Team:
 * [Andrew Gelman](http://www.stat.columbia.edu/~gelman/), Professor of Statistics and Political Science, Department of Statistics, Columbia University
 * [Jessica Hullman](http://users.eecs.northwestern.edu/~jhullman/), Ginni Rometty Associate Professor, Computer Science and Communication Studies, Northwestern University
 * [Edwin Pos](https://www.uu.nl/staff/ETPos), Associate Professor, Utrecht University
+* [Mari-Cruz Villa-Uriol](https://www.sheffield.ac.uk/dcs/people/academic/mari-cruz-villa-uriol), Senior Lecturer, University of Sheffield
 * [Hadley Wickham](https://hadley.nz/), Chief Scientist, Posit
 * [Levi Wolf](https://www.ljwolf.org/), Senior Lecturer in Quantitative Human Geography,  School of Geographical Sciences, University of Bristol
 * [Jo Wood](https://www.city.ac.uk/about/people/academics/joseph-wood), Professor of Visual Analytics, Department of Computing, City, University of London
