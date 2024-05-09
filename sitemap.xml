@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://theory4ida.github.io/tmcf/files/notes.html</loc>
-    <lastmod>2024-03-19T10:27:25.428Z</lastmod>
+    <lastmod>2024-05-09T16:03:43.686Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/programme/index.html</loc>
-    <lastmod>2024-03-19T10:27:25.428Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/tools/index.html</loc>
-    <lastmod>2024-03-19T10:27:25.428Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/inference/index.html</loc>
-    <lastmod>2024-03-19T10:27:25.428Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/index.html</loc>
-    <lastmod>2024-03-19T10:27:25.428Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/modelling/index.html</loc>
-    <lastmod>2024-03-19T10:27:25.428Z</lastmod>
+    <lastmod>2024-05-09T16:03:43.690Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/index.html</loc>
-    <lastmod>2024-03-19T10:27:25.428Z</lastmod>
+    <lastmod>2024-05-09T16:03:43.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/modelling/index.html</loc>
+    <lastmod>2024-05-09T16:03:43.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/index.html</loc>
+    <lastmod>2024-05-09T16:03:43.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/inference/index.html</loc>
+    <lastmod>2024-05-09T16:03:43.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/tools/index.html</loc>
+    <lastmod>2024-05-09T16:03:43.686Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/lecture/index.html</loc>
+    <lastmod>2024-05-09T16:03:43.690Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/team/index.html</loc>
-    <lastmod>2024-03-19T10:27:25.428Z</lastmod>
+    <lastmod>2024-05-09T16:03:43.690Z</lastmod>
   </url>
 </urlset>
