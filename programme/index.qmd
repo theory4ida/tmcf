@@ -5,4 +5,189 @@ title-block-banner: "#495057"
 title-block-banner-color: "#f8f9fa"
 ---
 
-Detals to appear soon.
+---
+title: "Conference Programme"
+---
+
+```{css echo=FALSE}
+.no-stripe .gt_table tr.odd {
+  --bs-table-striped-bg: transparent;
+}
+```
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| eval: true
+#| classes: no-stripe
+library(gt)
+library(gtExtras)
+library(dplyr)
+library(readr)
+library(glue)
+library(purrr)
+library(stringr)
+
+ #days <- read_csv(here("programme", "program.csv")) |> 
+days <- read_csv("program.csv") |> 
+  mutate(Activity=pmap_chr(list(Activity, Author),
+     ~if_else(is.na(..2), (html(glue("<span style='font-size:14pt'> {..1}</span>"))), (html(glue("<span style='font-size:14pt'> {..1}</span><br><span style='font-style:italic; font-size:12pt'>--&nbsp;{..2}</span>")))))
+  )
+
+    
+
+# From https://rpubs.com/kaustav/table_contest_2020
+gt_theme_gisruk <- function(data,...) {
+  data |>
+  opt_all_caps()  |>
+  opt_table_font(
+    font = list(
+      google_font("Jost"),
+      default_fonts()
+    )
+  ) |>
+    tab_style(
+      style = cell_borders(
+        sides = "bottom", color = "transparent", weight = px(1)
+      ),
+      locations = cells_body(
+        columns = everything(),
+        # This is a relatively sneaky way of changing the bottom border
+        # Regardless of data size
+        rows = nrow(data$`_data`)
+      )
+    )  |>
+  tab_options(
+    column_labels.background.color = "white",
+    table.border.top.width = px(1),
+    table.border.top.color = "transparent",
+    table.border.bottom.color = "transparent",
+    row_group.border.top.width = px(1),
+    table.border.bottom.width = px(1),
+    column_labels.border.top.width = px(1),
+    column_labels.border.top.color = "transparent",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    data_row.padding = px(1),
+    source_notes.font.size = 12,
+    table.font.size = 16,
+    heading.align = "left",
+    heading.border.bottom.width = px(1),
+    ...
+  ) |>
+  tab_style(
+      style=list(
+        cell_borders(
+          sides = c("bottom"),  
+          weight = px(2),
+          color ="white"),
+      cell_fill(color="#eeeeee")),
+     locations = cells_row_groups()
+  )
+}
+```
+
+
+### Monday 17th June
+
+```{r}
+#| label: mon
+#| echo: false
+#| eval: true
+#| classes: no-stripe
+days |> filter(Day=="Mon") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(15)) |>
+    cols_width(matches("Activity") ~ pct(85)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(18),
+              column_labels.font.size = px(18), table.align="left", row_group.font.size = px(16))  
+
+```
+
+
+### Tuesday 18th June
+
+```{r}
+#| label: tue
+#| echo: false
+#| eval: true
+#| classes: no-stripe
+days |> filter(Day=="Tue") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(15)) |>
+    cols_width(matches("Activity") ~ pct(85)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(18),
+              column_labels.font.size = px(18), table.align="left", row_group.font.size = px(16))  
+
+```
+
+
+### Wednesday 19th June
+
+```{r}
+#| label: wed
+#| echo: false
+#| eval: true
+#| classes: no-stripe
+days |> filter(Day=="Wed") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(15)) |>
+    cols_width(matches("Activity") ~ pct(85)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(18),
+              column_labels.font.size = px(18), table.align="left", row_group.font.size = px(16))  
+
+```
+
+
+### Thursday 20th June
+
+```{r}
+#| label: thu
+#| echo: false
+#| eval: true
+#| classes: no-stripe
+days |> filter(Day=="Thu") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(15)) |>
+    cols_width(matches("Activity") ~ pct(85)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(18),
+              column_labels.font.size = px(18), table.align="left", row_group.font.size = px(16))  
+
+```
+
+### Friday 21st June
+
+```{r}
+#| label: fri
+#| echo: false
+#| eval: true
+#| classes: no-stripe
+days |> filter(Day=="Fri") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(15)) |>
+    cols_width(matches("Activity") ~ pct(85)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(18),
+              column_labels.font.size = px(18), table.align="left", row_group.font.size = px(16))  
+
+```

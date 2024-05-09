@@ -27,6 +27,8 @@ website:
         text: Challenge
       - href: programme/
         text: Programme
+      - href: lecture/
+        text: Public Lecture
       - href: team/
         text: Team
     tools:
