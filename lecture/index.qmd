@@ -10,8 +10,8 @@ title-block-banner-color: "#f8f9fa"
 
 The steady expansion in the availability and reach of observational data has prompted much-needed introspection into data analysis practice. When using data to answer questions, it is not simply a case of choosing from a set of appropriate statistical procedures, or ‘rolling out’ some research design template. Effective data analysis requires analysts to make decisions within a wide space of analysis options and to engage deeply with the processes and mechanisms being represented through data. This public lecture features three internationally-standout scientists from academia and industry.  Talks will cover how to challenge and interrogate in data-based research; techniques for imagining uncertainty and variation in observational data; and how data-driven analyses can be put into production.
 
-* Date/Time : Wednesday 19th June, 1600-1900
-* Venue : TBC
+* Date/Time : Thursday 20th June, 1730-2100
+* Venue : King's College London
 * Details : Drinks reception following talks 
 
 <br>
