@@ -131,7 +131,7 @@ gt(groupname_col = "Objective") |>
 ```
 
 
-### Wednesday 19th June
+### Wednesday 19th Jun
 
 ```{r}
 #| label: wed

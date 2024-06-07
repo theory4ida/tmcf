@@ -1,0 +1,261 @@
+/*-- scss:defaults --*/
+
+$theme: "slides-theme" !default;
+
+//
+// Color system
+//
+
+$white:    #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #373a3c !default;
+$gray-900: #212529 !default;
+$black:    #000000 !default;
+
+$blue:    #315696 !default;
+$green:   #274033 !default;
+$grey:    #32251f !default;
+$red:     #d03231 !default;
+$orange:  #f3b135 !default;
+$light-grey: #f4e9d9 !default;
+
+$primary:   $blue !default;
+$secondary: $gray-700 !default;
+$success:   $light-grey !default;
+$info:      $red !default;
+$warning:   $orange !default;
+$danger:    $red !default;
+$light:     $light-grey !default;
+$dark:      $grey !default;
+
+// $min-contrast-ratio: 2.6 !default;
+
+// Fonts
+
+
+// Fonts
+$font-family-sans-serif: "Jost" !default;
+
+$headings-font-family: "Jost" !default;
+$headings-font-weight: 600 !default;
+
+$navbar-font-family: "Jost" !default;
+$toc-font-family: "Jost" !default;
+$footer-font-family: "Jost" !default;
+
+@font-face {
+  font-family: 'iosevka';
+  src: url('../../../../../Fonts/iosevka.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// $font-size-base: 1.1rem !default; // Assumes the browser default, typically `16px`
+// $font-size-sm: $font-size-base * .875 !default;
+
+
+// Body
+$body-color: $gray-900 !default;
+
+// Links
+$link-color: $red !default;
+$link-decoration: none !default;
+$link-hover-color: $orange !default;
+$link-hover-decoration: underline !default;
+
+// Inline code
+$code-bg: $gray-200 !default;
+$code-color: $gray-900 !default;
+
+/*$code-block-font-size:	0.45em;*/
+
+// Code copy
+$btn-code-copy-color-active: $orange !default;
+
+// code
+$code-color: #b20e10 !default;
+$code-block-font-size: 0.55em;
+$code-block-border-color: #000000;
+$code-block-bg: #fafafa;
+
+
+// TOC
+$toc-color: $orange;
+$toc-font-size: 1em;
+
+// Navbar
+$navbar-bg: $grey !default;
+$navbar-fg: $light-grey !default;
+$navbar-hl: $orange !default;
+
+// Footer
+$footer-bg: $grey !default;
+$footer-fg: $light-grey !default;
+
+/*-- scss:rules --*/
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" !default;
+
+@if $web-font-path {
+    @import url($web-font-path);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+
+.home {
+    .quarto-title-banner {
+        margin-bottom: 0;
+    }
+}
+
+#title-block-header {
+    &.home {
+        margin-block-end: 0.5rem;
+    }
+}
+
+.home {
+    .quarto-title-banner {
+        margin-bottom: 0;
+    }
+
+    #title-block-header {
+        margin-block-end: 0;
+    }
+}
+
+// Shrink blocks of code
+pre.text, pre.sourceCode, .cell-output pre {
+    font-size: 0.775em;
+}
+
+.navbar {
+    font-family: $navbar-font-family;
+}
+
+// Put all the icons in a single row in the hamburger menu
+.navbar-nav.navbar-nav-scroll.ms-auto {
+    flex-direction: row;
+}
+
+#TOC {
+    font-family: $toc-font-family;
+    padding-bottom: 0.1em;
+
+    .active {
+        font-weight: 400;
+    }
+
+    #toc-title {
+        font-weight: 600;
+    }
+}
+
+.sidebar nav[role="doc-toc"]>ul li a {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+#quarto-margin-sidebar {
+    .quarto-listing-category-title {
+        margin-left: 0.5em;
+    }
+
+    .quarto-listing-category {
+        font-family: $toc-font-family;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 1.1;
+        padding-left: 0.6rem;
+        margin-left: 0.5em;
+        border-left: 1px solid $gray-200;
+
+        .category {
+            padding-bottom: 0.5rem;
+        }
+
+        .active {
+            font-weight: 400;
+            color: $orange;
+        }
+
+        .quarto-category-count {
+            font-weight: 200;
+            font-size: 0.8em;
+            color: $gray-600;
+        }
+    }
+}
+
+.nav-footer {
+    align-items: flex-start;  // Align all flex items to the top
+    flex-wrap: wrap;
+    border: 0 !important;
+    min-height: 3em;
+    font-family: $footer-font-family;
+
+    a {
+        color: $orange;
+    }
+
+    .faux-block {
+        display: block;
+        padding-bottom: 0.4em;
+    }
+
+    .fingerprint {
+        font-family: $font-family-monospace;
+        font-size: 0.8em;
+    }
+
+
+    // When the screen is medium or smaller, make each footer chunk be 100% width 
+    // and centered; otherwise make them be 33% width and left/right/centerd
+    .nav-footer-left,
+    .nav-footer-right,
+    .nav-footer-center {
+        text-align: center;
+        width: 100%;
+        min-height: 2em;
+    }
+}
+
+   
+   
+
+#title-block-header {
+    .quarto-title-banner {
+        font-family: $headings-font-family;
+        
+        .description {
+            font-size: 1.1em;
+            margin-top: 1em !important;
+        }
+    }
+}
+
+
+
+#title-slide {
+  text-align: left;
+}
+
+
+.back-nav {
+    margin-bottom: 1.5em;
+}
+

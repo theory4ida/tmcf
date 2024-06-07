@@ -1,0 +1,352 @@
+---
+title: "<span style='font-size:1.1em; font-weight: 600;'>TMCF 2024</span>"
+subtitle: "<span style='font-size:1.6em; font-weight: 500;'>Navigating the garden of forking paths in data-driven science</span><br><span style='color:#525252; font-size:1.2em; font-weight: 500; font-family: iosevka'><br>17th -- 21st June 2024 </span>"
+format: 
+   revealjs:
+     transition: fade
+     theme: theme/slides-theme.scss
+     css: theme/style.css
+     footer: 'TMCF 2024 | British Library'
+     mainfont: Jost
+     logo: "img/logos/logo_ati.png"
+     resources: 
+       - fonts/iosevka-regular.ttc
+       - fonts/iosevka-semibold.ttc
+       - fonts/iosevka-thin.ttc
+       - fonts/iosevka.ttc
+       
+---
+
+
+```{=html}
+<style>
+.flushright {
+   text-align: right;
+}
+</style>
+```
+
+
+![](img/challenge.png){.absolute top=10 left=0 width="90%"}
+
+---
+
+![](img/team.png){.absolute top=10 left=0 width="90%"}
+
+::: {.notes}
+
+That we are a cool group: Applied data scientists doing problem-driven research; methods-oriented data scientists from Vis and Stats
+
+:::
+
+
+---
+
+![](img/hdsr.png){.absolute top=0 left=550 width="40%"}
+![](img/rss_b.png){.absolute top=280 left=0 width="60%"}
+
+![](img/rsos.png){.absolute top=0 left=0 width="50%"}
+
+::: {.notes}
+
+Flexibility in how TMCFs operate, in activities undertaken.
+
+But ambitions in terms of outputs:  
+
+1. Commentary paper in RSS / Harvard Data Science Review / Other;  and 
+
+2. SI papers that take,  extend, exemplify research agenda outlined in Commentary paper. 
+
+:::
+
+---
+
+![](img/programme.png){.absolute top=10 left=0 width="90%"}
+
+::: {.notes}
+
+To achieve this: structured activities, aimed to generate material and evidence that we can use to create these outputs.
+
+:::
+
+---
+
+# *Our* TMCF
+
+::: {.notes}
+
+Tell story of how  we came to land on this theme for the TMCF
+
+:::
+
+---
+
+![](img/stats19.png){.absolute top=10 left=0 width="50%"}
+
+![](img/stats19_2.png){.absolute top=30 left=550 width="40%"}
+
+
+::: {.notes}
+
+For me: 
+Road Crash Analysis project with DfT
+A loose brief: 
+1. between-area comparison in crash rates -- monitoring 
+2. thematic analysis on under-analysed sections of the dataset. 
+
+
+That we did both of these things, but in a different way to what I had initially intended.
+
+:::
+
+---
+
+::: {.columns}
+
+
+![](img/science_reform_paper.png){.absolute top=0 left=0 width="50%"}
+
+::: {.column width="20%"}
+<br><br><br><br><br><br>
+
+::: {style="font-size: 90%"}
+
+Claims of Science Reform
+
+:::
+
+:::
+
+::: {.column width="80%"}
+
+<br><br><br><br><br><br>
+
+::: {style="font-size: 80%"}
+
+> 1 Reproducibility is the cornerstone of science
+>
+> 2 Using data more than once invalidates statistical inference 
+>
+> 3 Exploratory research uses 'wonky' statistics
+
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+At the time, 2020–2, I had been conscious of Science Reform and HCID and Vis, but also adjacent social science disciplines were starting to publish empirical work with full pre-registrations… 
+
+about establishing rigour in scientific method as a response to replication crisis –– show slide from Devezer paper with “tenets” of Science Reform
+
+And started to do that -- in fact have a draft pre-registration report/proposal looking at autobesity -- changing vehicle sizes and crash frequency and severity -- but this didn't get far. Essentially because our exploratory analysis threw up so many things that undermined our initial plans -- and had we proceeded, would have generated findings that at a high-level would look compelling (p-values etc.), but when properly scrutinised would fall apart
+
+And so instead we pushed our exploratory analysis in various directions, using combinations of models and data graphics in tandem -- in a way that geographers often do, but that you tend to see in data analysis primers.
+
+
+:::
+
+
+---
+
+::: {.columns}
+
+![](img/science_reform_paper.png){.absolute top=0 left=0 width="50%"}
+
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="90%"}
+
+<br><br><br><br><br><br>
+
+::: {style="font-size: 75%"}
+
+> Exploratory research **needs rigor** to serve its intended aim of **facilitating scientific discovery**. Whichever method is selected [...] it needs to be implemented rigorously to **maximize the probability of true discoveries while minimizing the probability of false discoveries**.
+> 
+> Devezer et al. 2021
+
+:::
+
+:::
+
+:::
+
+
+::: {.notes}
+
++ Way in which we were doing this resonated with interesting papers that I was reading, identifying problems with Science Reform without thinking and re-looking at / elevating exploratory analysis approaches – that they are essentially about generating and evaluating models (where most analytic activity happens) ...
+
+ broadside / critique at these tenets of science reform – and this quote:
+
+:::
+
+
+---
+
+![](img/challenges_eda.png){.absolute top=0 left=0 width="65%"}
+
+![](img/harvard_challenges_eda.png){.absolute top=0 left=700 width="25%"}
+
+
+---
+
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+::: {style="font-size: 65%"}
+
+<br>
+
+> EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual system
+>
+> We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
+>
+> Hullman and Gelman 2021
+
+:::
+
+:::
+
+::: {.column width="20%"}
+
+:::
+
+:::
+
+![](img/harvard_challenges_eda.png){.absolute top=0 left=720 width="30%"}
+
+
+---
+
+![](img/analysis1.png){.absolute top=80 left=450 width="55%"}
+![](img/analysis2.png){.absolute top=350 left=450 width="51%"}
+
+
+![](img/ga_twitter.png){.absolute top=0 left=0 width="40%"}
+
+::: {.notes}
+
+Resonated in capturing how it is really when doing applied analysis + and try to *demonstrate* this in analysis covered in my paper
+
+:::
+
+---
+
+::: {.columns}
+
+
+::: {.column width="49%"}
+
+::: {.flushright}
+
+
+
+::: {style="font-size: 200%"}
+**Rigour**
+:::
+
+::: {style="font-size: 90%"}
+-- Repeatable analysis plans <br>
+-- Known inference protocols <br>
+-- Expectations for size and stability of effects 
+
+:::
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+<br><br><br><br>
+
+::: {style="font-size: 200%"}
+**Richness**
+:::
+
+::: {style="font-size: 90%"}
+-- Evolving analysis plans <br>
+-- Informal inference <br>
+-- Effects situated within descriptive context
+
+:::
+
+:::
+
+:::
+
+
+::: {.notes}
+
+This speaks to tension that the TMCF is concerned with: balancing depth/richness in context – descriptive detail – with rigour (repeatable methods, judgements of how stable are observations, how regularly/consistently they occur)
+
+So it is this tension that informs those Provocations – we think they push at this from different angles – and really that motivates this TMCF
+
+
+:::
+
+---
+
+# Research agenda for exploratory research
+
+::: {.notes}
+
+Amazingly, we’ve managed to bring in people who have very eloquently defined this problem space, and are the obvious experts that have been pushing this alternative/modern/realistic reading of data analysis
+
+
+:::
+
+---
+
+### via Devezer 2021
+
+::: {style="font-size: 75%"}
+> 1 Exploratory research needs to start with **subject matter expertise** or **theoretical background**, and hence, **cannot be** [...] **completely dictated by the data**.
+> <br><br>
+> 2 Successful exploratory studies [must have] **richness of data**. Random datasets that are uninformative about the area to be explored will probably not yield important discoveries.
+> <br><br>
+> 3 Exploration requires robust **methods that are insensitive to underlying assumptions**. ... **Using robust approaches** such as multiverse analysis [86] or metastudies could be **more appropriate** for exploration purposes.
+> <br><br>
+> 4 Exploratory work needs to be done in a **structured, systematic, honest and transparent** manner using a **deliberately chosen methodology appropriate for the task**.
+>
+
+:::
+
+---
+
+
+::: {.notes}
+
+ e.g. model-based exploratory analysis that has rigour – and so that allows us to comment on effects, processes, causes and assess generalisability and reliability of things we are observing. 
+
+
+
++ What we would really like to do is think, write about, and start working on examples of how this would ‘look’ in our own domains:
+  + how it might work/be specialised according to domains
+  + whether we can systemise any of this and generate tools to support analysts in reasoning and building models that are loaded with rich context
++ but that also invite us to check against spurious discovery, consider the context under which observed patterns become unstable etc.
+
+:::
+
+---
+
+# Day 1 : Provocations
+
+::: {.notes}
+
+Provocations and position statements as a launch-pad. These are necessarily discursive and probably cover things that we've variously read and are aware of
+
+From here, self-organise into groups for preparing blog posts – in these we want to generate material, discussion points and examples/evidence for the Commentary Paper
+
+What would be great is if we can take these and for each map them to example -- ultimately think about protocols / recipes / frameworks and/or applied examples.
+
+
+
+:::
+

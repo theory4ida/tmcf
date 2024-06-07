@@ -1,0 +1,11 @@
+h1.title {
+  margin-bottom: 0;
+  background-image: url(../img/gridmappr.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 250px, 250px;
+}
+
+title.slide {
+  text-align: left;
+}
