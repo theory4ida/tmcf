@@ -161,6 +161,13 @@
     "text": "Related work (challenge team)\n\nBeecham, R. and Lovelace, R. (2023) A Framework for Inserting Visually Supported Inferences into Geographical Analysis Workflow: Application to Road Safety Research, Geographical Analysis, 55(3): 345–366.\nCook, D., Reid, N., and Tanaka, E. (2021) The Foundation Is Available for Thinking About Data Visualization Inferentially. Harvard Data Science Review, 3(3).\nFranklin, R. (2023) Quantitative methods II: Big theory. Progress in Human Geography, 47(1): 178-186.\nGelman, A. (2004) “Exploratory Data Analysis for Complex Models.” Journal of Computational and Graphical Statistics, 13: 755–79.\nHullman, J., and Gelman, A. (2021) Designing for Interactive Exploratory Data Analysis Requires Theories of Graphical Inference. Harvard Data Science Review, 3(3).\nWolf, L.J. (2022) “The Right to Rule by Thumb: A Comment on Epistemology in A Route Map for Successful Applications of Geographically-Weighted Regression, Geographical Analysis, 55(1): 184–190.\nWood, J., D. Badawood, J. Dykes, and A. Slingsby. (2011). “BallotMaps: Detecting Name Bias in Alphabetically Ordered Ballot Papers.” IEEE Transactions on Visualization and Computer Graphics, 17: 2384–91."
   },
   {
+    "objectID": "files/slides/open.html#themes",
+    "href": "files/slides/open.html#themes",
+    "title": "TMCF 2024",
+    "section": "Themes",
+    "text": "Themes\n\n\nModelling paradigms: establish what is distinctive about modelling in data-driven science by mapping out archetypal data-driven projects and the analysis practices they use.\nInference and replicability: develop ways of documenting the context under which analytical findings are made – a grammar for structuring exploratory research findings – so that inferences can be more formally reported.\nTools for progressing from analysis to communication: documenting interactive data analysis processes with integrity – balancing claims to knowledge with informational complexity.\n\n\n\ne.g. model-based exploratory analysis that has rigour – and so that allows us to comment on effects, processes, causes and assess generalisability and reliability of things we are observing.\n\nWhat we would really like to do is think, write about, and start working on examples of how this would ‘look’ in our own domains:\n\nhow it might work/be specialised according to domains\nwhether we can systemise any of this and generate tools to support analysts in reasoning and building models that are loaded with rich context\n\nbut that also invite us to check against spurious discovery, consider the context under which observed patterns become unstable etc."
+  },
+  {
     "objectID": "lecture/index.html",
     "href": "lecture/index.html",
     "title": "Public Lecture",
