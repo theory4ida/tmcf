@@ -28,10 +28,17 @@ format:
 
 
 ![](img/challenge.png){.absolute top=10 left=0 width="90%"}
+---
+
+![](img/turing-team.png){.absolute top=0 left=0 width="100%"}
+
+::: {.notes}
+
+
 
 ---
 
-![](img/team.png){.absolute top=10 left=0 width="90%"}
+![](img/TMCF-team.png){.absolute top=10 left=0 width="90%"}
 
 ::: {.notes}
 
@@ -406,6 +413,17 @@ But ambitions in terms of outputs:
 1. Commentary paper in RSS / Harvard Data Science Review / Other;  and 
 
 2. SI papers that take,  extend, exemplify research agenda outlined in Commentary paper. 
+
+:::
+
+
+---
+
+![](img/socialPlans.png){.absolute top=0 left=0 width="100%"}
+
+::: {.notes}
+
+Mention the walk/cycle on Wednesday. Also the runs.
 
 :::
 
