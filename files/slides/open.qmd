@@ -1,6 +1,6 @@
 ---
 title: "<span style='font-size:1.1em; font-weight: 600;'>TMCF 2024</span>"
-subtitle: "<span style='font-size:1.6em; font-weight: 500;'>Navigating the garden of forking paths in data-driven science</span><br><span style='color:#525252; font-size:1.2em; font-weight: 500; font-family: iosevka'><br>17th -- 21st June 2024 </span>"
+subtitle: "<span style='font-size:1.6em; font-weight: 500;'>Navigating the garden of forking paths in data-driven science</span><br><span style='color:#525252; font-size:1.2em; font-weight: 500;'><br>17th -- 21st June 2024 </span>"
 format: 
    revealjs:
      transition: fade
@@ -44,11 +44,11 @@ That we are a cool group: Applied data scientists doing problem-driven research;
 
 
 
-# *Our* TMCF
+# *Our* TMCF <br> <span style='font-size:0.8em; font-weight: 500;'>Forking paths in data-driven science </span>
 
 ::: {.notes}
 
-Tell story of how  we came to land on this theme for the TMCF
+Tell story of this theme for the TMCF
 
 :::
 
@@ -63,12 +63,13 @@ Tell story of how  we came to land on this theme for the TMCF
 
 For me: 
 Road Crash Analysis project with DfT
+Stats19 -- the road safety dataset for UK
+
 A loose brief: 
 1. between-area comparison in crash rates -- monitoring 
 2. thematic analysis on under-analysed sections of the dataset. 
 
 
-That we did both of these things, but in a different way to what I had initially intended.
 
 :::
 
@@ -77,30 +78,30 @@ That we did both of these things, but in a different way to what I had initially
 ::: {.columns}
 
 
-![](img/science_reform_paper.png){.absolute top=0 left=0 width="50%"}
+![](img/science_reform_paper.png){.absolute top=0 left=0 width="65%"}
 
-::: {.column width="20%"}
-<br><br><br><br><br><br>
+::: {.column width="60%"}
+<br><br><br><br><br><br><br>
 
-::: {style="font-size: 90%"}
+::: {style="font-size: 100%"}
 
-Claims of Science Reform
+<!-- > 1 Reproducibility is the cornerstone of science -->
+<!-- > -->
+<!-- > 2 Using data more than once invalidates statistical inference -->
+<!-- > -->
+<!-- > 3 Exploratory research uses 'wonky' statistics -->
+
+<br> > Explore <br> > Pre-register <br> > Test
 
 :::
 
 :::
 
-::: {.column width="80%"}
+::: {.column width="40%"}
 
-<br><br><br><br><br><br>
 
-::: {style="font-size: 80%"}
+::: {style="font-size: 130%"}
 
-> 1 Reproducibility is the cornerstone of science
->
-> 2 Using data more than once invalidates statistical inference 
->
-> 3 Exploratory research uses 'wonky' statistics
 
 :::
 
@@ -110,60 +111,56 @@ Claims of Science Reform
 
 ::: {.notes}
 
-At the time, 2020–2, I had been conscious of Science Reform and HCID and Vis, but also adjacent social science disciplines were starting to publish empirical work with full pre-registrations… 
+Presribed recipe for doing analysis:
 
-about establishing rigour in scientific method as a response to replication crisis –– show slide from Devezer paper with “tenets” of Science Reform
+Exploratory > Pre-register ? Test
 
-And started to do that -- in fact have a draft pre-registration report/proposal looking at autobesity -- changing vehicle sizes and crash frequency and severity -- but this didn't get far. Essentially because our exploratory analysis threw up so many things that undermined our initial plans -- and had we proceeded, would have generated findings that at a high-level would look compelling (p-values etc.), but when properly scrutinised would fall apart
+
+At the time, 2020–2, conscious of Science Reform -- HCID and Vis -- for establising emoirical rigour… as a response to replication crisis –– 
+
+Have a draft pre-registration report/proposal looking at autobesity and injury severity -- but this didn't get far. 
+
+Essentially because our exploratory analysis threw up so many things that undermined our initial plans 
+-- generated findings that at a high-level would look compelling (p-values etc.), but when properly scrutinised would fall apart
+
+
+
+:::
+
+
+---
+
+
+![](img/analysis1.png){.absolute top=80 left=450 width="55%"}
+![](img/analysis2.png){.absolute top=350 left=450 width="51%"}
+
+
+![](img/ga_twitter.png){.absolute top=0 left=0 width="40%"}
+
+::: {.notes}
+
 
 And so instead we pushed our exploratory analysis in various directions, using combinations of models and data graphics in tandem -- in a way that geographers often do, but that you tend to see in data analysis primers.
 
+Resonated in capturing how it is really when doing applied analysis + and try to *demonstrate* this in analysis covered in my paper
 
 :::
 
 
 ---
 
-::: {.columns}
 
-![](img/science_reform_paper.png){.absolute top=0 left=0 width="50%"}
+![](img/challenges_eda.png){.absolute top=100 left=50 width="72%"}
 
-::: {.column width="10%"}
-
-:::
-
-::: {.column width="90%"}
-
-<br><br><br><br><br><br>
-
-::: {style="font-size: 75%"}
-
-> Exploratory research **needs rigor** to serve its intended aim of **facilitating scientific discovery**. Whichever method is selected [...] it needs to be implemented rigorously to **maximize the probability of true discoveries while minimizing the probability of false discoveries**.
-> 
-> Devezer et al. 2021
-
-:::
-
-:::
-
-:::
+![](img/harvard_challenges_eda.png){.absolute top=0 left=720 width="25%"}
 
 
 ::: {.notes}
 
-+ Way in which we were doing this resonated with interesting papers that I was reading, identifying problems with Science Reform without thinking and re-looking at / elevating exploratory analysis approaches – that they are essentially about generating and evaluating models (where most analytic activity happens) ...
+Way of analysis resonated with commentary papers --  broadside / critique at these tenets of science reform ...re-looking at / elevating exploratory analysis approaches – that they are essentially about generating and evaluating models (where most analytic activity happens) ...
 
- broadside / critique at these tenets of science reform – and this quote:
 
 :::
-
-
----
-
-![](img/challenges_eda.png){.absolute top=120 left=50 width="72%"}
-
-![](img/harvard_challenges_eda.png){.absolute top=0 left=0 width="25%"}
-
 
 ---
 
@@ -197,17 +194,39 @@ And so instead we pushed our exploratory analysis in various directions, using c
 
 ---
 
-![](img/analysis1.png){.absolute top=80 left=450 width="55%"}
-![](img/analysis2.png){.absolute top=350 left=450 width="51%"}
+::: {.columns}
 
+![](img/science_reform_paper.png){.absolute top=0 left=0 width="50%"}
 
-![](img/ga_twitter.png){.absolute top=0 left=0 width="40%"}
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="90%"}
+
+<br><br><br><br><br><br>
+
+::: {style="font-size: 75%"}
+
+> Exploratory research **needs rigor** to serve its intended aim of **facilitating scientific discovery**. Whichever method is selected [...] it needs to be implemented rigorously to **maximize the probability of true discoveries while minimizing the probability of false discoveries**.
+> 
+> Devezer et al. 2021
+
+:::
+
+:::
+
+:::
+
 
 ::: {.notes}
 
-Resonated in capturing how it is really when doing applied analysis + and try to *demonstrate* this in analysis covered in my paper
+Call to action: rigor in exploratory work.
 
 :::
+
+
+
 
 ---
 
