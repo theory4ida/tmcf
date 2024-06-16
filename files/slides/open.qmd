@@ -116,7 +116,7 @@ Presribed recipe for doing analysis:
 Exploratory > Pre-register ? Test
 
 
-At the time, 2020–2, conscious of Science Reform -- HCID and Vis -- for establising emoirical rigour… as a response to replication crisis –– 
+At the time, 2020–2, conscious of Science Reform -- for establishing empirical rigour… as a response to replication crisis –– 
 
 Have a draft pre-registration report/proposal looking at autobesity and injury severity -- but this didn't get far. 
 
@@ -140,9 +140,7 @@ Essentially because our exploratory analysis threw up so many things that underm
 ::: {.notes}
 
 
-And so instead we pushed our exploratory analysis in various directions, using combinations of models and data graphics in tandem -- in a way that geographers often do, but that you tend to see in data analysis primers.
-
-Resonated in capturing how it is really when doing applied analysis + and try to *demonstrate* this in analysis covered in my paper
+And so instead we pushed our exploratory analysis in various directions, using combinations of models and data graphics in tandem -- in a way that geographers often do, but that you tend not to see in data analysis primers.
 
 :::
 
