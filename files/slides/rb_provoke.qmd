@@ -1,0 +1,34 @@
+---
+title: "<span style='font-size:1.0em; font-weight: 600;'>RB Provocation </span>"
+format: 
+   revealjs:
+     transition: fade
+     theme: theme/slides-theme.scss
+     css: theme/style.css
+     footer: 'TMCF 2024 | British Library'
+     mainfont: Jost
+     logo: "img/logos/logo_ati.png"
+     resources: 
+       - fonts/iosevka-regular.ttc
+       - fonts/iosevka-semibold.ttc
+       - fonts/iosevka-thin.ttc
+       - fonts/iosevka.ttc
+       
+---
+
+
+```{=html}
+<style>
+.flushright {
+   text-align: right;
+}
+</style>
+```
+
+> <span style='font-size:1.9em; color: #252525; font-weight: 500;'>*Pre-registration locks researchers into facile statistical tests* </span><br><br> <span style='font-size:1.2em; font-weight: 500; color: #252525'>*Without extensive exploratory analysis and visualization, data-driven analysis will lead to weak or straw-men hypotheses*  </span>
+
+---
+
+![](img/jth.png){.absolute top=10 left=0 width="70%"}
+![](img/aap.png){.absolute top=10 left=0 width="70%"}
+

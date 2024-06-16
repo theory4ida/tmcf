@@ -297,6 +297,10 @@ So it is this tension that informs those Provocations – we think they push at 
 
 --- 
 
+
+## <span style='font-size:1.5em; font-weight: 500;'>Navigating the garden of forking paths </span><br><br> <span style='font-size:1.0em; font-weight: 500;'>Theoretical foundations for interactive data analysis in data-driven science</span>
+
+
 <!-- ### via Devezer 2021 -->
 
 <!-- ::: {style="font-size: 75%"} -->
@@ -329,6 +333,10 @@ So it is this tension that informs those Provocations – we think they push at 
 
 <!-- --- -->
 
+
+
+---
+
 ## Themes
 
 ::: {style="font-size: 85%"}
@@ -358,7 +366,7 @@ So it is this tension that informs those Provocations – we think they push at 
 
 ---
 
-# Day 1 : Provocations
+# Provocations and Themes
 
 ::: {.notes}
 
