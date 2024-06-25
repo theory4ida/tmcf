@@ -27,8 +27,90 @@ format:
 
 > <span style='font-size:1.9em; color: #252525; font-weight: 500;'>*Pre-registration locks researchers into facile statistical tests* </span><br><br> <span style='font-size:1.2em; font-weight: 500; color: #252525'>*Without extensive exploratory analysis and visualization, data-driven analysis will lead to weak or straw-men hypotheses*  </span>
 
+::: {.notes}
+
+ In (Transport) Geography, my ‘home’ discipline, the space for doing this form of pre-registration seems quite small.
+
+:::
+
 ---
 
-![](img/jth.png){.absolute top=10 left=0 width="70%"}
-![](img/aap.png){.absolute top=10 left=0 width="70%"}
+![](img/aap.png){.absolute top=0 left=0 width="45%"}
+![](img/jth.png){.absolute top=350 left=0 width="45%"}
+
+![](img/contraflow.png){.absolute top=50 left=550 width="40%"}
+
+::: {.notes}
+
+Our attempts to quantify the impact of contraflow cycling infrastructure on observed cycle volumes and crashes, looking at 20+years of data in London.  
+
+Lots of thinking to derive outcome variables that made sense. 
+
+For example, non-straightforward decisions around infrastructure data; linking estimates of recorded crashes and modelled cycle counts (exposure) to sections of infrastructure; allocating linked crashes to pre- and post- infrastructure periods. 
+
+:::
+
+---
+
+
+![](img/tro.png){.absolute top=20 left=10 width="60%"}
+
+::: {.notes}
+
+* Traffic Regulation Orders
+
+Each of these analysis steps were implemented quite differently to what was laid out in our initial research design. 
+
+:::
+
+---
+
+![](img/pre_post1.png){.absolute top=0 left=10 width="70%"}
+
+
+::: {.notes}
+
+Separate from this was the muddiness of the ‘global’ statistics used to claim findings: those estimating change in cycling rates and crash risk pre- and post- infrastructure. 
+
+When disaggregating by different context variables, we found that these estimated rates varied enormously, including directionally. 
+
+:::
+
+---
+
+![](img/pre_post2.png){.absolute top=0 left=10 width="70%"}
+
+
+::: {.notes}
+
+ The assumption baked into the statistics presented in our analysis was that random differences in context ‘balance out’ in our global-level statistic.  
+ 
+ It didn’t take much thinking-time for us to loose faith in this assumption. 
+ 
+ So key findings were presented with corresponding levels of humility; our analysis of cycling volumes and contraflow emphasised more descriptive elements of the analysis.
+
+:::
+
+---
+
+> <span style='font-size:1.9em; color: #252525; font-weight: 500;'>*Pre-registration locks researchers into facile statistical tests* </span><br><br> <span style='font-size:1.2em; font-weight: 500; color: #252525'>*Without extensive exploratory analysis and visualization, data-driven analysis will lead to weak or straw-men hypotheses*  </span>
+
+::: {.notes}
+
+
+The provocation gives license to doing and publishing exploratory work that seeks to describe processes, interactions, relationships in rich detail. 
+
+
+This emphasis on rich description might seem overly “qualitative” and at odds with the scientific method. 
+
+In fact, it invites us to think causally about the phenomena under observation. 
+
+By characterising in detail the context under which some events happen, and do not happen, we naturally begin to think about how events were generated, the regularity with which they appear. 
+
+The challenge becomes how to represent (tools) and evaluate (statistical models) this detailed /rich space of context-dependent outcomes -- some of which we don't have data for -- in a reasonably formal, standardised and accessible way. 
+
+
+:::
+
+---
 
