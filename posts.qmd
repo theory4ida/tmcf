@@ -1,0 +1,12 @@
+---
+title: "Posts"
+subtitle: "Theory and Methods Challenge Fortnight, Alan Turing Institute" 
+title-block-banner: "#495057"
+title-block-banner-color: "#f8f9fa"
+listing: 
+  contents: posts
+  type: default
+  sort: "date desc" 
+  categories: true  
+  feed: true
+---
