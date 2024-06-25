@@ -1,0 +1,285 @@
+---
+title: "Humans all the way down: statistical reflection and self-critique for interactive data analysis"
+description: "This blogpost came out from TMCF 2024 at the Turing Institute and is a result of discussions and thinking over the course of a couple of days."
+author:
+- name: Di Cook
+  url: http://www.dicook.org
+- name: Rachel Franklin
+  url: https://www.rachelfranklin.org/
+- name: Cagatay Turkay
+  url: https://warwick.ac.uk/fac/cross_fac/cim/people/cagatay-turkay/
+- name: Mari-Cruz Villa-Uriol
+  url: https://www.sheffield.ac.uk/cs/people/academic/mari-cruz-villa-uriol
+- name: Levi Wolf
+  url: https://ljwolf.org
+date: 2024-06-25
+title-block-banner: "#495057"
+title-block-banner-color: "#f8f9fa"
+categories: 
+citation: 
+  url: https://theory4ida.github.io/tmcf/posts/03-cultures/ 
+image: archives.png 
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+![](archives.png)
+
+> The Census Bureau tabulates same-sex couples in both the American Community Survey (ACS) and the Decennial Census. Two questions are used to identify same-sex couples: relationship and sex. The agency follows edit rules that are used to change data values for seemingly contradictory answers. The edit rules for combining information from relationship and sex have evolved since the category of unmarried partner was added in 1990. **In that census, if a household consisted of a married couple and both spouses reported the same sex, the relationship category remained husband or wife, but the sex of the partner who reported being a spouse to the householder was changed** [our emphasis].
+>
+> [DeMaio et al., 2023](https://academic.oup.com/poq/article/77/S1/145/1877806)
+
+
+What does data-driven science that is critical, reflexive, and methodologically robust look like? How can we operationalise such a mindset through structured methods and practices to foster different expectations for data-driven science and scientists? Interactive data analysis[^1] by definition offers approaches that encourage an iterative dialogue between analyst, models, and data, making the most of machine capability and human participation and facilitating the interrogation of context and situatedness of data and analytical workflows. Used mindfully and deliberately, interactivity is a strength—not a threat—for validity, robustness, and value. In this blog, we highlight reasons why analysis cannot be left solely to the machines and provide concrete suggestions for guided interactivity: ways in which analysts can probe themselves and their analytical findings to become habituated to asking: How can I be sure I have found something? How can I be more certain what I have found is notable?
+
+
+## Interaction — Taking time to look around
+
+Within a broader data analysis framework, _interaction_ is a moment of communication—a touchpoint—that happens via a graphic, table, metric, summary statistic, an estimated parameter or a prediction. It’s usually facilitated by coding (as in literate programming), direct manipulation using graphics (as in multiple coordinated views), or through a user-interface. As such, _interactive data analysis _encourages an ongoing dialogue between analyst, analysis, and data. Each touchpoint presents an opportunity to stop and reflect: What have we learned? What might we still learn? How does this extend our imagination, understanding, and vision of the world we inhabit? Amidst pressure to find answers and make decisions, interaction prompts deliberation, curiosity, and reflection.   
+
+
+## Data-driven science starts with data
+
+Data is a powerful but imperfect lens for making sense, and increasing our understanding, of the world around us[^2][^3]. Human decisions determine (and constrain) the who, what, when, where, and why[^4] of data—as well as the mechanics of how phenomena and characteristics are measured. The way data is collected substantially determines what inferences can be made, which is sometimes ignored by the human analyst. Humans occasionally apply subjective filters to collected data, as well. For example, the widely publicized gender gap in math, measured with PISA data, is not universal among 15 year olds in numerous countries (however a_ reversed _reading gap _is_ observed)—and the effect is exaggerated from an average gap of 0–20 points out of a full numerical range of 0–1000. The effect is miniscule, and individual-to-individual variation dominates[^5]. 
+
+Automated validation[^6] is commonly implemented to prevent mistakes, but, at the root, human decisions guide what to check and what constitutes a mistake. Moreover, omissions in the original data collection can inhibit inference. For example, making population-level references from data requires specifying the population[^7]. It’s not easy, and it may be uncomfortable, to spell out the population. It may also result in awkward realizations, like that half the population was not measured. Other times, for example with animal sightings, values are only recorded when a human is present even though most events happened with no humans looking[^8] and substantial adjusting is required to provide some assurance of reliability of the inferences made[^9]. Transparency[^10] in data collection and application helps illuminate these issues. 
+
+There are multiple analytical starting points when working with data. A data scientist or analyst might commence directly from the data[^11], exploring potential relationships and patterns to determine what stories or narratives can be uncovered. More traditionally, one might come to the data with hypotheses in hand, seeking to test whether theory-based expectations can be supported. To infer from data and analysis, self-critique encourages questioning. Who and what is captured by the data and what is missing? How do method choices and presentation of results reinforce, obfuscate, or illuminate findings? When are results robust and ready to be shared? When should we stop? 
+
+
+## Humans all the way down
+
+Human-in-the-loop interactive data analysis is a helpful framework for data science- and AI-driven research, encouraging those explicit touchpoints between researcher and computer in which expert knowledge can shape and feed back into an iterative analytical process guided by real-world understanding. Although an appealing solution to existing problems, the human-in-the-loop proposition relies on an implicit null model of human-_not_-in-the-loop: that without deliberate touchpoints, data-driven research is somehow insulated from human fallibility (and expertise). This is patently not the case. Human fingerprints are all over data science applications, even when machines have guided the process from start to finish.
+
+
+### Humans are in the data loop
+
+Although some shortcomings of data are commonly acknowledged, like bias, representation, or missingness, there is less acknowledgement that, particularly for surveys or administrative data, data are created by humans. Humans decide what questions to ask, what the answer space looks like, how to convert raw answers into variables, measures, and indices, and what will be the unit of observation. The example at the top of this post illustrates how a massive and ongoing data collection mechanism like the US decennial census failed to count same-sex households in the late 20th century. The option not only didn’t appear as an element in the answer space, but [responses were changed for those households where both adults reported the same sex, on the assumption that error was involved](https://academic.oup.com/poq/article/77/S1/145/1877806)[^13]. In this case, human researchers not only failed to conceptualise the full space of real household behaviours, but also amended the data to fit a set of assumptions. Similar blinders or constraints exist for household structures that assume marriage, or ethnicity and race categories that force respondents into predefined categories, or sex/gender questions that fail to reflect actual lived identities.
+
+
+### Humans are in the theory loop
+
+Theory is often assumed to be less relevant for data-driven research—the idea that big data (and big code) renders theory obsolete[^14]. This can also be read as another form of blindness to humans in the loop, as theory is, without argument, created by humans. Wait, you say, how can theory impact data-driven research in which theory plays no explicit role? First, theory is what determines the content of our data. We know to collect data about race, gender, age, educational attainment, and geographical location (as just a few examples) _precisely because_ theory tells us these are important for understanding outcomes, behaviors, and preferences. Second, the questions we ask of our data—even in exploration—may not be testing theories, but are certainly theory-driven. When handed wage or income data, it is theory that whispers in our ear, “how does this compare across genders?”
+
+
+### And humans are in the methods loop, too
+
+Ok, but surely the methods we employ—software packages, models, and statistics—are free of humans? Not quite. Methods are created and implemented by humans in order to solve problems and answer questions generated by humans. This necessarily means that the types of analysis (and therefore eventual answers or findings) are constrained by the tools we have at our disposal. From the development of statistics to compare groups to innovative types of data visualisation (like hexagon maps[^15] over traditional choropleth maps), what at first glance might appear to be an off-the-shelf machine procedure is actually a human-in-the-loop solution.
+
+
+## Why human involvement matters
+
+In a nutshell, robust inference is difficult. One explanation for this is the “garden of forking paths” metaphor[^16] which illustrates the challenges of interactive hypothesis testing and the blurry boundaries between explanatory and confirmatory analysis. The challenge is, however, much more extensive: implicit choices embedded in theory, data, and methods also hamper inference. Moreover, the wider contexts in which data analysis takes place, whether academic, governmental, industry, or media, privilege speed and certainty of findings. Academic systems, including publication and promotion, reward quantity, innovation, and conformity, meaning there is little if any incentive for introspection, replication, or any other approach that might reinforce confidence in findings. 
+
+The assumption is that humans get in the way of robust inference—that, consciously and subconsciously, we make choices that facilitate the (occasionally spurious) detection of patterns, signals, and answers. We know to shine a spotlight on model specification and interpretation, whether exploratory or confirmatory—obvious touchpoints where humans and machines are in contact—as areas vulnerable to analyst bias. To go further and argue that human touchpoints exist at every stage of research, from theory to data to methods, is to invite capitulation. Perhaps robust analysis is impossible. Surrender is not what we are proposing, however! We are confident analysts can respond creatively to challenges, once they’re identified. To do this, though, we need to become better at academic self-reflection and also take greater advantage of a wide range of inference support approaches. We have some suggestions:
+
+
+### Be a “_social”_ scientist: talk to people!
+
+One of the easiest ways to stress-test data analysis is _to talk to people about it_! Getting feedback is central to improvement. Write a working paper, post it on [ArXiV](https://arxiv.org)/[OSF](https://osf.io), publish code as an open-source software package, and talk about the work at conferences and on social media. Indeed, the things that we worry about in analysis or research are often quite different from the stuff that other people might find concerning. It’s useful to note here that just _posting_ (or _talking_) about the work is often not enough to actually attract feedback; teaching people how to use one’s open source code might be necessary in order to get feedback on the ideas it executes. More informal “brown-bag” or “workshop”-style events are often designed for this kind of structured feedback, and tools like Margins/Librarian from Fermats Library[^17] or Hypothesis[^18] can help facilitate online input.
+
+At the same time, it is important to acknowledge that social media and conferences are not a cure-all for gaining perspective. Travel to conferences can be expensive and time-consuming, with clear disparities in access. Furthermore, conferences can be competitive, high-stakes environments for some, making it difficult to both give and receive effective and constructive critique. Social media also has some serious drawbacks[^19], in part due to the imperative to develop and maintain a ‘personal brand’ on those platforms.[^20] At a higher level, seeking input from others can make it difficult to find a balance between cultivating an individual voice and learning to adopt the perspectives and norms within a research community. This is especially the case for early career researchers. Thus, it can be helpful to cultivate methods to support internal self-reflection.
+
+
+### Internalize a critical perspective
+
+One common practice is to imagine how someone else might react to our work. This might be a PhD or work supervisor (or another mentor) voicing common questions or routine self-checks: _Have you plotted the data first? Have you tried to solve the problem yourself before reaching for something off the shelf? Has someone else solved it differently? Why did the previous work on this topic miss what you’re proposing? _This also might come in the form of conceptualizing a researcher _persona_, a fictional person who works from a given research background (like an “experimentalist” or a “data scientist”), who critiques work from a particular angle. This can help identify weaknesses in research design, or identify places where analytical choices might merit more justification. This can be quite useful as a mode of self-reflection, and has its place in developing an analytical voice and sense of self. 
+
+Not everybody has had such a mentor or, if they have one, it might be hard to internalize their voice positively. Mentoring is quite important, but it can be difficult to cultivate good mentor-mentee relationships.[^21] When thinking about research personas, critiques might be too _total_ to effectively improve a draft. An old joke comes to mind: 
+
+A driver, tired and lost, pulls over to the side of the road and asks a shepherd: 
+
+> “How do I get to town?” _
+
+The shepherd responds, 
+
+> “Well, I wouldn’t start from here!”
+
+Indeed, if an analyst _knew_ that analysis was problematic, they might ostensibly change how they executed that part of the research in the first place. Of course, the analyst _doesn’t_ know what they don’t know until they try to gain perspective. This suggests that *surprise* is essential to effective self-reflection—learning about the ways you can improve will involve some kind of realization, a recognition of something previously unknown, and is fundamental to effective self-reflection. 
+
+
+### Leverage randomness and randomization
+
+Another way to elicit new perspectives is to invoke randomness[^22], like an _Oblique Strategies_[^23] for researchers. In its original form, this_ _is a deck of cards intended to help artists get over creative blocks. Each card has a different short statement used as a prompt for engagement[^24]. The card might suggest to “Discover the recipes you are using and abandon them” or “Honor thy error as a hidden intention”.  These are useful provocations to escape a creative block. They are unlikely to directly help determine a best course of action during a data analysis, or decide on a better model, but are an effective technique to imagine what this relationship might look like if there was really nothing going on[^25][^26], or vary if a different sample was taken. Invoking randomness includes permuting values[^27], bootstrapping[^28] the sample, creating cross-validation folds[^29][^30], simulating[^31] from a distribution—all mindsets and tools that enable the development of perspective on data patterns and provide confidence in interpretations. 
+
+
+### Consider granularity
+
+One pattern of thought might be to use more fine-grained explanations: what specific observations are necessary for a result to hold? There are a few new statistical approaches that can help identify, for example, how much of a dataset is needed in order to preserve a core finding[^32] or how “serious” an omitted confounder would have to be before an effect disappears[^33]. In either case, these statistical tools help identify _why_ a result arises from a given dataset, characterize the conditions under which they might not, and find what new data might be needed (or analyses conducted) in order to make the work more robust. 
+
+
+### Identify saturation
+
+How much analysis is enough? The question of when to stop collecting data, when to stop estimating models, or when a question has been answered—when to stop fiddling around with analytical details, in short—is one faced across the entire research continuum. An approach widely adopted in qualitative research is that of saturation[^34]: research can stop when no new information or insight is elicited from additional data collection or analysis. This framework is also generally (but cautiously!) applicable to data-driven science. Here the idea is less that analysis stops as soon as a satisfactory answer is found (bad; don’t do this), but rather that a variety of approaches is tried until broadly the same findings emerge across the board. At that point saturation is reached.
+
+
+### Use counterfactuals and what-if scenarios
+
+Robust inference depends on stress-testing analytical approaches, or theoretical assumptions[^35], and the ability to interpret black-box models[^36]. Across research domains, the observed analytical relationships between variables can result from a range of underlying processes. Student test scores that increase as class size shrinks[^37], for example, may result from a direct relationship between the two variables, but might also be attributable to the wealth of the school district, characteristics of students, or a host of other intervening/underlying factors. From a policy standpoint, this is a problem. Where and how should interventions be designed? A counterfactual[^38] mindset encourages the analyst to consider alternative stories or narratives and to assess whether, and how, analytical findings change when parts of the story are changed. This also relates to explainable artificial intelligence (XAI) methods for complex models[^39], which articulate how a model makes an individual prediction.  
+
+
+### See it to believe it
+
+Data visualisation employs the human visual system to interpret relationships, enabling summaries that are more elaborate than is capable from simple numerical statistics. It is useful in every stage of interactive data analysis, from data exploration to diagnosing and summarising model fit. New statistical thinking in visualisation methods lifts this area into the domain of making inference for unconventional data scenarios and evaluating robustness of findings. As a baseline, the grammar of graphics[^40][^41] provides a framework that bridges statistical thinking and data graphics. From this basis, new methods are emerging. Line-ups[^42][^43] nudge the viewer to check whether observed relationships are really there. Causal quartets[^44], which provide a visual “check” on the mechanics of average treatment effects, can help analysts understand the different combinations of individual effects that produce average effects. Hypothetical outcome plots[^45] enable the analyst to assess what the plot might look like under different samples. Rashomon sets[^46] are useful for instances in which predictive models offer similar performance, but alternative underlying explanations. One element common to these visual approaches is that they serve to encourage reflection, multiplicity of perspectives, and nuanced interpretation, supporting and cautioning interpretation of results and aiding inference where classical statistical methods do not apply.
+
+
+### Embrace uncertainty
+
+Modelling is an uncertain endeavour: data are uncertain; models provide (uncertain) estimates of one potential version of reality; and individual point estimates are uncertain. Researchers and analysts, however, work in truths and certainties, generating inevitable tension between data-driven analysis and real-world applications. What to do? Formally, it’s important to embrace opportunities to foreground uncertainty of findings and this can be done visually, numerically, and narratively. More informally, practicing talking about findings as one plausible version of a story _out of many_ performs a wider service to all communities producing and consuming data-driven analysis.
+
+
+### Record provenance and document analytic journeys
+
+The human-machine partnership underlying interactive data analysis needs to be documented as a means to ensure reproducibility, facilitate validation, and increase trust—not only in the findings but in the journey itself[^47]. The documentation and provenance of these interactions can be performed at different levels of detail, including with data and methods, as well as how results are validated and reported. The documentation of the analytic journey needs to happen at multiple levels of detail, from coarse high-level representations of the journey to fine-grained, low-level, representations of the analyst’s journey. Ensuring that these are explored in context is also important.
+
+
+## Closing reflections
+
+Despite the rise of artificial intelligence, human intelligence (and fallibility) are evergreen. Human actions are ubiquitous in every part of data analysis, and humans are active players in this game. With the increasing prevalence of open-source tools and open research, everyone has the power to do data analysis. Under these conditions making reliable inferences presents ongoing challenges. Creating spaces in which to try out alternatives facilitates creativity, interactivity, and surprise in data analysis—and, in the end, more robust inference. Building in techniques for self-reflection and critique is more necessary than ever to help ensure confidence in data analysis results, allowing the data to say what it means.
+
+
+<!-- Footnotes themselves at the bottom. -->
+
+
+[^1]:
+     Becker, R. and Chambers, J. (1984) S: An Interactive Environment for Data Analysis and Graphics, Chapman and Hall/CRC.
+
+[^2]:
+     Donoho, D. (2017). 50 Years of Data Science. Journal of Computational and Graphical Statistics, 26(4), 745–766. https://doi.org/10.1080/10618600.2017.1384734.
+
+[^3]:
+     Wickham, H., Çetinkaya-Rundel, M. & Grolemund, G. (2023). R for Data Science (2e). O'Reilly Media.
+
+[^4]:
+     Çetinkaya-Rundel, M., Dogucu, M. & Rummerfield, W. (2022) The 5Ws and 1H of Term Projects in the Introductory Data Science Classroom, https://doi.org/10.52041/serj.v21i2.37.
+
+[^5]:
+     https://www.oecd-ilibrary.org/sites/f56f8c26-en/index.html?itemId=/content/component/f56f8c26-en
+
+[^6]:
+     Broman, K. W., & Woo, K. H. (2018). Data Organization in Spreadsheets. The American Statistician, 72(1), 2–10. https://doi.org/10.1080/00031305.2017.1375989.
+
+[^7]:
+     Swinscow, T. D. V. (2009) Statistics at Square One (11e), BMJ Books. (Chapter 3). 
+
+[^8]:
+     Belbin L, Wallis E, Hobern D, Zerger A (2021) The Atlas of Living Australia: History, current state and future directions. Biodiversity Data Journal 9: e65023. https://doi.org/10.3897/BDJ.9.e65023
+
+[^9]:
+     MacColl, C., Leseberg, N. P., Seaton, R., Murphy, S. A., & Watson, J. E. M. (2023). Rapid and recent range collapse of Australia’s Red Goshawk Erythrotriorchis radiatus. Emu - Austral Ornithology, 123(2), 93–104. https://doi.org/10.1080/01584197.2023.2172735
+
+[^10]:
+     Malički M, Aalbersberg IJ, Bouter L, Mulligan A, Ter Riet G. (2023) Transparency in Conducting and Reporting Research: A survey of authors, reviewers, and editors across scholarly disciplines. PLoS One. 18(3):e0270054. doi: 10.1371/journal.pone.0270054.
+
+[^11]:
+     Wickham, H., Lawrence, M., Cook, D. et al. (2009) The Plumbing of Interactive Graphics. Computational Statistics 24, 207–215, https://doi.org/10.1007/s00180-008-0116-x
+
+[^12]:
+     [https://en.wikipedia.org/wiki/Turtles_all_the_way_down](https://en.wikipedia.org/wiki/Turtles_all_the_way_down)
+
+[^13]:
+    DeMaio, T., Bates, N., and O’Connell, M. (2013). Exploring Measurement Error Issues In the Reporting of Same-Sex Couples. _Public Opinion Quarterly_ 77(S1): 145-158.  [https://doi.org/10.1093/poq/nfs066](https://doi.org/10.1093/poq/nfs066)
+
+[^14]:
+     https://www.wired.com/2008/06/pb-theory/
+
+[^15]:
+     https://srkobakian.github.io/sugarbag/index.html
+
+[^16]:
+     http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf
+
+[^17]:
+     [https://fermatslibrary.com/](https://fermatslibrary.com/)
+
+[^18]:
+     [https://web.hypothes.is/](https://web.hypothes.is/)
+
+[^19]:
+     [https://thesiswhisperer.com/2023/07/10/academicenshittification/](https://thesiswhisperer.com/2023/07/10/academicenshittification/)
+
+[^20]:
+     Whitmer, J. M. You are your brand: self-branding and the marketization of self. _Sociology Compass_ 13(3): e12662. [https://doi.org/10.1111/soc4.12662](https://doi.org/10.1111/soc4.12662)
+
+[^21]:
+     https://www.science.org/content/article/improving-mentoring-academia-requires-collective-effort.
+
+[^22]:
+     http://library.isical.ac.in:8080/jspui/bitstream/10263/5519/1/C%20R%20Rao%20speech.pdf.
+
+[^23]:
+     https://en.wikipedia.org/wiki/Oblique_Strategies.
+
+[^24]:
+     You can try drawing a few of these yourself here: http://stoney.sb.org/eno/oblique.html.
+
+[^25]:
+     Buja A.,  Cook D., Hofmann H.,  Lawrence M., Lee E.-K., Swayne D. F. and Wickham H. (2009) Statistical inference for exploratory data analysis and model diagnostics, Phil. Trans. R. Soc. A.3674361–4383
+    http://doi.org/10.1098/rsta.2009.0120.
+
+[^26]:
+     Wickham, H., Cook, D., Hofmann, H. and Buja, A., "Graphical inference for infovis," in IEEE Transactions on Visualization and Computer Graphics, vol. 16, no. 6, pp. 973-979, Nov.-Dec. 2010, doi: 10.1109/TVCG.2010.161.
+
+[^27]:
+     Good, P. (1994) Permutation Tests: A Practical Guide to Resampling Methods for Testing Hypotheses, Springer.
+
+[^28]:
+     Efron, B. (1979) Bootstrap Methods: Another Look at the Jackknife. Ann. Statist. 7 (1) 1 - 26, January, 1979. https://doi.org/10.1214/aos/1176344552.
+
+[^29]:
+     Allen, D. M. (1974). The Relationship between Variable Selection and Data Augmentation and a Method for Prediction, Technometrics. 16 (1): 125–127. doi:10.2307/1267500.
+
+[^30]:
+     Stone, M. (1974). Cross-Validatory Choice and Assessment of Statistical Predictions, Journal of the Royal Statistical Society, Series B (Methodological). 36 (2): 111–147. doi:10.1111/j.2517-6161.1974.tb00994.x.
+
+[^31]:
+     Sokolowski, J. A., Banks, C. M. (2009). Principles of Modeling and Simulation. John Wiley & Son. p. 6. ISBN 978-0-470-28943-3.
+
+[^32]:
+     Broderick, T., Giordano, R., and Meager, R. (2023). An automatic finite-sample robustness metric: when can dropping a little data make a big difference. ArXiV preprint: https://arxiv.org/abs/2011.14999
+
+[^33]:
+     Cinelli, C. and Hazlett, C. (2019). Making sense of sensitivity: extending omitted variable bias. _Journal of the Royal Statistical Society, Series B: Statistical Methodology_ 82(1), 39-67. [https://doi.org/10.1111/rssb.12348](https://doi.org/10.1111/rssb.12348)
+
+[^34]:
+     [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993836/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993836/)
+
+[^35]:
+     Greco, L., Ventura, L. (2011) Robust inference for the stress–strength reliability. Stat Papers 52, 773–788, https://doi.org/10.1007/s00362-009-0286-9.
+
+[^36]:
+     Molnar, C. (2024) Interpretable Machine Learning, https://christophm.github.io/interpretable-ml-book/
+
+[^37]:
+     Cho, H., Glewwe, P., Whitler, M. (2012) Do reductions in class size raise students’ test scores? Economics of Education Review, Volume 31, Issue 3, Pages 77-95, https://doi.org/10.1016/j.econedurev.2012.01.004.
+
+[^38]:
+     DeMartno, G.F. (2021) The specter of irreparable ignorance: counterfactuals and causality in economics. Review of Evolutionary Political Economy 2: 253-276.  https://doi.org/10.1007/s43253-020-00029-w
+
+[^39]:
+     Biecek P (2018). “DALEX: Explainers for Complex Predictive Models in R.” Journal of Machine Learning Research, 19(84), 1-5. https://jmlr.org/papers/v19/18-416.html.
+
+[^40]:
+     Wilkinson, L. (2010), The grammar of graphics. WIREs Comp Stat, 2: 673-677. https://doi.org/10.1002/wics.118
+
+[^41]:
+     Hadley Wickham. (2010) A layered grammar of graphics.Journal of Computational and Graphical Statistics, vol. 19, no. 1, pp. 3–28.
+
+[^42]:
+     Buja A.,  Cook D., Hofmann H.,  Lawrence M., Lee E.-K., Swayne D. F. and Wickham H. (2009) Statistical inference for exploratory data analysis and model diagnostics, Phil. Trans. R. Soc. A.3674361–4383
+    http://doi.org/10.1098/rsta.2009.0120.
+
+[^43]:
+     Wickham, H., Cook, D., Hofmann, H. and Buja, A., "Graphical inference for infovis," in IEEE Transactions on Visualization and Computer Graphics, vol. 16, no. 6, pp. 973-979, Nov.-Dec. 2010, doi: 10.1109/TVCG.2010.161.
+
+[^44]:
+     Gelman, A., Hullman, J. and Kennedy, L. (2023)  Causal quartets: Different ways to attain the same average treatment effect, [https://arxiv.org/abs/2302.12878](https://arxiv.org/abs/2302.12878). 
+
+[^45]:
+     A. Kale, F. Nguyen, M. Kay and J. Hullman, Hypothetical Outcome Plots Help Untrained Observers Judge Trends in Ambiguous Data in IEEE Transactions on Visualization & Computer Graphics, vol. 25, no. 01, pp. 892-902, 2019.
+    doi: 10.1109/TVCG.2018.2864909.
+
+[^46]:
+     Biecek, P., Baniecki, H., Krzyziński, M., & Cook, D. (2024). Performance Is Not Enough: The Story Told by a Rashomon Quartet. Journal of Computational and Graphical Statistics, 1–4. https://doi.org/10.1080/10618600.2024.2344616
+
+[^47]:
+     Becker, G., Barr, C., Gentleman, R., & Lawrence, M. (2017). Enhancing Reproducibility and Collaboration via Management of R Package Cohorts. Journal of Statistical Software, 82(1), 1–18. https://doi.org/10.18637/jss.v082.i01
