@@ -2,8 +2,9 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/models/index.html",
-      "/posts/tools/index.html"
+      "/posts/01-models/index.html",
+      "/posts/02-tools/index.html",
+      "/posts/03-cultures/index.html"
     ]
   }
 ]

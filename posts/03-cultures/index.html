@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Di Cook">
+<meta name="author" content="Rachel Franklin">
+<meta name="author" content="Cagatay Turkay">
+<meta name="author" content="Mari-Cruz Villa-Uriol">
+<meta name="author" content="Levi Wolf">
+<meta name="dcterms.date" content="2024-06-25">
+<meta name="description" content="This blogpost came out from TMCF 2024 at the Turing Institute and is a result of discussions and thinking over the course of a couple of days.">
+
+<title>TMCF 2024 - Humans all the way down: statistical reflection and self-critique for interactive data analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: #f8f9fa;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: #f8f9fa;
+background: #495057;
+      }
+</style>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">TMCF 2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../challenge/"> 
+<span class="menu-text">Challenge</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../programme/"> 
+<span class="menu-text">Programme</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../lecture/"> 
+<span class="menu-text">Public Lecture</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../team/"> 
+<span class="menu-text">Team</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://twitter.com/gisruk/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Humans all the way down: statistical reflection and self-critique for interactive data analysis</h1>
+                  <div>
+        <div class="description">
+          This blogpost came out from TMCF 2024 at the Turing Institute and is a result of discussions and thinking over the course of a couple of days.
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="http://www.dicook.org">Di Cook</a> </p>
+               <p><a href="https://www.rachelfranklin.org/">Rachel Franklin</a> </p>
+               <p><a href="https://warwick.ac.uk/fac/cross_fac/cim/people/cagatay-turkay/">Cagatay Turkay</a> </p>
+               <p><a href="https://www.sheffield.ac.uk/cs/people/academic/mari-cruz-villa-uriol">Mari-Cruz Villa-Uriol</a> </p>
+               <p><a href="https://ljwolf.org">Levi Wolf</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 25, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#interaction-taking-time-to-look-around" id="toc-interaction-taking-time-to-look-around" class="nav-link active" data-scroll-target="#interaction-taking-time-to-look-around">Interaction — Taking time to look around</a></li>
+  <li><a href="#data-driven-science-starts-with-data" id="toc-data-driven-science-starts-with-data" class="nav-link" data-scroll-target="#data-driven-science-starts-with-data">Data-driven science starts with data</a></li>
+  <li><a href="#humans-all-the-way-down" id="toc-humans-all-the-way-down" class="nav-link" data-scroll-target="#humans-all-the-way-down">Humans all the way down</a>
+  <ul class="collapse">
+  <li><a href="#humans-are-in-the-data-loop" id="toc-humans-are-in-the-data-loop" class="nav-link" data-scroll-target="#humans-are-in-the-data-loop">Humans are in the data loop</a></li>
+  <li><a href="#humans-are-in-the-theory-loop" id="toc-humans-are-in-the-theory-loop" class="nav-link" data-scroll-target="#humans-are-in-the-theory-loop">Humans are in the theory loop</a></li>
+  <li><a href="#and-humans-are-in-the-methods-loop-too" id="toc-and-humans-are-in-the-methods-loop-too" class="nav-link" data-scroll-target="#and-humans-are-in-the-methods-loop-too">And humans are in the methods loop, too</a></li>
+  </ul></li>
+  <li><a href="#why-human-involvement-matters" id="toc-why-human-involvement-matters" class="nav-link" data-scroll-target="#why-human-involvement-matters">Why human involvement matters</a>
+  <ul class="collapse">
+  <li><a href="#be-a-social-scientist-talk-to-people" id="toc-be-a-social-scientist-talk-to-people" class="nav-link" data-scroll-target="#be-a-social-scientist-talk-to-people">Be a “<em>social”</em> scientist: talk to people!</a></li>
+  <li><a href="#internalize-a-critical-perspective" id="toc-internalize-a-critical-perspective" class="nav-link" data-scroll-target="#internalize-a-critical-perspective">Internalize a critical perspective</a></li>
+  <li><a href="#leverage-randomness-and-randomization" id="toc-leverage-randomness-and-randomization" class="nav-link" data-scroll-target="#leverage-randomness-and-randomization">Leverage randomness and randomization</a></li>
+  <li><a href="#consider-granularity" id="toc-consider-granularity" class="nav-link" data-scroll-target="#consider-granularity">Consider granularity</a></li>
+  <li><a href="#identify-saturation" id="toc-identify-saturation" class="nav-link" data-scroll-target="#identify-saturation">Identify saturation</a></li>
+  <li><a href="#use-counterfactuals-and-what-if-scenarios" id="toc-use-counterfactuals-and-what-if-scenarios" class="nav-link" data-scroll-target="#use-counterfactuals-and-what-if-scenarios">Use counterfactuals and what-if scenarios</a></li>
+  <li><a href="#see-it-to-believe-it" id="toc-see-it-to-believe-it" class="nav-link" data-scroll-target="#see-it-to-believe-it">See it to believe it</a></li>
+  <li><a href="#embrace-uncertainty" id="toc-embrace-uncertainty" class="nav-link" data-scroll-target="#embrace-uncertainty">Embrace uncertainty</a></li>
+  <li><a href="#record-provenance-and-document-analytic-journeys" id="toc-record-provenance-and-document-analytic-journeys" class="nav-link" data-scroll-target="#record-provenance-and-document-analytic-journeys">Record provenance and document analytic journeys</a></li>
+  </ul></li>
+  <li><a href="#closing-reflections" id="toc-closing-reflections" class="nav-link" data-scroll-target="#closing-reflections">Closing reflections</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+
+<p><img src="archives.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>The Census Bureau tabulates same-sex couples in both the American Community Survey (ACS) and the Decennial Census. Two questions are used to identify same-sex couples: relationship and sex. The agency follows edit rules that are used to change data values for seemingly contradictory answers. The edit rules for combining information from relationship and sex have evolved since the category of unmarried partner was added in 1990. <strong>In that census, if a household consisted of a married couple and both spouses reported the same sex, the relationship category remained husband or wife, but the sex of the partner who reported being a spouse to the householder was changed</strong> [our emphasis].</p>
+<p><a href="https://academic.oup.com/poq/article/77/S1/145/1877806">DeMaio et al., 2023</a></p>
+</blockquote>
+<p>What does data-driven science that is critical, reflexive, and methodologically robust look like? How can we operationalise such a mindset through structured methods and practices to foster different expectations for data-driven science and scientists? Interactive data analysis<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> by definition offers approaches that encourage an iterative dialogue between analyst, models, and data, making the most of machine capability and human participation and facilitating the interrogation of context and situatedness of data and analytical workflows. Used mindfully and deliberately, interactivity is a strength—not a threat—for validity, robustness, and value. In this blog, we highlight reasons why analysis cannot be left solely to the machines and provide concrete suggestions for guided interactivity: ways in which analysts can probe themselves and their analytical findings to become habituated to asking: How can I be sure I have found something? How can I be more certain what I have found is notable?</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Becker, R. and Chambers, J. (1984) S: An Interactive Environment for Data Analysis and Graphics, Chapman and Hall/CRC.</p></div></div><section id="interaction-taking-time-to-look-around" class="level2">
+<h2 class="anchored" data-anchor-id="interaction-taking-time-to-look-around">Interaction — Taking time to look around</h2>
+<p>Within a broader data analysis framework, <em>interaction</em> is a moment of communication—a touchpoint—that happens via a graphic, table, metric, summary statistic, an estimated parameter or a prediction. It’s usually facilitated by coding (as in literate programming), direct manipulation using graphics (as in multiple coordinated views), or through a user-interface. As such, _interactive data analysis _encourages an ongoing dialogue between analyst, analysis, and data. Each touchpoint presents an opportunity to stop and reflect: What have we learned? What might we still learn? How does this extend our imagination, understanding, and vision of the world we inhabit? Amidst pressure to find answers and make decisions, interaction prompts deliberation, curiosity, and reflection.</p>
+</section>
+<section id="data-driven-science-starts-with-data" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="data-driven-science-starts-with-data">Data-driven science starts with data</h2>
+<p>Data is a powerful but imperfect lens for making sense, and increasing our understanding, of the world around us<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Human decisions determine (and constrain) the who, what, when, where, and why<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> of data—as well as the mechanics of how phenomena and characteristics are measured. The way data is collected substantially determines what inferences can be made, which is sometimes ignored by the human analyst. Humans occasionally apply subjective filters to collected data, as well. For example, the widely publicized gender gap in math, measured with PISA data, is not universal among 15 year olds in numerous countries (however a_ reversed _reading gap <em>is</em> observed)—and the effect is exaggerated from an average gap of 0–20 points out of a full numerical range of 0–1000. The effect is miniscule, and individual-to-individual variation dominates<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Donoho, D. (2017). 50 Years of Data Science. Journal of Computational and Graphical Statistics, 26(4), 745–766. https://doi.org/10.1080/10618600.2017.1384734.</p></div><div id="fn3"><p><sup>3</sup>&nbsp;Wickham, H., Çetinkaya-Rundel, M. &amp; Grolemund, G. (2023). R for Data Science (2e). O’Reilly Media.</p></div><div id="fn4"><p><sup>4</sup>&nbsp;Çetinkaya-Rundel, M., Dogucu, M. &amp; Rummerfield, W. (2022) The 5Ws and 1H of Term Projects in the Introductory Data Science Classroom, https://doi.org/10.52041/serj.v21i2.37.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;https://www.oecd-ilibrary.org/sites/f56f8c26-en/index.html?itemId=/content/component/f56f8c26-en</p></div><div id="fn6"><p><sup>6</sup>&nbsp;Broman, K. W., &amp; Woo, K. H. (2018). Data Organization in Spreadsheets. The American Statistician, 72(1), 2–10. https://doi.org/10.1080/00031305.2017.1375989.</p></div><div id="fn7"><p><sup>7</sup>&nbsp;Swinscow, T. D. V. (2009) Statistics at Square One (11e), BMJ Books. (Chapter 3).</p></div><div id="fn8"><p><sup>8</sup>&nbsp;Belbin L, Wallis E, Hobern D, Zerger A (2021) The Atlas of Living Australia: History, current state and future directions. Biodiversity Data Journal 9: e65023. https://doi.org/10.3897/BDJ.9.e65023</p></div><div id="fn9"><p><sup>9</sup>&nbsp;MacColl, C., Leseberg, N. P., Seaton, R., Murphy, S. A., &amp; Watson, J. E. M. (2023). Rapid and recent range collapse of Australia’s Red Goshawk Erythrotriorchis radiatus. Emu - Austral Ornithology, 123(2), 93–104. https://doi.org/10.1080/01584197.2023.2172735</p></div><div id="fn10"><p><sup>10</sup>&nbsp;Malički M, Aalbersberg IJ, Bouter L, Mulligan A, Ter Riet G. (2023) Transparency in Conducting and Reporting Research: A survey of authors, reviewers, and editors across scholarly disciplines. PLoS One. 18(3):e0270054. doi: 10.1371/journal.pone.0270054.</p></div></div><p>Automated validation<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> is commonly implemented to prevent mistakes, but, at the root, human decisions guide what to check and what constitutes a mistake. Moreover, omissions in the original data collection can inhibit inference. For example, making population-level references from data requires specifying the population<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. It’s not easy, and it may be uncomfortable, to spell out the population. It may also result in awkward realizations, like that half the population was not measured. Other times, for example with animal sightings, values are only recorded when a human is present even though most events happened with no humans looking<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> and substantial adjusting is required to provide some assurance of reliability of the inferences made<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. Transparency<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> in data collection and application helps illuminate these issues.</p>
+<p>There are multiple analytical starting points when working with data. A data scientist or analyst might commence directly from the data<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>, exploring potential relationships and patterns to determine what stories or narratives can be uncovered. More traditionally, one might come to the data with hypotheses in hand, seeking to test whether theory-based expectations can be supported. To infer from data and analysis, self-critique encourages questioning. Who and what is captured by the data and what is missing? How do method choices and presentation of results reinforce, obfuscate, or illuminate findings? When are results robust and ready to be shared? When should we stop?</p>
+<div class="no-row-height column-margin column-container"><div id="fn11"><p><sup>11</sup>&nbsp;Wickham, H., Lawrence, M., Cook, D. et al.&nbsp;(2009) The Plumbing of Interactive Graphics. Computational Statistics 24, 207–215, https://doi.org/10.1007/s00180-008-0116-x</p></div></div></section>
+<section id="humans-all-the-way-down" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="humans-all-the-way-down">Humans all the way down</h2>
+<p>Human-in-the-loop interactive data analysis is a helpful framework for data science- and AI-driven research, encouraging those explicit touchpoints between researcher and computer in which expert knowledge can shape and feed back into an iterative analytical process guided by real-world understanding. Although an appealing solution to existing problems, the human-in-the-loop proposition relies on an implicit null model of human-<em>not</em>-in-the-loop: that without deliberate touchpoints, data-driven research is somehow insulated from human fallibility (and expertise). This is patently not the case. Human fingerprints are all over data science applications, even when machines have guided the process from start to finish.</p>
+<section id="humans-are-in-the-data-loop" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="humans-are-in-the-data-loop">Humans are in the data loop</h3>
+<p>Although some shortcomings of data are commonly acknowledged, like bias, representation, or missingness, there is less acknowledgement that, particularly for surveys or administrative data, data are created by humans. Humans decide what questions to ask, what the answer space looks like, how to convert raw answers into variables, measures, and indices, and what will be the unit of observation. The example at the top of this post illustrates how a massive and ongoing data collection mechanism like the US decennial census failed to count same-sex households in the late 20th century. The option not only didn’t appear as an element in the answer space, but <a href="https://academic.oup.com/poq/article/77/S1/145/1877806">responses were changed for those households where both adults reported the same sex, on the assumption that error was involved</a><a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>. In this case, human researchers not only failed to conceptualise the full space of real household behaviours, but also amended the data to fit a set of assumptions. Similar blinders or constraints exist for household structures that assume marriage, or ethnicity and race categories that force respondents into predefined categories, or sex/gender questions that fail to reflect actual lived identities.</p>
+<div class="no-row-height column-margin column-container"><div id="fn12"><p><sup>12</sup>&nbsp;DeMaio, T., Bates, N., and O’Connell, M. (2013). Exploring Measurement Error Issues In the Reporting of Same-Sex Couples. <em>Public Opinion Quarterly</em> 77(S1): 145-158. <a href="https://doi.org/10.1093/poq/nfs066">https://doi.org/10.1093/poq/nfs066</a></p></div></div></section>
+<section id="humans-are-in-the-theory-loop" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="humans-are-in-the-theory-loop">Humans are in the theory loop</h3>
+<p>Theory is often assumed to be less relevant for data-driven research—the idea that big data (and big code) renders theory obsolete<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>. This can also be read as another form of blindness to humans in the loop, as theory is, without argument, created by humans. Wait, you say, how can theory impact data-driven research in which theory plays no explicit role? First, theory is what determines the content of our data. We know to collect data about race, gender, age, educational attainment, and geographical location (as just a few examples) <em>precisely because</em> theory tells us these are important for understanding outcomes, behaviors, and preferences. Second, the questions we ask of our data—even in exploration—may not be testing theories, but are certainly theory-driven. When handed wage or income data, it is theory that whispers in our ear, “how does this compare across genders?”</p>
+<div class="no-row-height column-margin column-container"><div id="fn13"><p><sup>13</sup>&nbsp;https://www.wired.com/2008/06/pb-theory/</p></div></div></section>
+<section id="and-humans-are-in-the-methods-loop-too" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="and-humans-are-in-the-methods-loop-too">And humans are in the methods loop, too</h3>
+<p>Ok, but surely the methods we employ—software packages, models, and statistics—are free of humans? Not quite. Methods are created and implemented by humans in order to solve problems and answer questions generated by humans. This necessarily means that the types of analysis (and therefore eventual answers or findings) are constrained by the tools we have at our disposal. From the development of statistics to compare groups to innovative types of data visualisation (like hexagon maps<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> over traditional choropleth maps), what at first glance might appear to be an off-the-shelf machine procedure is actually a human-in-the-loop solution.</p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;https://srkobakian.github.io/sugarbag/index.html</p></div></div></section>
+</section>
+<section id="why-human-involvement-matters" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="why-human-involvement-matters">Why human involvement matters</h2>
+<p>In a nutshell, robust inference is difficult. One explanation for this is the “garden of forking paths” metaphor<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a> which illustrates the challenges of interactive hypothesis testing and the blurry boundaries between explanatory and confirmatory analysis. The challenge is, however, much more extensive: implicit choices embedded in theory, data, and methods also hamper inference. Moreover, the wider contexts in which data analysis takes place, whether academic, governmental, industry, or media, privilege speed and certainty of findings. Academic systems, including publication and promotion, reward quantity, innovation, and conformity, meaning there is little if any incentive for introspection, replication, or any other approach that might reinforce confidence in findings.</p>
+<div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf</p></div></div><p>The assumption is that humans get in the way of robust inference—that, consciously and subconsciously, we make choices that facilitate the (occasionally spurious) detection of patterns, signals, and answers. We know to shine a spotlight on model specification and interpretation, whether exploratory or confirmatory—obvious touchpoints where humans and machines are in contact—as areas vulnerable to analyst bias. To go further and argue that human touchpoints exist at every stage of research, from theory to data to methods, is to invite capitulation. Perhaps robust analysis is impossible. Surrender is not what we are proposing, however! We are confident analysts can respond creatively to challenges, once they’re identified. To do this, though, we need to become better at academic self-reflection and also take greater advantage of a wide range of inference support approaches. We have some suggestions:</p>
+<section id="be-a-social-scientist-talk-to-people" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="be-a-social-scientist-talk-to-people">Be a “<em>social”</em> scientist: talk to people!</h3>
+<p>One of the easiest ways to stress-test data analysis is <em>to talk to people about it</em>! Getting feedback is central to improvement. Write a working paper, post it on <a href="https://arxiv.org">ArXiV</a>/<a href="https://osf.io">OSF</a>, publish code as an open-source software package, and talk about the work at conferences and on social media. Indeed, the things that we worry about in analysis or research are often quite different from the stuff that other people might find concerning. It’s useful to note here that just <em>posting</em> (or <em>talking</em>) about the work is often not enough to actually attract feedback; teaching people how to use one’s open source code might be necessary in order to get feedback on the ideas it executes. More informal “brown-bag” or “workshop”-style events are often designed for this kind of structured feedback, and tools like Margins/Librarian from Fermats Library<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a> or Hypothesis<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> can help facilitate online input.</p>
+<div class="no-row-height column-margin column-container"><div id="fn16"><p><sup>16</sup>&nbsp;<a href="https://fermatslibrary.com/">https://fermatslibrary.com/</a></p></div><div id="fn17"><p><sup>17</sup>&nbsp;<a href="https://web.hypothes.is/">https://web.hypothes.is/</a></p></div><div id="fn18"><p><sup>18</sup>&nbsp;<a href="https://thesiswhisperer.com/2023/07/10/academicenshittification/">https://thesiswhisperer.com/2023/07/10/academicenshittification/</a></p></div><div id="fn19"><p><sup>19</sup>&nbsp;Whitmer, J. M. You are your brand: self-branding and the marketization of self. <em>Sociology Compass</em> 13(3): e12662. <a href="https://doi.org/10.1111/soc4.12662">https://doi.org/10.1111/soc4.12662</a></p></div></div><p>At the same time, it is important to acknowledge that social media and conferences are not a cure-all for gaining perspective. Travel to conferences can be expensive and time-consuming, with clear disparities in access. Furthermore, conferences can be competitive, high-stakes environments for some, making it difficult to both give and receive effective and constructive critique. Social media also has some serious drawbacks<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a>, in part due to the imperative to develop and maintain a ‘personal brand’ on those platforms.<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a> At a higher level, seeking input from others can make it difficult to find a balance between cultivating an individual voice and learning to adopt the perspectives and norms within a research community. This is especially the case for early career researchers. Thus, it can be helpful to cultivate methods to support internal self-reflection.</p>
+</section>
+<section id="internalize-a-critical-perspective" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="internalize-a-critical-perspective">Internalize a critical perspective</h3>
+<p>One common practice is to imagine how someone else might react to our work. This might be a PhD or work supervisor (or another mentor) voicing common questions or routine self-checks: _Have you plotted the data first? Have you tried to solve the problem yourself before reaching for something off the shelf? Has someone else solved it differently? Why did the previous work on this topic miss what you’re proposing? _This also might come in the form of conceptualizing a researcher <em>persona</em>, a fictional person who works from a given research background (like an “experimentalist” or a “data scientist”), who critiques work from a particular angle. This can help identify weaknesses in research design, or identify places where analytical choices might merit more justification. This can be quite useful as a mode of self-reflection, and has its place in developing an analytical voice and sense of self.</p>
+<p>Not everybody has had such a mentor or, if they have one, it might be hard to internalize their voice positively. Mentoring is quite important, but it can be difficult to cultivate good mentor-mentee relationships.<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a> When thinking about research personas, critiques might be too <em>total</em> to effectively improve a draft. An old joke comes to mind:</p>
+<div class="no-row-height column-margin column-container"><div id="fn20"><p><sup>20</sup>&nbsp;https://www.science.org/content/article/improving-mentoring-academia-requires-collective-effort.</p></div></div><p>A driver, tired and lost, pulls over to the side of the road and asks a shepherd:</p>
+<blockquote class="blockquote">
+<p>“How do I get to town?” _</p>
+</blockquote>
+<p>The shepherd responds,</p>
+<blockquote class="blockquote">
+<p>“Well, I wouldn’t start from here!”</p>
+</blockquote>
+<p>Indeed, if an analyst <em>knew</em> that analysis was problematic, they might ostensibly change how they executed that part of the research in the first place. Of course, the analyst <em>doesn’t</em> know what they don’t know until they try to gain perspective. This suggests that <em>surprise</em> is essential to effective self-reflection—learning about the ways you can improve will involve some kind of realization, a recognition of something previously unknown, and is fundamental to effective self-reflection.</p>
+</section>
+<section id="leverage-randomness-and-randomization" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="leverage-randomness-and-randomization">Leverage randomness and randomization</h3>
+<p>Another way to elicit new perspectives is to invoke randomness<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>, like an <em>Oblique Strategies</em><a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a> for researchers. In its original form, this_ _is a deck of cards intended to help artists get over creative blocks. Each card has a different short statement used as a prompt for engagement<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a>. The card might suggest to “Discover the recipes you are using and abandon them” or “Honor thy error as a hidden intention”. These are useful provocations to escape a creative block. They are unlikely to directly help determine a best course of action during a data analysis, or decide on a better model, but are an effective technique to imagine what this relationship might look like if there was really nothing going on<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a><a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>, or vary if a different sample was taken. Invoking randomness includes permuting values<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>, bootstrapping<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a> the sample, creating cross-validation folds<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a><a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a>, simulating<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a> from a distribution—all mindsets and tools that enable the development of perspective on data patterns and provide confidence in interpretations.</p>
+<div class="no-row-height column-margin column-container"><div id="fn21"><p><sup>21</sup>&nbsp;http://library.isical.ac.in:8080/jspui/bitstream/10263/5519/1/C%20R%20Rao%20speech.pdf.</p></div><div id="fn22"><p><sup>22</sup>&nbsp;https://en.wikipedia.org/wiki/Oblique_Strategies.</p></div><div id="fn23"><p><sup>23</sup>&nbsp;You can try drawing a few of these yourself here: http://stoney.sb.org/eno/oblique.html.</p></div><div id="fn24"><p><sup>24</sup>&nbsp;Buja A., Cook D., Hofmann H., Lawrence M., Lee E.-K., Swayne D. F. and Wickham H. (2009) Statistical inference for exploratory data analysis and model diagnostics, Phil. Trans. R. Soc. A.3674361–4383 http://doi.org/10.1098/rsta.2009.0120.</p></div><div id="fn25"><p><sup>25</sup>&nbsp;Wickham, H., Cook, D., Hofmann, H. and Buja, A., “Graphical inference for infovis,” in IEEE Transactions on Visualization and Computer Graphics, vol.&nbsp;16, no. 6, pp.&nbsp;973-979, Nov.-Dec.&nbsp;2010, doi: 10.1109/TVCG.2010.161.</p></div><div id="fn26"><p><sup>26</sup>&nbsp;Good, P. (1994) Permutation Tests: A Practical Guide to Resampling Methods for Testing Hypotheses, Springer.</p></div><div id="fn27"><p><sup>27</sup>&nbsp;Efron, B. (1979) Bootstrap Methods: Another Look at the Jackknife. Ann. Statist. 7 (1) 1 - 26, January, 1979. https://doi.org/10.1214/aos/1176344552.</p></div><div id="fn28"><p><sup>28</sup>&nbsp;Allen, D. M. (1974). The Relationship between Variable Selection and Data Augmentation and a Method for Prediction, Technometrics. 16 (1): 125–127. doi:10.2307/1267500.</p></div><div id="fn29"><p><sup>29</sup>&nbsp;Stone, M. (1974). Cross-Validatory Choice and Assessment of Statistical Predictions, Journal of the Royal Statistical Society, Series B (Methodological). 36 (2): 111–147. doi:10.1111/j.2517-6161.1974.tb00994.x.</p></div><div id="fn30"><p><sup>30</sup>&nbsp;Sokolowski, J. A., Banks, C. M. (2009). Principles of Modeling and Simulation. John Wiley &amp; Son. p.&nbsp;6. ISBN 978-0-470-28943-3.</p></div></div></section>
+<section id="consider-granularity" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="consider-granularity">Consider granularity</h3>
+<p>One pattern of thought might be to use more fine-grained explanations: what specific observations are necessary for a result to hold? There are a few new statistical approaches that can help identify, for example, how much of a dataset is needed in order to preserve a core finding<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a> or how “serious” an omitted confounder would have to be before an effect disappears<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a>. In either case, these statistical tools help identify <em>why</em> a result arises from a given dataset, characterize the conditions under which they might not, and find what new data might be needed (or analyses conducted) in order to make the work more robust.</p>
+<div class="no-row-height column-margin column-container"><div id="fn31"><p><sup>31</sup>&nbsp;Broderick, T., Giordano, R., and Meager, R. (2023). An automatic finite-sample robustness metric: when can dropping a little data make a big difference. ArXiV preprint: https://arxiv.org/abs/2011.14999</p></div><div id="fn32"><p><sup>32</sup>&nbsp;Cinelli, C. and Hazlett, C. (2019). Making sense of sensitivity: extending omitted variable bias. <em>Journal of the Royal Statistical Society, Series B: Statistical Methodology</em> 82(1), 39-67. <a href="https://doi.org/10.1111/rssb.12348">https://doi.org/10.1111/rssb.12348</a></p></div></div></section>
+<section id="identify-saturation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="identify-saturation">Identify saturation</h3>
+<p>How much analysis is enough? The question of when to stop collecting data, when to stop estimating models, or when a question has been answered—when to stop fiddling around with analytical details, in short—is one faced across the entire research continuum. An approach widely adopted in qualitative research is that of saturation<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a>: research can stop when no new information or insight is elicited from additional data collection or analysis. This framework is also generally (but cautiously!) applicable to data-driven science. Here the idea is less that analysis stops as soon as a satisfactory answer is found (bad; don’t do this), but rather that a variety of approaches is tried until broadly the same findings emerge across the board. At that point saturation is reached.</p>
+<div class="no-row-height column-margin column-container"><div id="fn33"><p><sup>33</sup>&nbsp;<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993836/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993836/</a></p></div></div></section>
+<section id="use-counterfactuals-and-what-if-scenarios" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="use-counterfactuals-and-what-if-scenarios">Use counterfactuals and what-if scenarios</h3>
+<p>Robust inference depends on stress-testing analytical approaches, or theoretical assumptions<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>, and the ability to interpret black-box models<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>. Across research domains, the observed analytical relationships between variables can result from a range of underlying processes. Student test scores that increase as class size shrinks<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>, for example, may result from a direct relationship between the two variables, but might also be attributable to the wealth of the school district, characteristics of students, or a host of other intervening/underlying factors. From a policy standpoint, this is a problem. Where and how should interventions be designed? A counterfactual<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a> mindset encourages the analyst to consider alternative stories or narratives and to assess whether, and how, analytical findings change when parts of the story are changed. This also relates to explainable artificial intelligence (XAI) methods for complex models<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>, which articulate how a model makes an individual prediction.</p>
+<div class="no-row-height column-margin column-container"><div id="fn34"><p><sup>34</sup>&nbsp;Greco, L., Ventura, L. (2011) Robust inference for the stress–strength reliability. Stat Papers 52, 773–788, https://doi.org/10.1007/s00362-009-0286-9.</p></div><div id="fn35"><p><sup>35</sup>&nbsp;Molnar, C. (2024) Interpretable Machine Learning, https://christophm.github.io/interpretable-ml-book/</p></div><div id="fn36"><p><sup>36</sup>&nbsp;Cho, H., Glewwe, P., Whitler, M. (2012) Do reductions in class size raise students’ test scores? Economics of Education Review, Volume 31, Issue 3, Pages 77-95, https://doi.org/10.1016/j.econedurev.2012.01.004.</p></div><div id="fn37"><p><sup>37</sup>&nbsp;DeMartno, G.F. (2021) The specter of irreparable ignorance: counterfactuals and causality in economics. Review of Evolutionary Political Economy 2: 253-276. https://doi.org/10.1007/s43253-020-00029-w</p></div><div id="fn38"><p><sup>38</sup>&nbsp;Biecek P (2018). “DALEX: Explainers for Complex Predictive Models in R.” Journal of Machine Learning Research, 19(84), 1-5. https://jmlr.org/papers/v19/18-416.html.</p></div></div></section>
+<section id="see-it-to-believe-it" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="see-it-to-believe-it">See it to believe it</h3>
+<p>Data visualisation employs the human visual system to interpret relationships, enabling summaries that are more elaborate than is capable from simple numerical statistics. It is useful in every stage of interactive data analysis, from data exploration to diagnosing and summarising model fit. New statistical thinking in visualisation methods lifts this area into the domain of making inference for unconventional data scenarios and evaluating robustness of findings. As a baseline, the grammar of graphics<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a><a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a> provides a framework that bridges statistical thinking and data graphics. From this basis, new methods are emerging. Line-ups<a href="#fn41" class="footnote-ref" id="fnref41" role="doc-noteref"><sup>41</sup></a><a href="#fn42" class="footnote-ref" id="fnref42" role="doc-noteref"><sup>42</sup></a> nudge the viewer to check whether observed relationships are really there. Causal quartets<a href="#fn43" class="footnote-ref" id="fnref43" role="doc-noteref"><sup>43</sup></a>, which provide a visual “check” on the mechanics of average treatment effects, can help analysts understand the different combinations of individual effects that produce average effects. Hypothetical outcome plots<a href="#fn44" class="footnote-ref" id="fnref44" role="doc-noteref"><sup>44</sup></a> enable the analyst to assess what the plot might look like under different samples. Rashomon sets<a href="#fn45" class="footnote-ref" id="fnref45" role="doc-noteref"><sup>45</sup></a> are useful for instances in which predictive models offer similar performance, but alternative underlying explanations. One element common to these visual approaches is that they serve to encourage reflection, multiplicity of perspectives, and nuanced interpretation, supporting and cautioning interpretation of results and aiding inference where classical statistical methods do not apply.</p>
+<div class="no-row-height column-margin column-container"><div id="fn39"><p><sup>39</sup>&nbsp;Wilkinson, L. (2010), The grammar of graphics. WIREs Comp Stat, 2: 673-677. https://doi.org/10.1002/wics.118</p></div><div id="fn40"><p><sup>40</sup>&nbsp;Hadley Wickham. (2010) A layered grammar of graphics.Journal of Computational and Graphical Statistics, vol.&nbsp;19, no. 1, pp.&nbsp;3–28.</p></div><div id="fn41"><p><sup>41</sup>&nbsp;Buja A., Cook D., Hofmann H., Lawrence M., Lee E.-K., Swayne D. F. and Wickham H. (2009) Statistical inference for exploratory data analysis and model diagnostics, Phil. Trans. R. Soc. A.3674361–4383 http://doi.org/10.1098/rsta.2009.0120.</p></div><div id="fn42"><p><sup>42</sup>&nbsp;Wickham, H., Cook, D., Hofmann, H. and Buja, A., “Graphical inference for infovis,” in IEEE Transactions on Visualization and Computer Graphics, vol.&nbsp;16, no. 6, pp.&nbsp;973-979, Nov.-Dec.&nbsp;2010, doi: 10.1109/TVCG.2010.161.</p></div><div id="fn43"><p><sup>43</sup>&nbsp;Gelman, A., Hullman, J. and Kennedy, L. (2023) Causal quartets: Different ways to attain the same average treatment effect, <a href="https://arxiv.org/abs/2302.12878">https://arxiv.org/abs/2302.12878</a>.</p></div><div id="fn44"><p><sup>44</sup>&nbsp;A. Kale, F. Nguyen, M. Kay and J. Hullman, Hypothetical Outcome Plots Help Untrained Observers Judge Trends in Ambiguous Data in IEEE Transactions on Visualization &amp; Computer Graphics, vol.&nbsp;25, no. 01, pp.&nbsp;892-902, 2019. doi: 10.1109/TVCG.2018.2864909.</p></div><div id="fn45"><p><sup>45</sup>&nbsp;Biecek, P., Baniecki, H., Krzyziński, M., &amp; Cook, D. (2024). Performance Is Not Enough: The Story Told by a Rashomon Quartet. Journal of Computational and Graphical Statistics, 1–4. https://doi.org/10.1080/10618600.2024.2344616</p></div></div></section>
+<section id="embrace-uncertainty" class="level3">
+<h3 class="anchored" data-anchor-id="embrace-uncertainty">Embrace uncertainty</h3>
+<p>Modelling is an uncertain endeavour: data are uncertain; models provide (uncertain) estimates of one potential version of reality; and individual point estimates are uncertain. Researchers and analysts, however, work in truths and certainties, generating inevitable tension between data-driven analysis and real-world applications. What to do? Formally, it’s important to embrace opportunities to foreground uncertainty of findings and this can be done visually, numerically, and narratively. More informally, practicing talking about findings as one plausible version of a story <em>out of many</em> performs a wider service to all communities producing and consuming data-driven analysis.</p>
+</section>
+<section id="record-provenance-and-document-analytic-journeys" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="record-provenance-and-document-analytic-journeys">Record provenance and document analytic journeys</h3>
+<p>The human-machine partnership underlying interactive data analysis needs to be documented as a means to ensure reproducibility, facilitate validation, and increase trust—not only in the findings but in the journey itself<a href="#fn46" class="footnote-ref" id="fnref46" role="doc-noteref"><sup>46</sup></a>. The documentation and provenance of these interactions can be performed at different levels of detail, including with data and methods, as well as how results are validated and reported. The documentation of the analytic journey needs to happen at multiple levels of detail, from coarse high-level representations of the journey to fine-grained, low-level, representations of the analyst’s journey. Ensuring that these are explored in context is also important.</p>
+<div class="no-row-height column-margin column-container"><div id="fn46"><p><sup>46</sup>&nbsp;Becker, G., Barr, C., Gentleman, R., &amp; Lawrence, M. (2017). Enhancing Reproducibility and Collaboration via Management of R Package Cohorts. Journal of Statistical Software, 82(1), 1–18. https://doi.org/10.18637/jss.v082.i01</p></div></div></section>
+</section>
+<section id="closing-reflections" class="level2">
+<h2 class="anchored" data-anchor-id="closing-reflections">Closing reflections</h2>
+<p>Despite the rise of artificial intelligence, human intelligence (and fallibility) are evergreen. Human actions are ubiquitous in every part of data analysis, and humans are active players in this game. With the increasing prevalence of open-source tools and open research, everyone has the power to do data analysis. Under these conditions making reliable inferences presents ongoing challenges. Creating spaces in which to try out alternatives facilitates creativity, interactivity, and surprise in data analysis—and, in the end, more robust inference. Building in techniques for self-reflection and critique is more necessary than ever to help ensure confidence in data analysis results, allowing the data to say what it means.</p>
+<!-- Footnotes themselves at the bottom. -->
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{cook2024,
+  author = {Cook, Di and Franklin, Rachel and Turkay, Cagatay and
+    Villa-Uriol, Mari-Cruz and Wolf, Levi},
+  title = {Humans All the Way down: Statistical Reflection and
+    Self-Critique for Interactive Data Analysis},
+  date = {2024-06-25},
+  url = {https://theory4ida.github.io/tmcf/posts/03-cultures/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-cook2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Cook, Di, Rachel Franklin, Cagatay Turkay, Mari-Cruz Villa-Uriol, and
+Levi Wolf. 2024. <span>“Humans All the Way down: Statistical Reflection
+and Self-Critique for Interactive Data Analysis.”</span> June 25, 2024.
+<a href="https://theory4ida.github.io/tmcf/posts/03-cultures/">https://theory4ida.github.io/tmcf/posts/03-cultures/</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/theory4ida\.github\.io\/tmcf\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/theory4ida/tmcf">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

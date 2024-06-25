@@ -2,58 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://theory4ida.github.io/tmcf/files/notes.html</loc>
-    <lastmod>2024-06-25T17:17:48.597Z</lastmod>
+    <lastmod>2024-06-25T21:18:28.257Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/programme/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.809Z</lastmod>
+    <lastmod>2024-06-25T21:18:28.493Z</lastmod>
   </url>
   <url>
-    <loc>https://theory4ida.github.io/tmcf/posts/models/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.809Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/lecture/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.809Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/files/slides/rb_provoke.html</loc>
-    <lastmod>2024-06-25T17:17:48.805Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/tools/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.597Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/inference/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.597Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.597Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/modelling/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.597Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/files/slides/open.html</loc>
-    <lastmod>2024-06-25T17:17:48.805Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.805Z</lastmod>
+    <loc>https://theory4ida.github.io/tmcf/posts/02-tools/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.461Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/posts.html</loc>
-    <lastmod>2024-06-25T17:17:48.809Z</lastmod>
+    <lastmod>2024-06-25T21:18:28.461Z</lastmod>
   </url>
   <url>
-    <loc>https://theory4ida.github.io/tmcf/posts/tools/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.809Z</lastmod>
+    <loc>https://theory4ida.github.io/tmcf/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.461Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/files/slides/open.html</loc>
+    <lastmod>2024-06-25T21:18:28.461Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/modelling/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/inference/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/tools/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.257Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/files/slides/rb_provoke.html</loc>
+    <lastmod>2024-06-25T21:18:28.461Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/lecture/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.461Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/posts/01-models/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.461Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/posts/03-cultures/index.html</loc>
+    <lastmod>2024-06-25T21:18:28.493Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/team/index.html</loc>
-    <lastmod>2024-06-25T17:17:48.809Z</lastmod>
+    <lastmod>2024-06-25T21:18:28.493Z</lastmod>
   </url>
 </urlset>
