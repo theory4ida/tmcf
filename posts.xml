@@ -9,8 +9,8 @@
 <link>https://theory4ida.github.io/tmcf/posts.html</link>
 <atom:link href="https://theory4ida.github.io/tmcf/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.555</generator>
-<lastBuildDate>Tue, 25 Jun 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.554</generator>
+<lastBuildDate>Mon, 24 Jun 2024 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Some risks and opportunities of automated data analysis</title>
   <dc:creator>Daniel Archambault</dc:creator>
@@ -93,7 +93,7 @@ Edwin Pos. 2024. <span>“Some Risks and Opportunities of Automated Data
 Analysis.”</span> June 25, 2024. <a href="https://theory4ida.github.io/tmcf/posts/01-models/">https://theory4ida.github.io/tmcf/posts/01-models/</a>.
 </div></div></section></div> ]]></description>
   <guid>https://theory4ida.github.io/tmcf/posts/01-models/</guid>
-  <pubDate>Tue, 25 Jun 2024 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 24 Jun 2024 23:00:00 GMT</pubDate>
   <media:content url="https://blog.sciencemuseum.org.uk/wp-content/uploads/2013/12/Alan-Turing-29-March-1951-picture-credit-NPL-Archive-Science-Museum1.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -247,7 +247,7 @@ Bach, Benjamin, Hadley Wickham, Jo Wood, and Kai Xu. 2024.
 2024. <a href="https://theory4ida.github.io/tmcf/posts/02-tools/">https://theory4ida.github.io/tmcf/posts/02-tools/</a>.
 </div></div></section></div> ]]></description>
   <guid>https://theory4ida.github.io/tmcf/posts/02-tools/</guid>
-  <pubDate>Tue, 25 Jun 2024 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 24 Jun 2024 23:00:00 GMT</pubDate>
   <media:content url="https://jwolondon.github.io/forkingPaths/images/gardenPhoto.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -373,7 +373,7 @@ and Self-Critique for Interactive Data Analysis.”</span> June 25, 2024.
 <a href="https://theory4ida.github.io/tmcf/posts/03-cultures/">https://theory4ida.github.io/tmcf/posts/03-cultures/</a>.
 </div></div></section></div> ]]></description>
   <guid>https://theory4ida.github.io/tmcf/posts/03-cultures/</guid>
-  <pubDate>Tue, 25 Jun 2024 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 24 Jun 2024 23:00:00 GMT</pubDate>
   <media:content url="https://theory4ida.github.io/tmcf/posts/03-cultures/archives.png" medium="image" type="image/png" height="66" width="144"/>
 </item>
 </channel>
