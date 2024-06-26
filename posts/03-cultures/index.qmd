@@ -1,6 +1,6 @@
 ---
 title: "Humans all the way down: statistical reflection and self-critique for interactive data analysis"
-description: "This blogpost came out from TMCF 2024 at the Turing Institute and is a result of discussions and thinking over the course of a couple of days."
+description: "Some thoughts arising from TMCF 2024 workshop at the Turing Institute."
 author:
 - name: Di Cook
   url: http://www.dicook.org

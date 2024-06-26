@@ -1,6 +1,6 @@
 ---
 title: "Navigating the Foggy Garden of Forking Paths"
-description: "This blogpost came out from TMCF 2024 at the Turing Institute and is a result of discussions and thinking over the course of a couple of days."
+description: "Some thoughts arising from TMCF 2024 workshop at the Turing Institute."
 author:
 - name: Benjamin Bach
   url: https://vishub.net/bach
