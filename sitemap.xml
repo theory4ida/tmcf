@@ -2,62 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://theory4ida.github.io/tmcf/files/notes.html</loc>
-    <lastmod>2024-06-26T19:36:16.759Z</lastmod>
+    <lastmod>2024-05-31T08:34:25.317Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/programme/index.html</loc>
-    <lastmod>2024-06-26T19:36:17.007Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/posts/02-tools/index.html</loc>
-    <lastmod>2024-06-26T19:36:16.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/posts.html</loc>
-    <lastmod>2024-06-26T19:36:16.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/index.html</loc>
-    <lastmod>2024-06-26T19:36:16.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/files/slides/open.html</loc>
-    <lastmod>2024-06-26T19:36:16.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/modelling/index.html</loc>
-    <lastmod>2024-06-26T19:36:16.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/index.html</loc>
-    <lastmod>2024-06-26T19:36:16.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/inference/index.html</loc>
-    <lastmod>2024-06-26T19:36:16.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/challenge/tools/index.html</loc>
-    <lastmod>2024-06-26T19:36:16.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/files/slides/rb_provoke.html</loc>
-    <lastmod>2024-06-26T19:36:16.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/lecture/index.html</loc>
-    <lastmod>2024-06-26T19:36:16.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://theory4ida.github.io/tmcf/posts/01-models/index.html</loc>
-    <lastmod>2024-06-26T19:36:16.975Z</lastmod>
+    <lastmod>2024-06-10T14:03:27.458Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/posts/03-cultures/index.html</loc>
-    <lastmod>2024-06-26T19:36:17.007Z</lastmod>
+    <lastmod>2024-06-26T13:51:08.046Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/posts/01-models/index.html</loc>
+    <lastmod>2024-06-26T13:47:18.432Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/lecture/index.html</loc>
+    <lastmod>2024-05-31T08:34:25.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/files/slides/rb_provoke.html</loc>
+    <lastmod>2024-06-26T13:47:18.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/tools/index.html</loc>
+    <lastmod>2024-05-31T08:34:25.315Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/inference/index.html</loc>
+    <lastmod>2024-05-31T08:34:25.315Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/index.html</loc>
+    <lastmod>2024-05-31T08:34:25.314Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/challenge/modelling/index.html</loc>
+    <lastmod>2024-05-31T08:34:25.315Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/files/slides/open.html</loc>
+    <lastmod>2024-06-16T21:59:19.370Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/index.html</loc>
+    <lastmod>2024-05-31T08:34:25.318Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/posts.html</loc>
+    <lastmod>2024-06-26T13:47:18.431Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/posts/02-tools/index.html</loc>
+    <lastmod>2024-06-26T13:47:18.432Z</lastmod>
+  </url>
+  <url>
+    <loc>https://theory4ida.github.io/tmcf/posts/04-forkingpaths/index.html</loc>
+    <lastmod>2024-06-30T20:40:36.077Z</lastmod>
   </url>
   <url>
     <loc>https://theory4ida.github.io/tmcf/team/index.html</loc>
-    <lastmod>2024-06-26T19:36:17.007Z</lastmod>
+    <lastmod>2024-05-31T08:34:25.320Z</lastmod>
   </url>
 </urlset>
