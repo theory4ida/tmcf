@@ -1,0 +1,831 @@
+---
+title: "<span style='font-size:1.1em; font-weight: 600;'>TMCF 2024</span>"
+subtitle: "<span style='font-size:1.6em; font-weight: 500;'>Navigating the garden of forking paths in data-driven science</span><br><span style='color:#525252; font-size:1.2em; font-weight: 500;'><br>7th February 2025 </span>"
+format: 
+   revealjs:
+     transition: fade
+     theme: theme/slides-theme.scss
+     css: theme/style.css
+     footer: 'TMCF 2024 | British Library'
+     mainfont: Jost
+     logo: "img/logos/logo_ati.png"
+     resources: 
+       - fonts/iosevka-regular.ttc
+       - fonts/iosevka-semibold.ttc
+       - fonts/iosevka-thin.ttc
+       - fonts/iosevka.ttc
+       
+---
+
+
+```{=html}
+<style>
+.flushright {
+   text-align: right;
+}
+</style>
+```
+
+---
+
+## Huge thanks to the Turing Team
+
+
+![](img/turing-team.png){.absolute top=160 left=0 width="80%"}
+
+::: {.notes}
+
+
+:::
+
+
+---
+
+
+# *Our* TMCF <br> <span style='font-size:0.8em; font-weight: 500;'>Forking paths in data-driven science </span>
+
+::: {.notes}
+
+Forking paths: 
+problem where researchers make many decisions—such as selecting variables, models, or subgroups—during data analysis -- these decisions, when not judtified, accumulate biasing inference...
+
+
+
+:::
+
+---
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="font-size: 100%"}
+
+
+<br> > Explore <br> > Pre-register <br> > Test
+
+:::
+
+
+:::
+
+::: {.column width="70%"}
+
+
+![](img/science_reform_paper.png){.absolute top=50 left=300 width="85%"}
+
+
+:::
+
+::: {.column width="40%"}
+
+
+::: {style="font-size: 130%"}
+
+
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+Other terms : metascience, open science
+
+As a response to questionable research practices (QRPs) that led to replication crisis
+
+Important and useful structural changes in how science is conducted, reported, and rewarded.
+
+Establishing empirical rigour…  
+
+–– Narrow approach to doing data analysis
+
+Presribed recipe for doing analysis:
+
+Exploratore > Pre-register ? Test
+
+
+
+:::
+
+
+---
+
+---
+
+![](img/stats19.png){.absolute top=10 left=0 width="50%"}
+
+![](img/stats19_2.png){.absolute top=30 left=550 width="40%"}
+
+
+::: {.notes}
+
+For me: 
+Road Crash Analysis project with DfT
+Also work with a PhD student
+
+
+Stats19 -- the road safety dataset for UK
+
+Had some  draft pre-registration report/proposal looking at pedestrian injury -- before / after analysis, establishing effect of intervention classes on crash rates/ injury sevrity 
+
+Essentially because our exploratory analysis threw up so many things that undermined our initial plans 
+-- generated findings that at a high-level would look compelling (p-values etc.), but when properly scrutinised would fall apart
+
+These needed to be fully explored, but doing so would kind of invalidate our pre-registration (depending on how srictly adhered to).
+
+Re-confirmed actually a lot of data analysis is scientific exploration.
+
+:::
+
+---
+
+
+
+![](img/analysis1.png){.absolute top=80 left=450 width="55%"}
+![](img/analysis2.png){.absolute top=350 left=450 width="51%"}
+
+
+![](img/ga_twitter.png){.absolute top=0 left=0 width="40%"}
+
+::: {.notes}
+
+**Demonstrating** how we do scientific exploration in a way that is:
+
+* structured (that acknowledges important branching points and makes careful decisions on what to persue)
+* that uses theory, heuristics -- and models -- to support interpretion 
+* that uses statistical techniques de-emphasises / discourages spurious disovery.
+* that considers *coverage* -- how likely are dominant effects likely to hold? how sensitive are they to noise?
+
+This was a model-based analysis, but emphasis in models is different -- more on using models for helping us to identify parts of data space that is surprsing--
+less interested in how much overall data depart from expectaiton, but *where* this is the case 
+
+
+* that considers appropriate levels of data and analytic uncertainty -- some might be represented by statistical computation; others might be more epistemic; that considers 
+
+And so instead we pushed our exploratory analysis in various directions, using combinations of models and data graphics in tandem -- in a way that geographers often do, but that you tend not to see in data analysis primers.
+
+:::
+
+
+---
+
+
+![](img/challenges_eda.png){.absolute top=100 left=50 width="72%"}
+
+![](img/harvard_challenges_eda.png){.absolute top=0 left=720 width="25%"}
+
+
+::: {.notes}
+
+
+Exploratory analysis -- and doing analysis in GEOG and VIS -- is not (just) about saying how far data depart from model overall, but in what ways -- where in the distribution.
+
+Data graphics: not about exposing structure in data -- errors, outliers -- but about model- and theory- building. Comparison against exploration
+
+
+
+
+:::
+
+---
+
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+::: {style="font-size: 65%"}
+
+<br>
+
+> EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual system
+>
+> We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
+>
+> Hullman and Gelman 2021
+
+:::
+
+:::
+
+::: {.column width="20%"}
+
+:::
+
+:::
+
+![](img/harvard_challenges_eda.png){.absolute top=0 left=720 width="30%"}
+
+
+---
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+::: {style="font-size: 85%"}
+
+<br><br>
+
+> Exploratory research **needs rigor** to serve its intended aim of **facilitating scientific discovery**. Whichever method is selected [...] it needs to be implemented rigorously to **maximize the probability of true discoveries while minimizing the probability of false discoveries**.
+> 
+> Devezer et al. 2021
+
+:::
+
+:::
+
+
+![](img/science_reform_paper.png){.absolute top=0 left=650 width="50%"}
+
+:::
+
+
+::: {.notes}
+
+But if expanded role for exploratory research ...
+
+Inject scepticims of stat practice...
+
+:::
+
+
+
+
+---
+
+
+::: {style="font-size: 200%"}
+
+<br>
+
+*Our TMCF*: <br>
+**A research agenda for exploratory research**
+
+
+:::
+
+---
+
+::: {.columns}
+
+
+::: {.column width="49%" style="background-color: #000000; color: #f0f0f0f0"}
+
+
+
+::: {.flushright}
+
+
+
+::: {style="font-size: 200%"}
+**Rigour**
+:::
+
+::: {style="font-size: 90%"}
+-- Repeatable analysis plans <br>
+-- Known inference protocols <br>
+-- Expectations for size and stability of effects 
+<br><br><br><br><br><br><br><br>
+:::
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+<br><br><br><br>
+
+::: {style="font-size: 200%"}
+**Richness**
+:::
+
+::: {style="font-size: 90%"}
+-- Evolving analysis plans <br>
+-- Informal inference (multiplicity) <br>
+-- Effects situated within descriptive context
+
+:::
+
+:::
+
+:::
+
+
+::: {.notes}
+
+Rigour :
+
+-- do the things/recipes we associate with rigour really lead to more defensible, better science?
+-- straightjacket, risk getting trapped in local minima, abdicating analytical thought to process / mechanics of pre-registration
+
+Many of the human errors we point out in data analysis can be attributed to a lack of ability to entertain multiple possibilities. We like to suppress and reduce uncertainty, not maintain it as we go.
+
+
+:::
+
+
+
+<!-- ### via Devezer 2021 -->
+
+<!-- ::: {style="font-size: 75%"} -->
+<!-- > 1 Exploratory research needs to start with **subject matter expertise** or **theoretical background**, and hence, **cannot be** [...] **completely dictated by the data**. -->
+<!-- > <br><br> -->
+<!-- > 2 Successful exploratory studies [must have] **richness of data**. Random datasets that are uninformative about the area to be explored will probably not yield important discoveries. -->
+<!-- > <br><br> -->
+<!-- > 3 Exploration requires robust **methods that are insensitive to underlying assumptions**. ... **Using robust approaches** such as multiverse analysis or metastudies could be **more appropriate** for exploration purposes. -->
+<!-- > <br><br> -->
+<!-- > 4 Exploratory work needs to be done in a **structured, systematic, honest and transparent** manner using a **deliberately chosen methodology appropriate for the task**. -->
+<!-- > -->
+
+<!-- ::: -->
+
+<!-- --- -->
+
+
+<!-- ::: {.notes} -->
+
+<!--  e.g. model-based exploratory analysis that has rigour – and so that allows us to comment on effects, processes, causes and assess generalisability and reliability of things we are observing.  -->
+
+
+
+<!-- + What we would really like to do is think, write about, and start working on examples of how this would ‘look’ in our own domains: -->
+<!--   + how it might work/be specialised according to domains -->
+<!--   + whether we can  systemise any of this and generate tools to support analysts in reasoning and building models that are loaded with rich context -->
+<!-- + but that also invite us to check against spurious discovery, consider the context under which observed patterns become unstable etc. -->
+
+<!-- ::: -->
+
+<!-- --- -->
+
+
+---
+
+
+::: {style="font-size: 85%"}
+<span style='font-size:1.2em;'>1. **Modelling paradigms**</span> <br>
+Establish what is distinctive about modelling in data-driven science by mapping out archetypal data-driven projects and the analysis practices they use.
+<br>
+
+<span style='font-size:1.2em;'>2. **Inference and replicability**</span> <br>
+Develop ways of documenting the context under which analytical findings are made – a grammar for structuring exploratory research findings – so that inferences can be more formally reported.
+<br>
+
+<span style='font-size:1.2em;'>3. **Tools** </span><br>
+For progressing **from analysis to communication**: documenting interactive data analysis processes with integrity – balancing claims to knowledge with informational complexity.
+
+:::
+
+
+::: {.notes}
+
+Call for pre-registration sparked by forking paths -- was about the many decisions—such as selecting variables, models, or subgroups—during data analysis --  this flexibility increases the risk of p-hacking as seemingly reasonable choices accumulate, leading to biased inference. 
+
+Pre-registration, transparency, and robustness checks help mitigate this problem in scientific research.
+
+:::
+
+---
+
+![](img/TMCF-team.png){.absolute top=30 left=0 width="90%"}
+
+::: {.notes}
+
+We brought people who have very eloquently defined this problem space, and are the obvious experts that have been pushing this perspective/take on applied data analysis
+
+
+Applied data scientists doing problem-driven research; methods-oriented data scientists from Vis and Stats
+
+:::
+
+
+---
+
+![](img/tmcf-team-turing.jpeg){.absolute top=30 left=0 width="80%"}
+
+::: {.notes}
+
+Applied data scientists doing problem-driven research; methods-oriented data scientists from Vis and Stats
+
+:::
+
+
+
+---
+
+
+
+::: {style="font-size: 200%"}
+
+<br>
+
+*Our TMCF*: <br>
+**Workshop and outputs**
+
+
+:::
+
+::: {.notes}
+
+
+
+:::
+
+---
+
+**Before** 
+<br> > Provocations <br> > 500-word position statements 
+
+
+**During** 
+<br> > Testing position statements <br> > 1500-word blogs <br> > concept paper 
+
+
+**After** 
+<br> > concept paper: *[wide]* data analysis <br> > call to action for *[wide]* applications
+
+
+::: {.notes}
+
+Avoid seminar series... more *doing*
+
+:::
+
+---
+
+# Week 1
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**Provocations**</span>
+:::
+
+::: {style="font-size: 65%; background-color: #f0f0f0;"}
+<span style='font-size:1.2em;'>1. **Modelling paradigms**</span> <br>
+-- *Heuristics trumps theory in data-driven research* <br>
+-- *Models are exploratory artefacts* <br>
+
+
+<span style='font-size:1.2em;'>2. **Inference and replicability**</span> <br>
+-- *Claims to knowledge can only be made through out-of-sample significance tests* <br>
+-- *Pre-registration locks researchers into facile statistical tests*<br>
+-- *Human-in-the-loop is incompatible with inferential and replicable analysis* <br>
+
+<span style='font-size:1.2em;'>3. **Tools** </span><br>
+-- *Visualizations are limited as evidence* <br>
+-- *There is no formal beginning, process or an end to an interactive data analysis session, it is all context-dependent* <br>
+-- *Provenance of exploratory data analysis processes are too complex and ad hoc to be useful*
+
+:::
+
+::: {.notes}
+
+
+:::
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**Provoking**</span>
+:::
+
+![](img/provoking.jpeg){.absolute top=0 left=0 width="78%"}
+
+
+---
+
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**Blogging**</span>
+:::
+
+
+![](img/blogging.jpeg){.absolute top=0 left=0 width="80%"}
+
+
+::: {.notes}
+
+Humans all the way down : self-reflection and critique -- chock with useful examples 
+Garden of foggy paths : trapped in local minima - imagination is important 
+Automated analysis : how we interact with data, models, evidence 
+Andrew : collection of ideas and examples  
+
+:::
+
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**Panelling**</span>
+:::
+
+
+![](img/panelling.jpeg){.absolute top=0 left=0 width="80%"}
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**Jogging**</span>
+:::
+
+![](img/jogging.jpeg){.absolute top=0 left=0 width="80%"}
+
+---
+
+# Week 2
+
+---
+
+::: {style="font-size: 110%"}
+
+<span style='font-size:4.0em;'>**wide**</span> <span style='font-size:2.0em;'>**Data Analysis** </span><br>
+-------------------- <br>
+[E]nabling <br> [W]ide <br> [D]etailed and <br> [I]nteractive <br> data practice
+
+:::
+
+
+::: {.notes}
+
+Concerns science reform movement and "Rigour" --> narrow application of  processes / practices
+
+> Many errors in data analysis -- its generalisation --  a lack of ability to entertain multiple possibilities. 
+> We like to suppress and reduce 
+
+
+-- can get trapped in local minima
+
+In the blogs : examples of new techniques, frameworks, approaches to navigate this space...
+
+Write these up in four strategies for wide data analysis
+
+
+:::
+---
+
+
+
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<span style='font-size:1.1em;'>
+[W]idening </span>
+
+::: {style="font-size: 90%"}
+> [W]idening the data analysis process involves considering a **broader range of approaches** to problem solving than might otherwise be adopted. The aim is to encourage a **mindset** that is open to exploration, interpretation, **multiple and complementary explanations** of phenomena. They may be specific **variations in some modelling parameterisation** or more **profound choices around methodological approach**. Widening requires an evaluative and self-reflective critical perspective in selecting the range of approaches to consider and to make choices of which to adopt in practice 
+:::
+
+::: {.notes}
+
+Compel us in analysis to extend / consider different ways of doing...
+
+Might be low-level model-building
+
+Might be more fundamentally different approaches -- two different paradigms for 
+
+:::
+
+---
+
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<span style='font-size:1.1em;'>
+[I]nteracting </span>
+
+::: {style="font-size: 90%"}
+> [I]nteracting recognises and embraces the potential of human decision-making in every step of the data analysis workflow. We broaden its scope beyond the use of graphical systems for human-computer interaction to include **all points where a human decision shapes and responds to the analytic process**. This might be in the parameterisation of a model, the choice of data source, the synthesis of results -- a **touchpoint in the workflow** that ties analysis to its underlying goals. By emphasising this broader view of interaction we open the myriad of choices that shape all data analysis to examination and reflection.
+:::
+
+::: {.notes}
+
+
+Interacting is where we make decisions to cut data in different ways -- so this is the point in which we branch (forking paths) -- we want to do this conciously (judiciiously)
+
+
+:::
+
+
+---
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<span style='font-size:1.1em;'>
+[D]etailing </span>
+
+
+> [D]etailing involves providing explicit accounts of the data analysis process in order to support **scrutiny and interpretation and epistemological reflection**. This added richness supports transparency and encourages an acknowledgment that human decision-making is present throughout the analysis process. That detail may include **rich descriptive documentation of process and context**, justifications of **choices made, interpretations of results** and reflections on the workflow.
+
+
+::: {.notes}
+
+In a robust exploratory analysis, we'd want to *document* and *introdpect* key decision points....
+
+But also the context of our gindings -- if we detail that context in a thorough way, we can use this to judge expectations of generalisation... 
+
+:::
+
+---
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<span style='font-size:1.1em;'>
+[E]nabling </span>
+
+> [E]nabling involves making the adoption of widening, interacting and detailing strategies as easy as possible. We argue that even with a strong case for **widening** and deepening a data analysis workflow, this **may not be implemented** in practice **if the cost of doing so is perceived as too high**. In this paper we propose and speculate on a number of possible mechanisms by which we might enable more rigorous data analysis and provide a call to action to develop **new enabling tools and practices**.
+
+---
+
+::: {.flushright}
+**wide** data analysis : foundations
+:::
+
+<br>
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+<span style='font-size:.9em;'>Ways of **thinking** wide  </span> <br>
+
+::: {style="font-size: 70%"}
+
+-- Bringing different model paradigms 
+&nbsp;&nbsp;&nbsp;and traditions together
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Integrative modelling](https://www.nature.com/articles/s41586-021-03659-0) 
+
+-- Scientific exploration as storytelling  <br>
+
+-- Embracing uncertainty
+
+
+
+:::
+
+:::
+
+
+::: {.column width="50%"}
+
+<span style='font-size:0.9em;'> Ways of **doing** wide </span> <br>
+
+::: {style="font-size: 70%"}
+
+-- Consider granularity, sensitivity, saturation 
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Finite sample robustness checks](https://arxiv.org/pdf/2011.14999) <br> 
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Omitted variable bias](https://academic.oup.com/jrsssb/article/82/1/39/7056023)
+
+
+-- Asking what-ifs 
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Robust inference](https://link.springer.com/article/10.1007/s00362-009-0286-9) 
+
+-- Visualization for widening focus 
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Line-ups](https://royalsocietypublishing.org/doi/10.1098/rsta.2009.0120) | [Hypothetical outcome plots](https://ieeexplore.ieee.org/document/8440816) <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Rashomon sets](https://arxiv.org/pdf/2302.13356) | [Causal quartets](https://sites.stat.columbia.edu/gelman/research/unpublished/causal_quartets.pdf)
+
+:::
+
+
+:::
+
+:::
+
+
+::: {.notes}
+
+**Granularity** New stat approaches -- how much data is needed to preserve core finding / assumption / how serious an omitted confounder would have to be before an effect dissappears 
+
+**Vis** -- 
+Approaches to exploring observed data, identified effects, under different assumptions / mechanisms ...Vis as looking at how data depart from global model / avg effect!
+
+Rashomon -- different relationships between predictors based on model type
+Gelman causal -- same overall effect but different things happening within pre-treatment chacrateristics...same average effct but different patterns of treatment interaction / process
+
+...e.g. often find average "effects" are smaller than expected...we should not expect them to generalise ... some variation will generalise, some won't
+
+**Different modelling paradigms together** : 
+Integrative modelling : it makes sense that we would want to *explain* the processes (explanatory modelling) and also stres-test them under different contexts/ situations (predictive modelling)
+
+
+**Storytelling not just about broadcasting** : how we as scientists understand and evaluate theories using data -- how *surprising* are our data given these? storytelling is a form of exploration of the implications of a hypothesis
+
+**Embracing uncertainty** : Beyond just randomisation... we should stat to talk about epistemic uncertainty
+
+
+
+
+
+:::
+
+---
+
+::: {.flushright}
+**wide** data analysis : prompting questions
+:::
+
+<!-- via *Data Feminism* (D’ignazio and Klein 2020) -->
+
+<span style='font-size:1.0em;'>**Widening questions**</span> <br>
+
+::: {style="font-size: 65%; background-color: #f0f0f0;"}
+**data** <br>
+Can you think of anything not currently captured in your data that could be relevant?
+Whose perspectives have been excluded from the data collection/categorization?
+Do your data truthfully capture the phenomena you are interested in?
+Can the data provenance be identified and how might that provenance influence your
+analysis and interpretation?
+Have there been meaningful changes since your data were collected?
+
+**methods** <br>
+How do you know if your sample is representative of the target population? 
+Do your observations change with different spatial/temporal scales?
+How sensitive are your results to the parameter choices in your models?
+
+**methodological** <br>
+Are there other approaches to the task that might yield different but meaningful perspectives?
+Are there critiques of your methodological approach? Do they apply here?
+Would bringing in a wider team of people, from different methodological traditions, result in alternative methodological approaches?
+How might your findings and interpretation compare with those arrived at via other
+methodological approaches?
+
+
+<!-- <span style='font-size:1.2em;'>**Interacting**</span> <br>
+Where in your workflow should you pause and re-evaluate your data / methods / approach / interpretation?
+Can visualising intermediate results help in assessing the validity of your approach?
+What are the impacts of data, methods and methodological decisions as they propagate through the analysis and interpretation process?
+Do any of the answers above prompt you to alter your analysis?
+
+
+<span style='font-size:1.2em;'>**Detailing** </span><br>
+How do you register relevant characteristics that do not easily fall into your classification / modelling?
+How can you help future analysts learn from your data and analysis decisions and insights?
+How can you capture the propagation of data, method and methodological decisions through the analysis and interpretation process?
+Is it feasible to provide details of the provenance of the data used and how might this be most effectively and efficiently conveyed? -->
+
+:::
+
+
+---
+
+::: {.flushright}
+**wide** data analysis : case study
+:::
+
+![](img/polls.png){.absolute top=70 left=0 width="70%"}
+![](img/polls_legend.png){.absolute top=100 left=680 width="15%"}
+
+
+::: {.notes}
+
+Examples of wide data analysis : polling
+
+-- introspection/scrutiny into what is being done
+-- different companies and individuals trying to do the same thing
+-- if we look at two polls -- talk about differences being due to aleatory uncertainty -- random varuations
+-- or epistemic
+
+-- some methodological -- MRP
+-- some of these methods-related (variable selection)
+-- some of these emprirical data collection -- should we introduce squeeze questions? sampling non-response?
+-- emerging theories / ideas / concepts are shifting how it is practiced
+
+Analysis of Labour miss in recent polls. 
+
+:::
+
+---
+
+::: {.flushright}
+**wide** data analysis : call-to-action
+:::
+
+<!-- ![](img/hdsr.png){.absolute top=0 left=550 width="40%"} -->
+![](img/rss_b.png){.absolute top=340 left=0 width="60%"}
+
+![](img/rsos.png){.absolute top=80 left=0 width="50%"}
+
+::: {.notes}
+. 
+
+:::
+
+
+
