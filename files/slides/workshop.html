@@ -273,8 +273,9 @@
 <p><img data-src="img/challenges_eda.png" class="absolute" style="top: 100px; left: 50px; width: 72%; "></p>
 <p><img data-src="img/harvard_challenges_eda.png" class="absolute" style="top: 0px; left: 720px; width: 25%; "></p>
 <aside class="notes">
-<p>Exploratory analysis – and doing analysis in GEOG and VIS – is not (just) about saying how far data depart from model overall, but in what ways – where in the distribution.</p>
 <p>Data graphics: not about exposing structure in data – errors, outliers – but about model- and theory- building. Comparison against exploration</p>
+<p>How can we do inference with, or what sorts of inference do we make with graphics?</p>
+<p>Exploratory analysis – and doing analysis in GEOG and VIS – is not (just) about saying how far data depart from model overall, but in what ways – where in the distribution</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -362,7 +363,9 @@
 </div></div>
 <aside class="notes">
 <p>Rigour :</p>
-<p>– do the things/recipes we associate with rigour really lead to more defensible, better science? – straightjacket, risk getting trapped in local minima, abdicating analytical thought to process / mechanics of pre-registration</p>
+<p>– do the things/recipes we associate with rigour really lead to more defensible, better science? – straightjacket, risk getting trapped in local minima + mechanics of pre-registration</p>
+<p>Richness :</p>
+<p>– descriptive detail that underpins the inferences we make necessary for generalising / transfer – if context under which data / findings generated not properly detailed, should we be surprised about a replication crisis?</p>
 <p>Many of the human errors we point out in data analysis can be attributed to a lack of ability to entertain multiple possibilities. We like to suppress and reduce uncertainty, not maintain it as we go.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -422,7 +425,6 @@
 
 <p><img data-src="img/TMCF-team.png" class="absolute" style="top: 30px; left: 0px; width: 90%; "></p>
 <aside class="notes">
-<p>We brought people who have very eloquently defined this problem space, and are the obvious experts that have been pushing this perspective/take on applied data analysis</p>
 <p>Applied data scientists doing problem-driven research; methods-oriented data scientists from Vis and Stats</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -538,7 +540,12 @@
 </div>
 <p><img data-src="img/blogging.jpeg" class="absolute" style="top: 0px; left: 0px; width: 80%; "></p>
 <aside class="notes">
-<p>Humans all the way down : self-reflection and critique – chock with useful examples Garden of foggy paths : trapped in local minima - imagination is important Automated analysis : how we interact with data, models, evidence Andrew : collection of ideas and examples</p>
+<ul>
+<li><p>Humans all the way down : self-reflection and critique – examples</p></li>
+<li><p>Garden of foggy paths : trapped in local minima - imagination is important</p></li>
+<li><p>Automated analysis : how we interact with data, models, evidence</p></li>
+<li><p>Andrew : collection of ideas and examples</p></li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -583,9 +590,9 @@
 <blockquote>
 <p>Many errors in data analysis – its generalisation – a lack of ability to entertain multiple possibilities. We like to suppress and reduce</p>
 </blockquote>
-<p>– can get trapped in local minima</p>
 <p>In the blogs : examples of new techniques, frameworks, approaches to navigate this space…</p>
 <p>Write these up in four strategies for wide data analysis</p>
+<p>– not getting trapped in local minima</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -661,7 +668,7 @@
 </blockquote>
 <aside class="notes">
 <p>In a robust exploratory analysis, we’d want to <em>document</em> and <em>introdpect</em> key decision points….</p>
-<p>But also the context of our gindings – if we detail that context in a thorough way, we can use this to judge expectations of generalisation…</p>
+<p>But also the context of our findings – if we detail that context in a thorough way, we can use this to judge expectations of generalisation…</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -711,9 +718,15 @@
 </div>
 </div></div>
 <aside class="notes">
-<p><strong>Granularity</strong> New stat approaches – how much data is needed to preserve core finding / assumption / how serious an omitted confounder would have to be before an effect dissappears</p>
-<p><strong>Vis</strong> – Approaches to exploring observed data, identified effects, under different assumptions / mechanisms …Vis as looking at how data depart from global model / avg effect!</p>
-<p>Rashomon – different relationships between predictors based on model type Gelman causal – same overall effect but different things happening within pre-treatment chacrateristics…same average effct but different patterns of treatment interaction / process</p>
+<p><strong>Granularity</strong></p>
+<ul>
+<li>New stat approaches – how much data is needed to preserve core finding / assumption /</li>
+<li>how serious an omitted confounder would have to be before an effect disappears</li>
+</ul>
+<p><strong>Vis</strong> – Extend our understanding of mechanims and processes that are occuring in datasets..</p>
+<p>Hypothetical outcome plots – how different an inferred pattern can look under different samples…</p>
+<p>Motivating example used for vis is looking at how data depart from global model / avg effect!</p>
+<p>Rashomon – different relationships between predictors based on model type Gelman causal quartets – same overall effect but different things happening within pre-treatment chacrateristics…same average effct but different patterns of treatment interaction / process</p>
 <p>…e.g.&nbsp;often find average “effects” are smaller than expected…we should not expect them to generalise … some variation will generalise, some won’t</p>
 <p><strong>Different modelling paradigms together</strong> : Integrative modelling : it makes sense that we would want to <em>explain</em> the processes (explanatory modelling) and also stres-test them under different contexts/ situations (predictive modelling)</p>
 <p><strong>Storytelling not just about broadcasting</strong> : how we as scientists understand and evaluate theories using data – how <em>surprising</em> are our data given these? storytelling is a form of exploration of the implications of a hypothesis</p>
@@ -754,6 +767,26 @@ How can you help future analysts learn from your data and analysis decisions and
 How can you capture the propagation of data, method and methodological decisions through the analysis and interpretation process?
 Is it feasible to provide details of the provenance of the data used and how might this be most effectively and efficiently conveyed? -->
 </div>
+<aside class="notes">
+<p>Data Feminism – D’Ignazio and Klein</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<div class="flushright">
+<p><strong>wide</strong> data analysis : prompting questions</p>
+</div>
+<p><img data-src="img/schemas.png" class="absolute" style="top: 70px; left: 0px; width: 90%; "></p>
 </section>
 <section class="slide level2">
 

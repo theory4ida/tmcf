@@ -180,10 +180,12 @@ And so instead we pushed our exploratory analysis in various directions, using c
 ::: {.notes}
 
 
-Exploratory analysis -- and doing analysis in GEOG and VIS -- is not (just) about saying how far data depart from model overall, but in what ways -- where in the distribution.
-
 Data graphics: not about exposing structure in data -- errors, outliers -- but about model- and theory- building. Comparison against exploration
 
+How can we do inference with, or what sorts of inference do we make with graphics?
+
+
+Exploratory analysis -- and doing analysis in GEOG and VIS -- is not (just) about saying how far data depart from model overall, but in what ways -- where in the distribution
 
 
 
@@ -320,7 +322,12 @@ Inject scepticims of stat practice...
 Rigour :
 
 -- do the things/recipes we associate with rigour really lead to more defensible, better science?
--- straightjacket, risk getting trapped in local minima, abdicating analytical thought to process / mechanics of pre-registration
+-- straightjacket, risk getting trapped in local minima + mechanics of pre-registration
+
+Richness :
+
+-- descriptive detail that underpins the inferences we make necessary for generalising / transfer
+-- if context under which data / findings generated not properly detailed, should we be surprised about a replication crisis? 
 
 Many of the human errors we point out in data analysis can be attributed to a lack of ability to entertain multiple possibilities. We like to suppress and reduce uncertainty, not maintain it as we go.
 
@@ -394,7 +401,6 @@ Pre-registration, transparency, and robustness checks help mitigate this problem
 
 ::: {.notes}
 
-We brought people who have very eloquently defined this problem space, and are the obvious experts that have been pushing this perspective/take on applied data analysis
 
 
 Applied data scientists doing problem-driven research; methods-oriented data scientists from Vis and Stats
@@ -509,10 +515,13 @@ Avoid seminar series... more *doing*
 
 ::: {.notes}
 
-Humans all the way down : self-reflection and critique -- chock with useful examples 
-Garden of foggy paths : trapped in local minima - imagination is important 
-Automated analysis : how we interact with data, models, evidence 
-Andrew : collection of ideas and examples  
+* Humans all the way down : self-reflection and critique -- examples 
+
+* Garden of foggy paths : trapped in local minima - imagination is important 
+
+* Automated analysis : how we interact with data, models, evidence 
+
+* Andrew : collection of ideas and examples  
 
 :::
 
@@ -557,11 +566,12 @@ Concerns science reform movement and "Rigour" --> narrow application of  process
 > We like to suppress and reduce 
 
 
--- can get trapped in local minima
 
 In the blogs : examples of new techniques, frameworks, approaches to navigate this space...
 
 Write these up in four strategies for wide data analysis
+
+-- not getting trapped in local minima
 
 
 :::
@@ -631,7 +641,7 @@ Interacting is where we make decisions to cut data in different ways -- so this 
 
 In a robust exploratory analysis, we'd want to *document* and *introdpect* key decision points....
 
-But also the context of our gindings -- if we detail that context in a thorough way, we can use this to judge expectations of generalisation... 
+But also the context of our findings -- if we detail that context in a thorough way, we can use this to judge expectations of generalisation... 
 
 :::
 
@@ -711,13 +721,22 @@ But also the context of our gindings -- if we detail that context in a thorough 
 
 ::: {.notes}
 
-**Granularity** New stat approaches -- how much data is needed to preserve core finding / assumption / how serious an omitted confounder would have to be before an effect dissappears 
+**Granularity** 
 
-**Vis** -- 
-Approaches to exploring observed data, identified effects, under different assumptions / mechanisms ...Vis as looking at how data depart from global model / avg effect!
+* New stat approaches -- how much data is needed to preserve core finding / assumption / 
+* how serious an omitted confounder would have to be before an effect disappears 
+
+
+
+**Vis** --
+Extend our understanding of mechanims and processes that are occuring in datasets..
+
+Hypothetical outcome plots -- how different an inferred pattern can look under different samples...
+
+Motivating example used for vis is looking at how data depart from global model / avg effect!
 
 Rashomon -- different relationships between predictors based on model type
-Gelman causal -- same overall effect but different things happening within pre-treatment chacrateristics...same average effct but different patterns of treatment interaction / process
+Gelman causal quartets -- same overall effect but different things happening within pre-treatment chacrateristics...same average effct but different patterns of treatment interaction / process
 
 ...e.g. often find average "effects" are smaller than expected...we should not expect them to generalise ... some variation will generalise, some won't
 
@@ -783,7 +802,27 @@ Is it feasible to provide details of the provenance of the data used and how mig
 :::
 
 
+::: {.notes}
+Data Feminism -- D'Ignazio and Klein
+
+:::
+
+
 ---
+
+
+::: {.flushright}
+**wide** data analysis : prompting questions
+:::
+
+
+![](img/schemas.png){.absolute top=70 left=0 width="90%"}
+
+
+----
+
+
+
 
 ::: {.flushright}
 **wide** data analysis : case study
