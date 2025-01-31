@@ -161,23 +161,159 @@
 </section>
 <section class="slide level2">
 
+<!-- # *Our* TMCF <br> <span style='font-size:0.8em; font-weight: 500;'>Forking paths in data-driven science </span>
+
+::: {.notes}
+
+Forking paths: 
+problem where researchers make many decisions—such as selecting variables, models, or subgroups—during data analysis -- these decisions, when not judtified, accumulate biasing inference...
+
+
+
+::: -->
 </section>
-<section>
-<section id="our-tmcf-forking-paths-in-data-driven-science" class="title-slide slide level1 center">
-<h1><em>Our</em> TMCF <br> <span style="font-size:0.8em; font-weight: 500;">Forking paths in data-driven science </span></h1>
-<aside class="notes">
-<p>Forking paths: problem where researchers make many decisions—such as selecting variables, models, or subgroups—during data analysis – these decisions, when not judtified, accumulate biasing inference…</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<section class="slide level2">
+
+<!-- ![](img/stats19.png){.absolute top=10 left=0 width="50%"}
+
+![](img/stats19_2.png){.absolute top=30 left=550 width="40%"}
+
+
+::: {.notes}
+
+For me: 
+Road Crash Analysis project with DfT
+Also work with a PhD student
+
+
+Stats19 -- the road safety dataset for UK
+
+Had some  draft pre-registration report/proposal looking at pedestrian injury -- before / after analysis, establishing effect of intervention classes on crash rates/ injury sevrity 
+
+Essentially because our exploratory analysis threw up so many things that undermined our initial plans 
+-- generated findings that at a high-level would look compelling (p-values etc.), but when properly scrutinised would fall apart
+
+These needed to be fully explored, but doing so would kind of invalidate our pre-registration (depending on how srictly adhered to).
+
+Re-confirmed actually a lot of data analysis is scientific exploration.
+
+:::
+
+---
+
+
+
+![](img/analysis1.png){.absolute top=80 left=450 width="55%"}
+![](img/analysis2.png){.absolute top=350 left=450 width="51%"}
+
+
+![](img/ga_twitter.png){.absolute top=0 left=0 width="40%"}
+
+::: {.notes}
+
+**Demonstrating** how we do scientific exploration in a way that is:
+
+* structured (that acknowledges important branching points and makes careful decisions on what to persue)
+* that uses theory, heuristics -- and models -- to support interpretion 
+* that uses statistical techniques de-emphasises / discourages spurious disovery.
+* that considers *coverage* -- how likely are dominant effects likely to hold? how sensitive are they to noise?
+
+This was a model-based analysis, but emphasis in models is different -- more on using models for helping us to identify parts of data space that is surprsing--
+less interested in how much overall data depart from expectaiton, but *where* this is the case 
+
+
+* that considers appropriate levels of data and analytic uncertainty -- some might be represented by statistical computation; others might be more epistemic; that considers 
+
+And so instead we pushed our exploratory analysis in various directions, using combinations of models and data graphics in tandem -- in a way that geographers often do, but that you tend not to see in data analysis primers.
+
+:::
+
+
+---
+
+
+![](img/challenges_eda.png){.absolute top=100 left=50 width="72%"}
+
+![](img/harvard_challenges_eda.png){.absolute top=0 left=720 width="25%"}
+
+
+::: {.notes}
+
+
+Data graphics: not about exposing structure in data -- errors, outliers -- but about model- and theory- building. Comparison against exploration
+
+How can we do inference with, or what sorts of inference do we make with graphics?
+
+
+Exploratory analysis -- and doing analysis in GEOG and VIS -- is not (just) about saying how far data depart from model overall, but in what ways -- where in the distribution
+
+
+
+::: -->
+<!-- ---
+
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+::: {style="font-size: 65%"}
+
+<br>
+
+> EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual system
+>
+> We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
+>
+> Hullman and Gelman 2021
+
+:::
+
+:::
+
+::: {.column width="20%"}
+
+:::
+
+:::
+
+![](img/harvard_challenges_eda.png){.absolute top=0 left=720 width="30%"}
+ -->
+<!-- ---
+
+
+::: {.notes}
+
+But if expanded role for exploratory research ...
+
+Inject scepticims of stat practice...
+
+:::
+ -->
+</section>
+<section class="slide level2">
+
+<div style="font-size: 200%">
+<p><br></p>
+<p><em>Our TMCF</em>: <br> <strong>A research agenda for exploratory research</strong></p>
+</div>
+</section>
+<section class="slide level2">
+
+<div style="font-size: 130%">
+<p><span style="font-size:1.6em; font-weight: 600;">What does </span> <span style="font-size:2.5em; font-weight: 600;">good* </span> <span style="font-size:1.6em; font-weight: 600;"> data-driven science look like? </span><br></p>
+<p><br> ——————– <br></p>
+<p>*defensible | rigorous | theoretically-informed</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div style="font-size: 80%">
+<p><span style="font-size:1.6em; font-weight: 600;">What does </span> <span style="font-size:2.5em; font-weight: 600;">good* </span> <span style="font-size:1.6em; font-weight: 600;"> data-driven science look like? </span><br></p>
+<p><br> ——————– <br></p>
+<p>*defensible | rigorous | theoretically-informed</p>
+</div>
+<p><span style="font-size:3.0em; font-weight: 600;"> And how do we get there? </span></p>
 </section>
 <section class="slide level2">
 
@@ -186,6 +322,7 @@
 <div style="font-size: 100%">
 <p><br> &gt; Explore <br> &gt; Pre-register <br> &gt; Test</p>
 </div>
+<hr>
 </div><div class="column" style="width:70%;">
 <p><img data-src="img/science_reform_paper.png" class="absolute" style="top: 50px; left: 300px; width: 85%; "></p>
 </div><div class="column" style="width:40%;">
@@ -215,98 +352,6 @@
 </section>
 <section class="slide level2">
 
-</section>
-<section class="slide level2">
-
-<p><img data-src="img/stats19.png" class="absolute" style="top: 10px; left: 0px; width: 50%; "></p>
-<p><img data-src="img/stats19_2.png" class="absolute" style="top: 30px; left: 550px; width: 40%; "></p>
-<aside class="notes">
-<p>For me: Road Crash Analysis project with DfT Also work with a PhD student</p>
-<p>Stats19 – the road safety dataset for UK</p>
-<p>Had some draft pre-registration report/proposal looking at pedestrian injury – before / after analysis, establishing effect of intervention classes on crash rates/ injury sevrity</p>
-<p>Essentially because our exploratory analysis threw up so many things that undermined our initial plans – generated findings that at a high-level would look compelling (p-values etc.), but when properly scrutinised would fall apart</p>
-<p>These needed to be fully explored, but doing so would kind of invalidate our pre-registration (depending on how srictly adhered to).</p>
-<p>Re-confirmed actually a lot of data analysis is scientific exploration.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<p><img data-src="img/analysis1.png" class="absolute" style="top: 80px; left: 450px; width: 55%; "> <img data-src="img/analysis2.png" class="absolute" style="top: 350px; left: 450px; width: 51%; "></p>
-<p><img data-src="img/ga_twitter.png" class="absolute" style="top: 0px; left: 0px; width: 40%; "></p>
-<aside class="notes">
-<p><strong>Demonstrating</strong> how we do scientific exploration in a way that is:</p>
-<ul>
-<li>structured (that acknowledges important branching points and makes careful decisions on what to persue)</li>
-<li>that uses theory, heuristics – and models – to support interpretion</li>
-<li>that uses statistical techniques de-emphasises / discourages spurious disovery.</li>
-<li>that considers <em>coverage</em> – how likely are dominant effects likely to hold? how sensitive are they to noise?</li>
-</ul>
-<p>This was a model-based analysis, but emphasis in models is different – more on using models for helping us to identify parts of data space that is surprsing– less interested in how much overall data depart from expectaiton, but <em>where</em> this is the case</p>
-<ul>
-<li>that considers appropriate levels of data and analytic uncertainty – some might be represented by statistical computation; others might be more epistemic; that considers</li>
-</ul>
-<p>And so instead we pushed our exploratory analysis in various directions, using combinations of models and data graphics in tandem – in a way that geographers often do, but that you tend not to see in data analysis primers.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<p><img data-src="img/challenges_eda.png" class="absolute" style="top: 100px; left: 50px; width: 72%; "></p>
-<p><img data-src="img/harvard_challenges_eda.png" class="absolute" style="top: 0px; left: 720px; width: 25%; "></p>
-<aside class="notes">
-<p>Data graphics: not about exposing structure in data – errors, outliers – but about model- and theory- building. Comparison against exploration</p>
-<p>How can we do inference with, or what sorts of inference do we make with graphics?</p>
-<p>Exploratory analysis – and doing analysis in GEOG and VIS – is not (just) about saying how far data depart from model overall, but in what ways – where in the distribution</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<div class="columns">
-<div class="column" style="width:70%;">
-<div style="font-size: 65%">
-<p><br></p>
-<blockquote>
-<p>EDA is often thought of as an alternative to model-based statistical analysis, but once we think of <strong>graphs as comparisons to models</strong>, it makes sense that the amount we’ve learned increases with the complexity of the model being compared to. <strong>Effective graphics</strong> create visual structures that <strong>enable model inspection</strong> by foregrounding comparisons of interest in ways that exploit the abilities of the human visual system</p>
-<p>We propose a perspective that <strong>unites exploratory and confirmatory analysis</strong> through the idea of <strong>graphs as model checks</strong> […] and describe how […] systems for exploratory visual analysis should be designed to <strong>better support model-driven inference and representation of uncertainty</strong>.</p>
-<p>Hullman and Gelman 2021</p>
-</blockquote>
-</div>
-</div><div class="column" style="width:20%;">
-
-</div></div>
-<p><img data-src="img/harvard_challenges_eda.png" class="absolute" style="top: 0px; left: 720px; width: 30%; "></p>
-</section>
-<section class="slide level2">
-
 <div class="columns">
 <div class="column" style="width:60%;">
 <div style="font-size: 85%">
@@ -317,27 +362,6 @@
 </blockquote>
 </div>
 </div><p><img data-src="img/science_reform_paper.png" class="absolute" style="top: 0px; left: 650px; width: 50%; "></p>
-</div>
-<aside class="notes">
-<p>But if expanded role for exploratory research …</p>
-<p>Inject scepticims of stat practice…</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<div style="font-size: 200%">
-<p><br></p>
-<p><em>Our TMCF</em>: <br> <strong>A research agenda for exploratory research</strong></p>
 </div>
 </section>
 <section class="slide level2">
@@ -398,6 +422,10 @@
 <!-- + but that also invite us to check against spurious discovery, consider the context under which observed patterns become unstable etc. -->
 <!-- ::: -->
 <!-- --- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="img/challenge.png" class="absolute" style="top: 10px; left: 0px; width: 90%; "></p>
 </section>
 <section class="slide level2">
 
@@ -496,14 +524,6 @@
 </section>
 <section class="slide level2">
 
-</section></section>
-<section>
-<section id="week-1" class="title-slide slide level1 center">
-<h1>Week 1</h1>
-
-</section>
-<section class="slide level2">
-
 <div class="flushright">
 <p><span style="font-size:1.2em;"><strong>Provocations</strong></span></p>
 </div>
@@ -532,6 +552,15 @@
 <p><span style="font-size:1.2em;"><strong>Provoking</strong></span></p>
 </div>
 <p><img data-src="img/provoking.jpeg" class="absolute" style="top: 0px; left: 0px; width: 78%; "></p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p><em>All (good) analysis fundamentally requires human intervention. And that’s a strength, not a weakness.</em></p>
+</blockquote>
+<blockquote>
+<p><em>If you look at your data before analysis, your p-values are wrong because you’ve spent researcher degrees of freedom. If you don’t look at your data before analysis, your p-values are wrong because your model is wrong.</em></p>
+</blockquote>
 </section>
 <section class="slide level2">
 
@@ -571,14 +600,6 @@
 <p><span style="font-size:1.2em;"><strong>Jogging</strong></span></p>
 </div>
 <p><img data-src="img/jogging.jpeg" class="absolute" style="top: 0px; left: 0px; width: 80%; "></p>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="week-2" class="title-slide slide level1 center">
-<h1>Week 2</h1>
-
 </section>
 <section class="slide level2">
 
@@ -834,7 +855,7 @@ Is it feasible to provide details of the provenance of the data used and how mig
       }</style></aside>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="img/logos/logo_ati.png" class="slide-logo"></p>
