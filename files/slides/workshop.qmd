@@ -198,13 +198,13 @@ Inject scepticims of stat practice...
 
 
 <span style='font-size:1.6em; font-weight: 600;'>What does </span> 
-<span style='font-size:2.5em; font-weight: 600;'>good* </span> 
+<span style='font-size:2.5em; font-weight: 600; color: #99000d'>good* </span> 
 <span style='font-size:1.6em; font-weight: 600;'> data-driven science look like? </span><br>
 
 <br>
 -------------------- <br>
 
-*defensible | rigorous | theoretically-informed 
+<span style='color: #99000d'>*</span>defensible | rigorous | theoretically-informed 
 
 :::
 
@@ -212,19 +212,21 @@ Inject scepticims of stat practice...
 
 ---
 
-::: {style="font-size: 80%"}
+::: {style="font-size: 40%"}
 
 
 <span style='font-size:1.6em; font-weight: 600;'>What does </span> 
-<span style='font-size:2.5em; font-weight: 600;'>good* </span> 
-<span style='font-size:1.6em; font-weight: 600;'> data-driven science look like? </span><br>
+<span style='font-size:2.5em; font-weight: 600; color: #99000d'>good* </span> 
+<span style='font-size:1.6em; font-weight: 600;'> data-<br>driven science look like? </span><br>
 
 <br>
 -------------------- <br>
 
-*defensible | rigorous | theoretically-informed 
+<span style='color: #99000d'>*</span>defensible | rigorous | theoretically-informed 
 
 :::
+
+<br>
 
 <span style='font-size:3.0em; font-weight: 600;'>
 And how do we get there?
@@ -426,14 +428,14 @@ Many of the human errors we point out in data analysis can be attributed to a la
 
 
 
-::: {style="font-size: 85%"}
+::: {style="font-size: 80%"}
 <span style='font-size:1.2em;'>1. **Modelling paradigms**</span> <br>
-Establish what is distinctive about modelling in data-driven science by mapping out archetypal data-driven projects and the analysis practices they use.
-<br>
+Establish what is **distinctive** about modelling in **data-driven science** by mapping out archetypal data-driven projects and the analysis practices they use.
+<br><br>
 
 <span style='font-size:1.2em;'>2. **Inference and replicability**</span> <br>
-Develop ways of documenting the context under which analytical findings are made – a grammar for structuring exploratory research findings – so that inferences can be more formally reported.
-<br>
+Develop ways of **documenting the context** under which analytical findings are made – a grammar for **structuring exploratory research** findings – so that inferences can be reported.
+<br><br>
 
 <span style='font-size:1.2em;'>3. **Tools** </span><br>
 For progressing **from analysis to communication**: documenting interactive data analysis processes with integrity – balancing claims to knowledge with informational complexity.
@@ -559,6 +561,11 @@ Avoid seminar series... more *doing*
 > *If you look at your data before analysis, your p-values are wrong because you've spent researcher degrees of freedom. If you don't look at your data before analysis, your p-values are wrong because your model is wrong.*
 
 
+::: {.notes}
+
+Affinity mapping exercise. 
+
+:::
 
 ---
 
@@ -607,7 +614,7 @@ Avoid seminar series... more *doing*
 
 <span style='font-size:4.0em;'>**wide**</span> <span style='font-size:2.0em;'>**Data Analysis** </span><br>
 -------------------- <br>
-[E]nabling <br> [W]ide <br> [D]etailed and <br> [I]nteractive <br> data practice
+[**E**]nabling <br> [**W**]ide <br> [**D**]etailed and <br> [**I**]nteractive <br> data practice
 
 :::
 
@@ -639,10 +646,10 @@ Write these up in four strategies for wide data analysis
 :::
 
 <span style='font-size:1.1em;'>
-[W]idening </span>
+[**W**]idening </span>
 
 ::: {style="font-size: 90%"}
-> [W]idening the data analysis process involves considering a **broader range of approaches** to problem solving than might otherwise be adopted. The aim is to encourage a **mindset** that is open to exploration, interpretation, **multiple and complementary explanations** of phenomena. They may be specific **variations in some modelling parameterisation** or more **profound choices around methodological approach**. Widening requires an evaluative and self-reflective critical perspective in selecting the range of approaches to consider and to make choices of which to adopt in practice 
+> [**W**]idening the data analysis process involves considering a **broader range of approaches** to problem solving than might otherwise be adopted. The aim is to encourage a **mindset** that is open to exploration, interpretation, **multiple and complementary explanations** of phenomena. They may be specific **variations in some modelling parameterisation** or more **profound choices around methodological approach**. Widening requires an evaluative and self-reflective critical perspective in selecting the range of approaches to consider and to make choices of which to adopt in practice 
 :::
 
 ::: {.notes}
@@ -663,10 +670,10 @@ Might be more fundamentally different approaches -- two different paradigms for
 :::
 
 <span style='font-size:1.1em;'>
-[I]nteracting </span>
+[**I**]nteracting </span>
 
 ::: {style="font-size: 90%"}
-> [I]nteracting recognises and embraces the potential of human decision-making in every step of the data analysis workflow. We broaden its scope beyond the use of graphical systems for human-computer interaction to include **all points where a human decision shapes and responds to the analytic process**. This might be in the parameterisation of a model, the choice of data source, the synthesis of results -- a **touchpoint in the workflow** that ties analysis to its underlying goals. By emphasising this broader view of interaction we open the myriad of choices that shape all data analysis to examination and reflection.
+> [**I**]nteracting recognises and embraces the potential of human decision-making in every step of the data analysis workflow. We broaden its scope beyond the use of graphical systems for human-computer interaction to include **all points where a human decision shapes and responds to the analytic process**. This might be in the parameterisation of a model, the choice of data source, the synthesis of results -- a **touchpoint in the workflow** that ties analysis to its underlying goals. By emphasising this broader view of interaction we open the myriad of choices that shape all data analysis to examination and reflection.
 :::
 
 ::: {.notes}
@@ -685,10 +692,10 @@ Interacting is where we make decisions to cut data in different ways -- so this 
 :::
 
 <span style='font-size:1.1em;'>
-[D]etailing </span>
+[**D**]etailing </span>
 
 
-> [D]etailing involves providing explicit accounts of the data analysis process in order to support **scrutiny and interpretation and epistemological reflection**. This added richness supports transparency and encourages an acknowledgment that human decision-making is present throughout the analysis process. That detail may include **rich descriptive documentation of process and context**, justifications of **choices made, interpretations of results** and reflections on the workflow.
+> [**D**]etailing involves providing explicit accounts of the data analysis process in order to support **scrutiny and interpretation and epistemological reflection**. This added richness supports transparency and encourages an acknowledgment that human decision-making is present throughout the analysis process. That detail may include **rich descriptive documentation of process and context**, justifications of **choices made, interpretations of results** and reflections on the workflow.
 
 
 ::: {.notes}
@@ -706,9 +713,9 @@ But also the context of our findings -- if we detail that context in a thorough 
 :::
 
 <span style='font-size:1.1em;'>
-[E]nabling </span>
+[**E**]nabling </span>
 
-> [E]nabling involves making the adoption of widening, interacting and detailing strategies as easy as possible. We argue that even with a strong case for **widening** and deepening a data analysis workflow, this **may not be implemented** in practice **if the cost of doing so is perceived as too high**. In this paper we propose and speculate on a number of possible mechanisms by which we might enable more rigorous data analysis and provide a call to action to develop **new enabling tools and practices**.
+> [**E**]nabling involves making the adoption of widening, interacting and detailing strategies as easy as possible. We argue that even with a strong case for **widening** and deepening a data analysis workflow, this **may not be implemented** in practice **if the cost of doing so is perceived as too high**. In this paper we propose and speculate on a number of possible mechanisms by which we might enable more rigorous data analysis and provide a call to action to develop **new enabling tools and practices**.
 
 ---
 
