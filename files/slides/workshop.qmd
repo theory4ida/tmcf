@@ -706,7 +706,61 @@ But also the context of our findings -- if we detail that context in a thorough 
 ---
 
 ::: {.flushright}
-**wide** data analysis : foundations
+**wide** foundations
+:::
+
+<span style='font-size:1.5em;'> Ways of **doing** wide </span> <br>
+
+
+
+::: {style="font-size: 50%"}
+
+::: {.columns}
+
+::: {.column width="21%"}
+
+![](img/causal_quartet.png){.absolute top=180 left=0 width="20%"}
+
+![](img/rashomon.png){.absolute top=340 left=0 width="18%"}
+
+
+![](img/ommitted.png){.absolute top=500 left=45 width="13%"}
+
+![](img/jobs_report.png){.absolute top=180 left=580 width="34%"}
+![](img/jobs_gif1.gif){.absolute top=310 left=580 width="17%"}
+![](img/jobs_gif2.gif){.absolute top=310 left=750 width="17%"}
+
+<!-- ![](img/lineup.jpeg){.absolute top=400 left=500 width="14%"} -->
+
+:::
+
+::: {.column width="34%"}
+<br>
+Gelman et al. (2023) Causal Quartets: Different Ways to Attain the Same Average Treatment Effect, *The American Statistician* <br>
+<br><br>
+Biecek et al. (2024) Performance Is Not Enough: The Story Told by a Rashomon Quartet, *Journal of Computational and Graphical Statistics*
+<br><br><br>
+Cinelli et al. (2020) Making Sense of Sensitivity: Extending Omitted Variable Bias, *Journal of the Royal Statistical Society Series B: Statistical Methodology*
+
+
+:::
+
+::: {.column width="35%"}
+
+<br><br><br><br><br><br><br><br><br><br>
+
+Kale et al. (2019) Hypothetical Outcome Plots Help Untrained Observers Judge Trends in Ambiguous Data, *IEEE TVCG*
+
+:::
+
+:::
+
+:::
+
+---
+
+::: {.flushright}
+**wide** foundations
 :::
 
 <br>
@@ -804,7 +858,7 @@ Integrative modelling : it makes sense that we would want to *explain* the proce
 ---
 
 ::: {.flushright}
-**wide** data analysis : prompting questions
+**wide** prompting questions
 :::
 
 <!-- via *Data Feminism* (D’ignazio and Klein 2020) -->
@@ -859,7 +913,7 @@ Data Feminism -- D'Ignazio and Klein
 
 
 ::: {.flushright}
-**wide** data analysis : prompting questions
+**wide** prompting questions
 :::
 
 
@@ -872,7 +926,7 @@ Data Feminism -- D'Ignazio and Klein
 
 
 ::: {.flushright}
-**wide** data analysis : case study
+**wide** case study
 :::
 
 ![](img/polls.png){.absolute top=70 left=0 width="70%"}
@@ -887,7 +941,7 @@ Data Feminism -- D'Ignazio and Klein
 ---
 
 ::: {.flushright}
-**wide** data analysis : call-to-action
+**wide** call-to-action
 :::
 
 <!-- ![](img/hdsr.png){.absolute top=0 left=550 width="40%"} -->
