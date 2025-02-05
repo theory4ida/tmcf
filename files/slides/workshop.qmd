@@ -1,6 +1,6 @@
 ---
-title: "<span style='font-size:1.1em; font-weight: 600;'>TMCF 2024</span>"
-subtitle: "<span style='font-size:1.6em; font-weight: 500;'>Navigating the garden of forking paths in data-driven science</span><br><span style='color:#525252; font-size:1.2em; font-weight: 500;'><br>7th February 2025 </span>"
+title: "<span style='font-size:1.0em; font-weight: 400;'>TMCF 2024</span>"
+subtitle: "<span style='font-size:2.3em; font-weight: 700;'>Navigating the garden of forking paths in data-driven science</span><br><span style='color:#525252; font-size:1.2em; font-weight: 500;'><br>7th February 2025 </span>"
 format: 
    revealjs:
      transition: fade
@@ -240,14 +240,13 @@ And how do we get there?
 
 ::: {.column width="30%"}
 
-::: {style="font-size: 100%"}
+::: {style="font-size: 120%"}
 
 
 <br> > Explore <br> > Pre-register <br> > Test
 
 :::
 
----
 
 
 :::
@@ -255,7 +254,7 @@ And how do we get there?
 ::: {.column width="70%"}
 
 
-![](img/science_reform_paper.png){.absolute top=50 left=300 width="85%"}
+![](img/science_reform_paper.png){.absolute top=70 left=350 width="50%"}
 
 
 :::
@@ -274,21 +273,22 @@ And how do we get there?
 
 ::: {.notes}
 
-Other terms : metascience, open science
+Science Reform:
 
-As a response to questionable research practices (QRPs) that led to replication crisis
+Structural change / standards in how science is conducted, reported, and rewarded.
 
-Important and useful structural changes in how science is conducted, reported, and rewarded.
+Aim : Establish empirical rigour, replicable and testable analysis  
 
-Establishing empirical rigour…  
+BUT : 
 
-–– Narrow approach to doing data analysis
+Can lead to didactic and narrow set of practices 
+may not apply well to applied analysis :
 
-Presribed recipe for doing analysis:
+Explore > Pre-register > Test
 
-Exploratore > Pre-register ? Test
+This paper questions whether tenets of science reform necessarily lead to defensible science.
 
-
+If exploratory analysis is limited and shallow, then can end up testing poorly specified null hypotheses. 
 
 :::
 
@@ -315,7 +315,7 @@ Exploratore > Pre-register ? Test
 :::
 
 
-![](img/science_reform_paper.png){.absolute top=0 left=650 width="50%"}
+![](img/science_reform_paper.png){.absolute top=0 left=650 width="35%"}
 
 :::
 
@@ -419,6 +419,23 @@ Many of the human errors we point out in data analysis can be attributed to a la
 
 <!-- --- -->
 
+---
+
+::: {style="font-size: 200%"}
+
+<br>
+
+*Our TMCF*: <br>
+**Workshop and outputs**
+
+
+:::
+
+::: {.notes}
+
+
+
+:::
 
 ---
 
@@ -445,9 +462,6 @@ For progressing **from analysis to communication**: documenting interactive data
 
 ::: {.notes}
 
-Call for pre-registration sparked by forking paths -- was about the many decisions—such as selecting variables, models, or subgroups—during data analysis --  this flexibility increases the risk of p-hacking as seemingly reasonable choices accumulate, leading to biased inference. 
-
-Pre-registration, transparency, and robustness checks help mitigate this problem in scientific research.
 
 :::
 
@@ -475,26 +489,6 @@ Applied data scientists doing problem-driven research; methods-oriented data sci
 :::
 
 
-
----
-
-
-
-::: {style="font-size: 200%"}
-
-<br>
-
-*Our TMCF*: <br>
-**Workshop and outputs**
-
-
-:::
-
-::: {.notes}
-
-
-
-:::
 
 ---
 
@@ -621,18 +615,10 @@ Affinity mapping exercise.
 
 ::: {.notes}
 
-Concerns science reform movement and "Rigour" --> narrow application of  processes / practices
-
-> Many errors in data analysis -- its generalisation --  a lack of ability to entertain multiple possibilities. 
-> We like to suppress and reduce 
-
-
-
 In the blogs : examples of new techniques, frameworks, approaches to navigate this space...
 
 Write these up in four strategies for wide data analysis
 
--- not getting trapped in local minima
 
 
 :::
@@ -895,19 +881,6 @@ Data Feminism -- D'Ignazio and Klein
 
 ::: {.notes}
 
-Examples of wide data analysis : polling
-
--- introspection/scrutiny into what is being done
--- different companies and individuals trying to do the same thing
--- if we look at two polls -- talk about differences being due to aleatory uncertainty -- random varuations
--- or epistemic
-
--- some methodological -- MRP
--- some of these methods-related (variable selection)
--- some of these emprirical data collection -- should we introduce squeeze questions? sampling non-response?
--- emerging theories / ideas / concepts are shifting how it is practiced
-
-Analysis of Labour miss in recent polls. 
 
 :::
 
