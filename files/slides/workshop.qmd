@@ -26,6 +26,83 @@ format:
 </style>
 ```
 
+```{r}
+#| echo: false
+#| warning: false
+#| eval: true
+#| classes: no-stripe
+library(gt)
+library(gtExtras)
+library(dplyr)
+library(readr)
+library(glue)
+library(purrr)
+library(stringr)
+
+ #days <- read_csv(here("programme", "program.csv")) |> 
+days <- read_csv("program.csv") |> 
+  mutate(Activity=pmap_chr(list(Activity, Author),
+     ~if_else(is.na(..2), (html(glue("<span style='font-size:14pt'> {..1}</span>"))), (html(glue("<span style='font-size:13pt'> {..1}</span><br><span style='font-style:italic; font-size:11pt'>--&nbsp;{..2}</span>")))))
+  )
+
+    
+
+# From https://rpubs.com/kaustav/table_contest_2020
+gt_theme_gisruk <- function(data,...) {
+  data |>
+  opt_all_caps()  |>
+  opt_table_font(
+    font = list(
+      google_font("Jost"),
+      default_fonts()
+    )
+  ) |>
+    tab_style(
+      style = cell_borders(
+        sides = "bottom", color = "transparent", weight = px(1)
+      ),
+      locations = cells_body(
+        columns = everything(),
+        # This is a relatively sneaky way of changing the bottom border
+        # Regardless of data size
+        rows = nrow(data$`_data`)
+      )
+    )  |>
+  tab_options(
+    column_labels.background.color = "white",
+    table.border.top.width = px(1),
+    table.border.top.color = "transparent",
+    table.border.bottom.color = "transparent",
+    row_group.border.top.width = px(1),
+    table.border.bottom.width = px(1),
+    column_labels.border.top.width = px(1),
+    column_labels.border.top.color = "transparent",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    data_row.padding = px(1),
+    source_notes.font.size = 12,
+    table.font.size = 16,
+    heading.align = "left",
+    heading.border.bottom.width = px(1),
+    ...
+  ) |>
+  tab_style(
+      style=list(
+        cell_borders(
+          sides = c("bottom"),  
+          weight = px(2),
+          color ="white"),
+      cell_fill(color="#eeeeee")),
+     locations = cells_row_groups()
+  )
+}
+```
+
+
+
+
+
+
 ---
 
 ## Huge thanks to the Turing Team
@@ -604,6 +681,33 @@ Affinity mapping exercise.
 
 ---
 
+::: {.columns}
+
+
+::: {.column width="60%"}
+
+```{r}
+#| echo: false
+#| eval: true
+days |> filter(Day=="ws") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(25)) |>
+    cols_width(matches("Activity") ~ pct(75)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(16),
+              column_labels.font.size = px(14), table.align="left", row_group.font.size = px(14))  
+```
+
+:::
+
+:::
+
+---
+
+
 ::: {style="font-size: 110%"}
 
 <span style='font-size:4.0em;'>**wide**</span> <span style='font-size:2.0em;'>**Data Analysis** </span><br>
@@ -760,104 +864,6 @@ Kale et al. (2019) Hypothetical Outcome Plots Help Untrained Observers Judge Tre
 ---
 
 ::: {.flushright}
-**wide** foundations
-:::
-
-<br>
-
-::: {.columns}
-
-::: {.column width="50%"}
-
-<span style='font-size:.9em;'>Ways of **thinking** wide  </span> <br>
-
-::: {style="font-size: 70%"}
-
--- Bringing different model paradigms 
-&nbsp;&nbsp;&nbsp;and traditions together
-
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Integrative modelling](https://www.nature.com/articles/s41586-021-03659-0) 
-
--- Scientific exploration as storytelling  <br>
-
--- Embracing uncertainty
-
-
-
-:::
-
-:::
-
-
-::: {.column width="50%"}
-
-<span style='font-size:0.9em;'> Ways of **doing** wide </span> <br>
-
-::: {style="font-size: 70%"}
-
--- Consider granularity, sensitivity, saturation 
-
-
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Finite sample robustness checks](https://arxiv.org/pdf/2011.14999) <br> 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Omitted variable bias](https://academic.oup.com/jrsssb/article/82/1/39/7056023)
-
-
--- Asking what-ifs 
-
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Robust inference](https://link.springer.com/article/10.1007/s00362-009-0286-9) 
-
--- Visualization for widening focus 
-
-
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Line-ups](https://royalsocietypublishing.org/doi/10.1098/rsta.2009.0120) | [Hypothetical outcome plots](https://ieeexplore.ieee.org/document/8440816) <br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [Rashomon sets](https://arxiv.org/pdf/2302.13356) | [Causal quartets](https://sites.stat.columbia.edu/gelman/research/unpublished/causal_quartets.pdf)
-
-:::
-
-
-:::
-
-:::
-
-
-::: {.notes}
-
-**Granularity** 
-
-* New stat approaches -- how much data is needed to preserve core finding / assumption / 
-* how serious an omitted confounder would have to be before an effect disappears 
-
-
-
-**Vis** --
-Extend our understanding of mechanims and processes that are occuring in datasets..
-
-Hypothetical outcome plots -- how different an inferred pattern can look under different samples...
-
-Motivating example used for vis is looking at how data depart from global model / avg effect!
-
-Rashomon -- different relationships between predictors based on model type
-Gelman causal quartets -- same overall effect but different things happening within pre-treatment chacrateristics...same average effct but different patterns of treatment interaction / process
-
-...e.g. often find average "effects" are smaller than expected...we should not expect them to generalise ... some variation will generalise, some won't
-
-**Different modelling paradigms together** : 
-Integrative modelling : it makes sense that we would want to *explain* the processes (explanatory modelling) and also stres-test them under different contexts/ situations (predictive modelling)
-
-
-**Storytelling not just about broadcasting** : how we as scientists understand and evaluate theories using data -- how *surprising* are our data given these? storytelling is a form of exploration of the implications of a hypothesis
-
-**Embracing uncertainty** : Beyond just randomisation... we should stat to talk about epistemic uncertainty
-
-
-
-
-
-:::
-
----
-
-::: {.flushright}
 **wide** prompting questions
 :::
 
@@ -919,6 +925,12 @@ Data Feminism -- D'Ignazio and Klein
 
 ![](img/schemas.png){.absolute top=70 left=0 width="90%"}
 
+<br><br><br><br><br><br><br><br><br><br>
+
+::: {style="font-size: 55%;"}
+Wood et al. (2019) Design Exposition with Literate Visualization. *IEEE Transactions on Visualization and Computer Graphics*
+
+:::
 
 ----
 
