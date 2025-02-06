@@ -945,14 +945,69 @@ Data Feminism -- D'Ignazio and Klein
 :::
 
 <!-- ![](img/hdsr.png){.absolute top=0 left=550 width="40%"} -->
-![](img/rss_b.png){.absolute top=340 left=0 width="60%"}
+<!-- ![](img/rss_b.png){.absolute top=100 left=0 width="70%"} -->
 
-![](img/rsos.png){.absolute top=80 left=0 width="50%"}
+::: {.columns}
+
+::: {.column width="70%"}
+
+![](img/si.png){.absolute top=100 left=0 width="65%"}
+
+:::
+
+
+::: {.column width="30%"}
+
+::: {style="font-size: 100%"}
+
+<br>> Case studies <br> > Methods <br> > Tools
+
+:::
+
+:::
+
+:::
+
+
+
 
 ::: {.notes}
 . 
 
 :::
+
+---
+
+::: {.flushright}
+**wide** call-to-action
+:::
+
+<!-- ![](img/hdsr.png){.absolute top=0 left=550 width="40%"} -->
+<!-- ![](img/rss_b.png){.absolute top=100 left=0 width="70%"} -->
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+![](img/si.png){.absolute top=100 left=0 width="65%"}
+
+:::
+
+
+::: {.column width="30%"}
+
+::: {style="font-size: 100%"}
+
+<br>
+EoI for papers <br>
+-- April 2025 <br>
+
+:::
+
+:::
+
+:::
+
 
 
 
