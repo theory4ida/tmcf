@@ -1,0 +1,44 @@
+﻿Day,Objective,When,Activity,Author
+Mon,Welcome,1100-1115,Arrival and networking,
+Mon,Welcome,1115-1130,TMCF and Turing,"Ioannis Kosmidis, TMCF Lead"
+Mon,Welcome,1130-1145,Turing Overview,"Daniel Lovelock, Head of Academic Engagement"
+Mon,Welcome,1145--1200,*This* TMCF,"Cagatay Turkay, Roger Beecham"
+Mon,Provocations and positions,1200--1300,"Participants present their provocations, w/ group review",All
+Mon,Provocations and positions,1300-1400,Lunch,
+Mon,Provocations and positions,1400--1530,"Participants present their provocations, w/ group review",All
+Mon,Provocations and positions,1530-1700,Affinity mapping exercise,All
+Tue,Welcome,0900-0930,Arrival and networking,
+Tue,Welcome,0930-0945,Update and plans for day,"Cagatay Turkay, Roger Beecham"
+Tue,Documenting positions,0945-1230,Groups co-write 1500-word blog  w/ example and evidence,All
+Tue,Documenting positions,1230-1330,Lunch,
+Tue,Documenting positions,1330-1600,Groupwork on commentaries,All
+Tue,Documenting positions,1600-1630,De-brief and planning,"Cagatay Turkay, Roger Beecham"
+Wed,Welcome,0900-0930,Arrival and networking,
+Wed,Welcome,0930-0945,Update and plans for day,"Cagatay Turkay, Roger Beecham"
+Wed,Welcome,0945-1100,Lightning talks from Turing PIs on probabilistic programming,TBC
+Wed,Grounding positions,1100-1230,Groupwork on blogs,All
+Wed,Grounding positions,1230-1330,Lunch,
+Wed,Grounding positions,1330-1600,Groupwork on blogs,All
+Thu,Welcome,0900-0930,Arrival and networking,
+Thu,Welcome,0930-0945,Update and plans for day,"Cagatay Turkay, Roger Beecham"
+Thu,Consolidate,0945-1230,Prioritising and grounding activity,All
+Thu,Consolidate,1130-1230,Paper planning,All
+Thu,Consolidate,1230-1330,Lunch,
+Thu,Consolidate,1330-1530,Paper planning + material gathering,All
+Thu,Consolidate,1545-1600,Progress and next steps,All
+Thu,Public lecture,1730-2100,Public lectures + drinks reception,"Andrew Gelman, Jess Hullman, Hadley Wickham"
+Fri,Welcome,0900-0930,Arrival and networking,
+Fri,Welcome,0930-0945,Briefing from Turing Director for Fundamental DS&AI,Andrew Duncan 
+Fri,Output planning,0945-1230,"Commentary + SI paper mapping, software, toolkits, etc.",All
+Fri,Output planning,1230-1400,Lunch and depart,
+ws,Introductions,1330-1345,TMCFs + Turing,Andrew Duncan 
+ws,Introductions,1345-1400,*Our* TMCF,"Cagatay Turkay, Roger Beecham"
+ws,Panel + talks,1400-1445,Talk1,Jo Wood
+ws,Panel + talks,1400-1445,Talk2,Rachel Franklin
+ws,Panel + talks,1400-1445,Talk3,Hadley Wickham
+ws,Panel + talks,1400-1445,Panel,All
+ws,Panel + talks,1445-1515,Break,
+ws,Outputs + call-to-action,1515-1530,**wide** data analysis,"Cagatay Turkay, Roger Beecham"
+ws,Outputs + call-to-action,1530-1545,Call-to-action and SI,"Cagatay Turkay, Roger Beecham"
+ws,Outputs + call-to-action,1545--1620,Workshop discussion ,All
+ws,Outputs + call-to-action,1620-1630,Close,"Cagatay Turkay, Roger Beecham"
