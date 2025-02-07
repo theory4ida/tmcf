@@ -322,6 +322,71 @@ And how do we get there?
 
 <br> > explore <span style='font-size:.8em; '>**~ EDA** </span> <br> > pre-register <br> > test <span style='font-size:.8em; '>**~ CDA** </span>
 
+<!-- ![](img/forking.png){.absolute top=250 left=0 width="30%"} -->
+
+:::
+
+
+
+:::
+
+::: {.column width="70%"}
+
+
+![](img/science_broken.png){.absolute top=300 left=350 width="45%"}
+![](img/forking.png){.absolute top=50 left=350 width="50%"}
+
+
+:::
+
+::: {.column width="40%"}
+
+
+::: {style="font-size: 130%"}
+
+
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+Science Reform response to reprdoducibility crisis in empirical science in 2010s
+
+Structural changes / standards in how science is conducted, reported, and rewarded.
+
+Aim to Establish empirical rigour, replicable and testable analysis  
+
+BUT : 
+
+Can lead to didactic and narrow set of practices 
+may not apply well to applied analysis :
+
+Explore > Pre-register > Test
+
+This paper questions whether tenets of science reform necessarily lead to defensible science.
+
+If exploratory analysis is limited and shallow, then can end up testing poorly specified null hypotheses. 
+
+:::
+
+
+
+---
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="font-size: 110%"}
+
+
+<br> > explore <span style='font-size:.8em; '>**~ EDA** </span> <br> > pre-register <br> > test <span style='font-size:.8em; '>**~ CDA** </span>
+
+<!-- ![](img/forking.png){.absolute top=250 left=0 width="30%"} -->
+
 :::
 
 
@@ -563,11 +628,12 @@ Establish what is **distinctive** about modelling in **data-driven science** by 
 <br><br>
 
 <span style='font-size:1.1em;'>2. **Inference and replicability**</span> <br>
-Develop ways of **documenting the context** under which analytical findings are made – a grammar for **structuring exploratory research** findings – so that inferences can be reported.
+How to plan and stage exploratory analysis? A grammar for **structuring exploratory research** findings so that inferences can be reported.
 <br><br>
 
-<span style='font-size:1.1em;'>3. **Tools** </span><br>
-For progressing **from analysis to communication**: documenting interactive data analysis processes with integrity – balancing claims to knowledge with informational complexity.
+<span style='font-size:1.1em;'>3. **Tools and Enablers** </span><br>
+How to enable **exploratory** research **practices** that are **rich** yet have **rigour**? <br>
+frameworks | techniques | analysis environments.
 
 :::
 
@@ -636,7 +702,7 @@ Avoid seminar series... more *doing*
 ---
 
 ::: {.flushright}
-<span style='font-size:1.0em;'>**provocations**</span>
+<span style='font-size:1.0  em;'>**provocations**</span>
 :::
 
 
@@ -655,7 +721,7 @@ Avoid seminar series... more *doing*
 -- *Pre-registration locks researchers into facile statistical tests*<br>
 -- *Human-in-the-loop is incompatible with inferential and replicable analysis* <br>
 
-<span style='font-size:1.2em;'>3. **Tools** </span><br>
+<span style='font-size:1.2em;'>3. **Tools and Enablers** </span><br>
 -- *Visualizations are limited as evidence* <br>
 -- *There is no formal beginning, process or an end to an interactive data analysis session, it is all context-dependent* <br>
 -- *Provenance of exploratory data analysis processes are too complex and ad hoc to be useful*
@@ -778,6 +844,27 @@ gt(groupname_col = "Objective") |>
 
 ---
 
+::: {.flushright}
+<span style='font-size:1.2em;'>**panel + talks**</span>
+:::
+
+<br>
+
+::: {style="font-size: 120%;"}
+
+***Communication is Design is Analysis is Communication*** <br>
+-- Jo Wood
+
+<br>
+
+ ***Locating the entrance to the garden of forking paths*** <br>
+ -- Rachel Franklin
+
+
+:::
+
+---
+
 
 ::: {style="font-size: 110%"}
 
@@ -800,6 +887,34 @@ Write these up in four strategies for wide data analysis
 ---
 
 
+::: {.flushright}
+**wide** data analysis
+:::
+
+![](img/blogs.png){.absolute top=100 left=0 width="95%"}
+
+
+---
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<br>
+
+* Bring together diverse **theories, methods, practices** and **traditions** from across disciplines, e.g., statistics, political science, geography, computer science, etc.
+
+* An opportunistic overview/review of existing (<span style='font-size:1.0em; font-weight: 600; color: #99000d'>good*</span>) practice of modelling and data analysis
+
+* Consolidate these over a **harmonising concept** and provide usable/actionable building blocks
+
+* And a **call-to-action** for further research and development of **enablers**
+
+
+
+
+
+---
 
 
 ::: {.flushright}
@@ -810,7 +925,7 @@ Write these up in four strategies for wide data analysis
 [**W**]idening </span>
 
 ::: {style="font-size: 90%"}
-> [**W**]idening the data analysis process involves considering a **broader range of approaches** than might otherwise be adopted. The aim is to encourage a **mindset** that is open to exploration, interpretation, **multiple and complementary explanations** []...] They may be specific **variations in some modelling parameterisation** or more **profound choices around methodological approach**. 
+> [**W**]idening the data analysis process involves considering a **broader range of approaches** than might otherwise be adopted. The aim is to encourage a **mindset** that is open to exploration, interpretation, **multiple and complementary explanations** []... They may be specific **variations in some modelling parameterisation** or more **profound choices around methodological approach**. 
 :::
 
 ::: {.notes}
@@ -878,13 +993,40 @@ But also the context of our findings -- if we detail that context in a thorough 
 
 > [**E**]nabling involves making the **adoption of** widening, interacting and detailing **strategies as easy as possible**. [...] **wide** data analysis **may not be implemented** in practice **if the cost of doing so is perceived as too high**. In this paper we propose  [...] mechanisms by which we might enable more rigorous data analysis and provide a call to action to develop **new enabling tools and practices**.
 
+
+
 ---
 
 ::: {.flushright}
 **wide** foundations
 :::
 
-<span style='font-size:1.5em;'> Ways of **doing** wide </span> <br>
+<span style='font-size:1.2em;'> Ways of **thinking** wide </span> <br>
+
+![](img/thinking.png){.absolute top=150 left=0 width="95%"}
+
+
+
+
+---
+
+
+::: {.flushright}
+**wide** foundations
+:::
+
+<span style='font-size:1.2em;'> Ways of **doing** wide </span> <br>
+
+![](img/doing.png){.absolute top=150 left=0 width="95%"}
+
+
+---
+
+<!-- ::: {.flushright}
+**wide** foundations
+:::
+
+<span style='font-size:1.2em;'> Ways of **doing** wide </span> <br>
 
 
 
@@ -901,13 +1043,13 @@ But also the context of our findings -- if we detail that context in a thorough 
 
 ![](img/ommitted.png){.absolute top=500 left=45 width="13%"}
 
-![](img/jobs_report.png){.absolute top=180 left=580 width="34%"}
-![](img/jobs_gif1.gif){.absolute top=310 left=580 width="17%"}
-![](img/jobs_gif2.gif){.absolute top=310 left=750 width="17%"}
+![](img/jobs_report.png){.absolute top=300 left=580 width="34%"}
+![](img/jobs_gif1.gif){.absolute top=400 left=580 width="17%"}
+![](img/jobs_gif2.gif){.absolute top=400 left=750 width="17%"}
 
 <!-- ![](img/lineup.jpeg){.absolute top=400 left=500 width="14%"} -->
 
-:::
+<!-- :::
 
 ::: {.column width="34%"}
 <br>
@@ -922,7 +1064,7 @@ Cinelli et al. (2020) Making Sense of Sensitivity: Extending Omitted Variable Bi
 
 ::: {.column width="35%"}
 
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 Kale et al. (2019) Hypothetical Outcome Plots Help Untrained Observers Judge Trends in Ambiguous Data, *IEEE TVCG*
 
@@ -932,7 +1074,8 @@ Kale et al. (2019) Hypothetical Outcome Plots Help Untrained Observers Judge Tre
 
 :::
 
----
+--- --> 
+
 
 ::: {.flushright}
 **wide** prompting questions
@@ -1084,7 +1227,7 @@ Wood et al. (2019) Design Exposition with Literate Visualization, <br> *IEEE Tra
 
 <br>
 EoI for papers <br>
--- April 2025 <br>
+-- Spring 2025 <br>
 
 :::
 
@@ -1093,5 +1236,38 @@ EoI for papers <br>
 :::
 
 
+---
 
+::: {.columns}
+
+
+::: {.column width="60%"}
+
+```{r}
+#| echo: false
+#| eval: true
+days |> filter(Day=="ws") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(25)) |>
+    cols_width(matches("Activity") ~ pct(75)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(16),
+              column_labels.font.size = px(14), table.align="left", row_group.font.size = px(14))  
+```
+
+:::
+
+
+::: {.column width="40%"}
+
+
+**workshop**<br> **agenda**
+:::
+
+:::
+
+---
 

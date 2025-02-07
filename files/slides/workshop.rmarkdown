@@ -1,0 +1,1285 @@
+---
+title: "<span style='font-size:1.0em; font-weight: 400;'>TMCF 2024</span>"
+subtitle: "<span style='font-size:2.3em; font-weight: 700;'>Navigating the garden of forking paths in data-driven science</span><br><span style='color:#525252; font-size:1.2em; font-weight: 500;'><br>7th February 2025 </span>"
+format: 
+   revealjs:
+     transition: fade
+     theme: theme/slides-theme.scss
+     css: theme/style.css
+     footer: 'TMCF 2024 | British Library'
+     mainfont: Jost
+     logo: "img/logos/logo_ati.png"
+     resources: 
+       - fonts/iosevka-regular.ttc
+       - fonts/iosevka-semibold.ttc
+       - fonts/iosevka-thin.ttc
+       - fonts/iosevka.ttc
+       
+---
+
+```{=html}
+<style>
+.flushright {
+   text-align: right;
+}
+</style>
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| eval: true
+#| classes: no-stripe
+library(gt)
+library(gtExtras)
+library(dplyr)
+library(readr)
+library(glue)
+library(purrr)
+library(stringr)
+
+ #days <- read_csv(here("programme", "program.csv")) |> 
+days <- read_csv("program.csv") |> 
+  mutate(Activity=pmap_chr(list(Activity, Author),
+     ~if_else(is.na(..2), (html(glue("<span style='font-size:14pt'> {..1}</span>"))), (html(glue("<span style='font-size:13pt'> {..1}</span><br><span style='font-style:italic; font-size:11pt'>--&nbsp;{..2}</span>")))))
+  )
+
+    
+
+# From https://rpubs.com/kaustav/table_contest_2020
+gt_theme_gisruk <- function(data,...) {
+  data |>
+  opt_all_caps()  |>
+  opt_table_font(
+    font = list(
+      google_font("Jost"),
+      default_fonts()
+    )
+  ) |>
+    tab_style(
+      style = cell_borders(
+        sides = "bottom", color = "transparent", weight = px(1)
+      ),
+      locations = cells_body(
+        columns = everything(),
+        # This is a relatively sneaky way of changing the bottom border
+        # Regardless of data size
+        rows = nrow(data$`_data`)
+      )
+    )  |>
+  tab_options(
+    column_labels.background.color = "white",
+    table.border.top.width = px(1),
+    table.border.top.color = "transparent",
+    table.border.bottom.color = "transparent",
+    row_group.border.top.width = px(1),
+    table.border.bottom.width = px(1),
+    column_labels.border.top.width = px(1),
+    column_labels.border.top.color = "transparent",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    data_row.padding = px(1),
+    source_notes.font.size = 12,
+    table.font.size = 16,
+    heading.align = "left",
+    heading.border.bottom.width = px(1),
+    ...
+  ) |>
+  tab_style(
+      style=list(
+        cell_borders(
+          sides = c("bottom"),  
+          weight = px(2),
+          color ="white"),
+      cell_fill(color="#eeeeee")),
+     locations = cells_row_groups()
+  )
+}
+```
+
+
+
+
+
+
+
+
+---
+
+## Huge thanks to the Turing Team
+
+
+![](img/turing-team.png){.absolute top=160 left=0 width="80%"}
+
+::: {.notes}
+
+
+:::
+
+
+---
+
+
+<!-- # *Our* TMCF <br> <span style='font-size:0.8em; font-weight: 500;'>Forking paths in data-driven science </span>
+
+::: {.notes}
+
+Forking paths: 
+problem where researchers make many decisions—such as selecting variables, models, or subgroups—during data analysis -- these decisions, when not judtified, accumulate biasing inference...
+
+
+
+::: -->
+
+---
+
+
+
+<!-- ![](img/stats19.png){.absolute top=10 left=0 width="50%"}
+
+![](img/stats19_2.png){.absolute top=30 left=550 width="40%"}
+
+
+::: {.notes}
+
+For me: 
+Road Crash Analysis project with DfT
+Also work with a PhD student
+
+
+Stats19 -- the road safety dataset for UK
+
+Had some  draft pre-registration report/proposal looking at pedestrian injury -- before / after analysis, establishing effect of intervention classes on crash rates/ injury sevrity 
+
+Essentially because our exploratory analysis threw up so many things that undermined our initial plans 
+-- generated findings that at a high-level would look compelling (p-values etc.), but when properly scrutinised would fall apart
+
+These needed to be fully explored, but doing so would kind of invalidate our pre-registration (depending on how srictly adhered to).
+
+Re-confirmed actually a lot of data analysis is scientific exploration.
+
+:::
+
+---
+
+
+
+![](img/analysis1.png){.absolute top=80 left=450 width="55%"}
+![](img/analysis2.png){.absolute top=350 left=450 width="51%"}
+
+
+![](img/ga_twitter.png){.absolute top=0 left=0 width="40%"}
+
+::: {.notes}
+
+**Demonstrating** how we do scientific exploration in a way that is:
+
+* structured (that acknowledges important branching points and makes careful decisions on what to persue)
+* that uses theory, heuristics -- and models -- to support interpretion 
+* that uses statistical techniques de-emphasises / discourages spurious disovery.
+* that considers *coverage* -- how likely are dominant effects likely to hold? how sensitive are they to noise?
+
+This was a model-based analysis, but emphasis in models is different -- more on using models for helping us to identify parts of data space that is surprsing--
+less interested in how much overall data depart from expectaiton, but *where* this is the case 
+
+
+* that considers appropriate levels of data and analytic uncertainty -- some might be represented by statistical computation; others might be more epistemic; that considers 
+
+And so instead we pushed our exploratory analysis in various directions, using combinations of models and data graphics in tandem -- in a way that geographers often do, but that you tend not to see in data analysis primers.
+
+:::
+
+
+---
+
+
+![](img/challenges_eda.png){.absolute top=100 left=50 width="72%"}
+
+![](img/harvard_challenges_eda.png){.absolute top=0 left=720 width="25%"}
+
+
+::: {.notes}
+
+
+Data graphics: not about exposing structure in data -- errors, outliers -- but about model- and theory- building. Comparison against exploration
+
+How can we do inference with, or what sorts of inference do we make with graphics?
+
+
+Exploratory analysis -- and doing analysis in GEOG and VIS -- is not (just) about saying how far data depart from model overall, but in what ways -- where in the distribution
+
+
+
+::: -->
+
+<!-- ---
+
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+::: {style="font-size: 65%"}
+
+<br>
+
+> EDA is often thought of as an alternative to model-based statistical analysis, but once we think of **graphs as comparisons to models**, it makes sense that the amount we've learned increases with the complexity of the model being compared to. **Effective graphics** create visual structures that **enable model inspection** by foregrounding comparisons of interest in ways that exploit the abilities of the human visual system
+>
+> We propose a perspective that **unites exploratory and confirmatory analysis** through the idea of **graphs as model checks** [...] and describe how [...] systems for exploratory visual analysis should be designed to **better support model-driven inference and representation of uncertainty**.
+>
+> Hullman and Gelman 2021
+
+:::
+
+:::
+
+::: {.column width="20%"}
+
+:::
+
+:::
+
+![](img/harvard_challenges_eda.png){.absolute top=0 left=720 width="30%"}
+ -->
+
+<!-- ---
+
+
+::: {.notes}
+
+But if expanded role for exploratory research ...
+
+Inject scepticims of stat practice...
+
+:::
+ -->
+
+
+
+---
+
+
+::: {style="font-size: 200%"}
+
+<br>
+
+*Our TMCF*: <br>
+**Forking paths and data-driven science**
+
+
+:::
+
+---
+
+
+::: {style="font-size: 130%"}
+
+
+<span style='font-size:1.6em; font-weight: 600;'>What does </span> 
+<span style='font-size:2.5em; font-weight: 600; color: #99000d'>good* </span> 
+<span style='font-size:1.6em; font-weight: 600;'> data-driven science look like? </span><br>
+
+<br>
+-------------------- <br>
+
+<span style='color: #99000d'>*</span>defensible | rigorous | theoretically-informed 
+
+:::
+
+
+
+---
+
+::: {style="font-size: 40%"}
+
+
+<span style='font-size:1.6em; font-weight: 600;'>What does </span> 
+<span style='font-size:2.5em; font-weight: 600; color: #99000d'>good* </span> 
+<span style='font-size:1.6em; font-weight: 600;'> data-<br>driven science look like? </span><br>
+
+<br>
+-------------------- <br>
+
+<span style='color: #99000d'>*</span>defensible | rigorous | theoretically-informed 
+
+:::
+
+<br>
+
+<span style='font-size:3.0em; font-weight: 600;'>
+And how do we get there?
+</span>
+
+---
+
+
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="font-size: 110%"}
+
+
+<br> > explore <span style='font-size:.8em; '>**~ EDA** </span> <br> > pre-register <br> > test <span style='font-size:.8em; '>**~ CDA** </span>
+
+<!-- ![](img/forking.png){.absolute top=250 left=0 width="30%"} -->
+
+:::
+
+
+
+:::
+
+::: {.column width="70%"}
+
+
+![](img/science_broken.png){.absolute top=300 left=350 width="45%"}
+![](img/forking.png){.absolute top=50 left=350 width="50%"}
+
+
+:::
+
+::: {.column width="40%"}
+
+
+::: {style="font-size: 130%"}
+
+
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+Science Reform response to reprdoducibility crisis in empirical science in 2010s
+
+Structural changes / standards in how science is conducted, reported, and rewarded.
+
+Aim to Establish empirical rigour, replicable and testable analysis  
+
+BUT : 
+
+Can lead to didactic and narrow set of practices 
+may not apply well to applied analysis :
+
+Explore > Pre-register > Test
+
+This paper questions whether tenets of science reform necessarily lead to defensible science.
+
+If exploratory analysis is limited and shallow, then can end up testing poorly specified null hypotheses. 
+
+:::
+
+
+
+---
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+::: {style="font-size: 110%"}
+
+
+<br> > explore <span style='font-size:.8em; '>**~ EDA** </span> <br> > pre-register <br> > test <span style='font-size:.8em; '>**~ CDA** </span>
+
+<!-- ![](img/forking.png){.absolute top=250 left=0 width="30%"} -->
+
+:::
+
+
+
+:::
+
+::: {.column width="70%"}
+
+
+![](img/science_reform_paper.png){.absolute top=70 left=350 width="50%"}
+
+
+:::
+
+::: {.column width="40%"}
+
+
+::: {style="font-size: 130%"}
+
+
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+Science Reform response to reprdoducibility crisis in empirical science in 2010s
+
+Structural changes / standards in how science is conducted, reported, and rewarded.
+
+Aim to Establish empirical rigour, replicable and testable analysis  
+
+BUT : 
+
+Can lead to didactic and narrow set of practices 
+may not apply well to applied analysis :
+
+Explore > Pre-register > Test
+
+This paper questions whether tenets of science reform necessarily lead to defensible science.
+
+If exploratory analysis is limited and shallow, then can end up testing poorly specified null hypotheses. 
+
+:::
+
+
+---
+
+<br><br>
+
+::: {style="font-size: 110%"}
+
+> *Many of the human errors we point out in data analysis can be attributed to a **lack of ability to entertain multiple possibilities**. We like to **suppress and reduce  uncertainty**, not maintain it as we go.*
+>
+> Jessica Hullman, 2024
+
+:::
+
+
+---
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+::: {style="font-size: 85%"}
+
+<br><br>
+
+> Exploratory research **needs rigor** to serve its intended aim of **facilitating scientific discovery**. Whichever method is selected [...] it needs to be implemented rigorously to **maximize the probability of true discoveries while minimizing the probability of false discoveries**.
+> 
+> Devezer et al. 2021
+
+:::
+
+:::
+
+
+![](img/science_reform_paper.png){.absolute top=0 left=650 width="35%"}
+
+:::
+
+
+::: {.notes}
+
+Argue for expand role of exploratory research -- 
+
+:::
+
+---
+
+
+
+::: {.columns}
+
+
+::: {.column width="49%" style="background-color: #000000; color: #f0f0f0f0"}
+
+
+
+::: {.flushright}
+
+
+
+::: {style="font-size: 200%"}
+**Rigour**
+:::
+
+::: {style="font-size: 90%"}
+-- Repeatable analysis plans <br>
+-- Known inference protocols <br>
+-- Expectations for size and stability of effects 
+<br><br><br><br><br><br><br><br>
+:::
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+<br><br><br><br>
+
+::: {style="font-size: 200%"}
+**Richness**
+:::
+
+::: {style="font-size: 90%"}
+-- Evolving analysis plans <br>
+-- Informal inference (multiplicity) <br>
+-- Effects situated within descriptive context
+
+:::
+
+:::
+
+:::
+
+
+::: {.notes}
+
+When doing **good** data-driven research we need to consider these two things at the same time.
+
+Rigour :
+
+-- established, well-justified and thoroughly considered analysis plans
+
+
+Richness :
+
+-- descriptive detail that underpins the inferences we make necessary for generalising / transfer
+-- if context under which data / findings generated not properly detailed, should we be surprised about a replication crisis? 
+
+
+We ask:
+
+-- do the things/recipes we associate with rigour really lead to more defensible, better science?
+-- straightjacket, risk getting trapped in local minima + mechanics of pre-registration
+
+
+
+:::
+
+
+
+<!-- ### via Devezer 2021 -->
+
+<!-- ::: {style="font-size: 75%"} -->
+<!-- > 1 Exploratory research needs to start with **subject matter expertise** or **theoretical background**, and hence, **cannot be** [...] **completely dictated by the data**. -->
+<!-- > <br><br> -->
+<!-- > 2 Successful exploratory studies [must have] **richness of data**. Random datasets that are uninformative about the area to be explored will probably not yield important discoveries. -->
+<!-- > <br><br> -->
+<!-- > 3 Exploration requires robust **methods that are insensitive to underlying assumptions**. ... **Using robust approaches** such as multiverse analysis or metastudies could be **more appropriate** for exploration purposes. -->
+<!-- > <br><br> -->
+<!-- > 4 Exploratory work needs to be done in a **structured, systematic, honest and transparent** manner using a **deliberately chosen methodology appropriate for the task**. -->
+<!-- > -->
+
+<!-- ::: -->
+
+<!-- --- -->
+
+
+<!-- ::: {.notes} -->
+
+<!--  e.g. model-based exploratory analysis that has rigour – and so that allows us to comment on effects, processes, causes and assess generalisability and reliability of things we are observing.  -->
+
+
+
+<!-- + What we would really like to do is think, write about, and start working on examples of how this would ‘look’ in our own domains: -->
+<!--   + how it might work/be specialised according to domains -->
+<!--   + whether we can  systemise any of this and generate tools to support analysts in reasoning and building models that are loaded with rich context -->
+<!-- + but that also invite us to check against spurious discovery, consider the context under which observed patterns become unstable etc. -->
+
+<!-- ::: -->
+
+<!-- --- -->
+
+---
+
+::: {style="font-size: 200%"}
+
+<br>
+
+*Our TMCF*: <br>
+**Workshop and outputs**
+
+
+:::
+
+::: {.notes}
+
+
+
+:::
+
+---
+
+![](img/challenge.png){.absolute top=10 left=0 width="90%"}
+
+---
+
+
+::: {.flushright}
+
+**tmcf themes**
+
+:::
+
+
+::: {.columns}
+
+::: {.column width="90%"}
+
+::: {style="font-size: 70%; background-color: #f0f0f0;"}
+<span style='font-size:1.1em;'>1. **Modelling paradigms**</span> <br>
+Establish what is **distinctive** about modelling in **data-driven science** by mapping out archetypal data-driven projects and the analysis practices they use.
+<br><br>
+
+<span style='font-size:1.1em;'>2. **Inference and replicability**</span> <br>
+How to plan and stage exploratory analysis? A grammar for **structuring exploratory research** findings so that inferences can be reported.
+<br><br>
+
+<span style='font-size:1.1em;'>3. **Tools and Enablers** </span><br>
+How to enable **exploratory** research **practices** that are **rich** yet have **rigour**? <br>
+frameworks | techniques | analysis environments.
+
+:::
+
+
+:::
+
+:::
+
+
+::: {.notes}
+
+
+:::
+
+---
+
+![](img/TMCF-team.png){.absolute top=30 left=0 width="90%"}
+
+::: {.notes}
+
+
+
+Applied data scientists doing problem-driven research; methods-oriented data scientists from Vis and Stats
+
+:::
+
+
+---
+
+![](img/tmcf-team-turing.jpeg){.absolute top=30 left=0 width="80%"}
+
+::: {.notes}
+
+Applied data scientists doing problem-driven research; methods-oriented data scientists from Vis and Stats
+
+:::
+
+
+
+---
+
+::: {.flushright}
+
+**tmcf staging**
+
+:::
+
+**Before** 
+<br> > Provocations <br> > 500-word position statements 
+
+
+**During** 
+<br> > Testing position statements <br> > 1500-word blogs <br> > concept paper 
+
+
+**After** 
+<br> > concept paper: *[wide]* data analysis <br> > call to action for *[wide]* applications
+
+
+::: {.notes}
+
+Avoid seminar series... more *doing*
+
+:::
+
+---
+
+::: {.flushright}
+<span style='font-size:1.0  em;'>**provocations**</span>
+:::
+
+
+::: {.columns}
+
+::: {.column width="80%"}
+
+::: {style="font-size: 65%; background-color: #f0f0f0;"}
+<span style='font-size:1.2em;'>1. **Modelling paradigms**</span> <br>
+-- *Heuristics trumps theory in data-driven research* <br>
+-- *Models are exploratory artefacts* <br>
+
+
+<span style='font-size:1.2em;'>2. **Inference and replicability**</span> <br>
+-- *Claims to knowledge can only be made through out-of-sample significance tests* <br>
+-- *Pre-registration locks researchers into facile statistical tests*<br>
+-- *Human-in-the-loop is incompatible with inferential and replicable analysis* <br>
+
+<span style='font-size:1.2em;'>3. **Tools and Enablers** </span><br>
+-- *Visualizations are limited as evidence* <br>
+-- *There is no formal beginning, process or an end to an interactive data analysis session, it is all context-dependent* <br>
+-- *Provenance of exploratory data analysis processes are too complex and ad hoc to be useful*
+
+:::
+
+:::
+
+:::
+
+::: {.notes}
+
+
+:::
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**provoking**</span>
+:::
+
+![](img/provoking.jpeg){.absolute top=0 left=0 width="70%"}
+
+
+---
+
+<!-- > *All (good) analysis fundamentally requires human intervention. And that's a strength, not a weakness.*
+
+> *If you look at your data before analysis, your p-values are wrong because you've spent researcher degrees of freedom. If you don't look at your data before analysis, your p-values are wrong because your model is wrong.* -->
+
+
+::: {.flushright}
+<span style='font-size:1.0em;'>**provoking**: quotes</span>
+:::
+
+
+
+![](img/quotes.png){.absolute top=80 left=0 width="95%"}
+
+
+::: {.notes}
+
+Affinity mapping exercise. 
+
+:::
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**blogging**</span>
+:::
+
+
+![](img/blogging.jpeg){.absolute top=0 left=0 width="70%"}
+
+
+::: {.notes}
+
+* Humans all the way down : self-reflection and critique -- examples 
+
+* Garden of foggy paths : trapped in local minima - imagination is important 
+
+* Automated analysis : how we interact with data, models, evidence 
+
+* Andrew : collection of ideas and examples  
+
+:::
+
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**panelling**</span>
+:::
+
+
+![](img/panelling.jpeg){.absolute top=0 left=0 width="70%"}
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**jogging**</span>
+:::
+
+![](img/jogging.jpeg){.absolute top=0 left=0 width="70%"}
+
+
+---
+
+::: {.columns}
+
+
+::: {.column width="60%"}
+
+
+
+```{r}
+#| echo: false
+#| eval: true
+days |> filter(Day=="ws") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(25)) |>
+    cols_width(matches("Activity") ~ pct(75)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(16),
+              column_labels.font.size = px(14), table.align="left", row_group.font.size = px(14))  
+```
+
+
+
+:::
+
+
+::: {.column width="40%"}
+
+
+**workshop**<br> **agenda**
+:::
+
+:::
+
+---
+
+::: {.flushright}
+<span style='font-size:1.2em;'>**panel + talks**</span>
+:::
+
+<br>
+
+::: {style="font-size: 120%;"}
+
+***Communication is Design is Analysis is Communication*** <br>
+-- Jo Wood
+
+<br>
+
+ ***Locating the entrance to the garden of forking paths*** <br>
+ -- Rachel Franklin
+
+
+:::
+
+---
+
+
+::: {style="font-size: 110%"}
+
+<span style='font-size:4.0em;'>**wide**</span> <span style='font-size:2.0em;'>**Data Analysis** </span><br>
+-------------------- <br>
+[**E**]nabling <br> [**W**]ide <br> [**D**]etailed and <br> [**I**]nteractive <br> data practice
+
+:::
+
+
+::: {.notes}
+
+In the blogs : examples of new techniques, frameworks, approaches to navigate this space...
+
+Write these up in four strategies for wide data analysis
+
+
+
+:::
+
+---
+
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+![](img/blogs.png){.absolute top=100 left=0 width="95%"}
+
+
+---
+
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<br>
+
+* Bring together diverse **theories, methods, practices** and **traditions** from across disciplines, e.g., statistics, political science, geography, computer science, etc.
+
+* An opportunistic overview/review of existing (<span style='font-size:1.0em; font-weight: 600; color: #99000d'>good*</span>) practice of modelling and data analysis
+
+* Consolidate these over a **harmonising concept** and provide usable/actionable building blocks
+
+* And a **call-to-action** for further research and development of **enablers**
+
+
+
+
+
+---
+
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<span style='font-size:1.1em;'>
+[**W**]idening </span>
+
+::: {style="font-size: 90%"}
+> [**W**]idening the data analysis process involves considering a **broader range of approaches** than might otherwise be adopted. The aim is to encourage a **mindset** that is open to exploration, interpretation, **multiple and complementary explanations** []... They may be specific **variations in some modelling parameterisation** or more **profound choices around methodological approach**. 
+:::
+
+::: {.notes}
+
+Compel us in analysis to extend / consider different ways of doing...
+
+Might be low-level model-building
+
+Might be more fundamentally different approaches -- two different paradigms for 
+
+:::
+
+---
+
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<span style='font-size:1.1em;'>
+[**I**]nteracting </span>
+
+::: {style="font-size: 90%"}
+> [**I**]nteracting [...] embraces the potential of **human decision-making** in every step of the data analysis workflow. We broaden its scope [...] to include **all points where a human decision shapes and responds to the analytic process**. This might be in the parameterisation of a model, the choice of data source, the synthesis of results -- a **touchpoint in the workflow** that ties analysis to its underlying goals.
+:::
+
+::: {.notes}
+
+
+Interacting is where we make decisions to cut data in different ways -- so this is the point in which we branch (forking paths) -- we want to do this conciously (judiciiously)
+
+
+:::
+
+
+---
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<span style='font-size:1.1em;'>
+[**D**]etailing </span>
+
+
+> [**D**]etailing [...] providing explicit accounts of the data analysis process in order to support **scrutiny and interpretation and epistemological reflection**. [...] [D]etail may include **rich descriptive documentation of process and context**, justifications of **choices made, interpretations of results** and reflections on the workflow.
+
+
+::: {.notes}
+
+In a robust exploratory analysis, we'd want to *document* and *introdpect* key decision points....
+
+But also the context of our findings -- if we detail that context in a thorough way, we can use this to judge expectations of generalisation... 
+
+:::
+
+---
+
+::: {.flushright}
+**wide** data analysis
+:::
+
+<span style='font-size:1.1em;'>
+[**E**]nabling </span>
+
+> [**E**]nabling involves making the **adoption of** widening, interacting and detailing **strategies as easy as possible**. [...] **wide** data analysis **may not be implemented** in practice **if the cost of doing so is perceived as too high**. In this paper we propose  [...] mechanisms by which we might enable more rigorous data analysis and provide a call to action to develop **new enabling tools and practices**.
+
+
+
+---
+
+::: {.flushright}
+**wide** foundations
+:::
+
+<span style='font-size:1.2em;'> Ways of **thinking** wide </span> <br>
+
+![](img/thinking.png){.absolute top=150 left=0 width="95%"}
+
+
+
+
+---
+
+
+::: {.flushright}
+**wide** foundations
+:::
+
+<span style='font-size:1.2em;'> Ways of **doing** wide </span> <br>
+
+![](img/doing.png){.absolute top=150 left=0 width="95%"}
+
+
+---
+
+<!-- ::: {.flushright}
+**wide** foundations
+:::
+
+<span style='font-size:1.2em;'> Ways of **doing** wide </span> <br>
+
+
+
+::: {style="font-size: 50%"}
+
+::: {.columns}
+
+::: {.column width="21%"}
+
+![](img/causal_quartet.png){.absolute top=180 left=0 width="20%"}
+
+![](img/rashomon.png){.absolute top=340 left=0 width="18%"}
+
+
+![](img/ommitted.png){.absolute top=500 left=45 width="13%"}
+
+![](img/jobs_report.png){.absolute top=300 left=580 width="34%"}
+![](img/jobs_gif1.gif){.absolute top=400 left=580 width="17%"}
+![](img/jobs_gif2.gif){.absolute top=400 left=750 width="17%"}
+
+<!-- ![](img/lineup.jpeg){.absolute top=400 left=500 width="14%"} -->
+
+<!-- :::
+
+::: {.column width="34%"}
+<br>
+Gelman et al. (2023) Causal Quartets: Different Ways to Attain the Same Average Treatment Effect, *The American Statistician* <br>
+<br><br>
+Biecek et al. (2024) Performance Is Not Enough: The Story Told by a Rashomon Quartet, *Journal of Computational and Graphical Statistics*
+<br><br><br>
+Cinelli et al. (2020) Making Sense of Sensitivity: Extending Omitted Variable Bias, *Journal of the Royal Statistical Society Series B: Statistical Methodology*
+
+
+:::
+
+::: {.column width="35%"}
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+Kale et al. (2019) Hypothetical Outcome Plots Help Untrained Observers Judge Trends in Ambiguous Data, *IEEE TVCG*
+
+:::
+
+:::
+
+:::
+
+--- --> 
+
+
+::: {.flushright}
+**wide** prompting questions
+:::
+
+<!-- via *Data Feminism* (D’ignazio and Klein 2020) -->
+
+<!-- <span style='font-size:1.0em;'>**Widening questions**</span> <br> -->
+
+
+![](img/prompting.png){.absolute top=110 left=0 width="90%"}
+
+<!-- ::: {style="font-size: 65%; background-color: #f0f0f0;"}
+**data** <br>
+Can you think of anything not currently captured in your data that could be relevant?
+Whose perspectives have been excluded from the data collection/categorization?
+Do your data truthfully capture the phenomena you are interested in?
+Can the data provenance be identified and how might that provenance influence your
+analysis and interpretation?
+Have there been meaningful changes since your data were collected?
+
+**methods** <br>
+How do you know if your sample is representative of the target population? 
+Do your observations change with different spatial/temporal scales?
+How sensitive are your results to the parameter choices in your models?
+
+**methodological** <br>
+Are there other approaches to the task that might yield different but meaningful perspectives?
+Are there critiques of your methodological approach? Do they apply here?
+Would bringing in a wider team of people, from different methodological traditions, result in alternative methodological approaches?
+How might your findings and interpretation compare with those arrived at via other
+methodological approaches? -->
+
+
+<!-- <span style='font-size:1.2em;'>**Interacting**</span> <br>
+Where in your workflow should you pause and re-evaluate your data / methods / approach / interpretation?
+Can visualising intermediate results help in assessing the validity of your approach?
+What are the impacts of data, methods and methodological decisions as they propagate through the analysis and interpretation process?
+Do any of the answers above prompt you to alter your analysis?
+
+
+<span style='font-size:1.2em;'>**Detailing** </span><br>
+How do you register relevant characteristics that do not easily fall into your classification / modelling?
+How can you help future analysts learn from your data and analysis decisions and insights?
+How can you capture the propagation of data, method and methodological decisions through the analysis and interpretation process?
+Is it feasible to provide details of the provenance of the data used and how might this be most effectively and efficiently conveyed? -->
+
+<!-- ::: -->
+
+
+::: {.notes}
+Data Feminism -- D'Ignazio and Klein
+
+:::
+
+
+---
+
+
+::: {.flushright}
+**wide** prompting questions
+:::
+
+
+![](img/schemas.png){.absolute top=70 left=0 width="90%"}
+
+<br><br><br><br><br><br><br><br><br><br>
+
+::: {style="font-size: 55%;"}
+Wood et al. (2019) Design Exposition with Literate Visualization, <br> *IEEE Transactions on Visualization and Computer Graphics*
+
+:::
+
+----
+
+
+::: {.flushright}
+**wide** case study
+:::
+
+![](img/polls.png){.absolute top=70 left=0 width="68%"}
+![](img/polls_legend.png){.absolute top=100 left=680 width="14%"}
+
+
+::: {.notes}
+
+
+:::
+
+---
+
+::: {.flushright}
+**wide** call-to-action
+:::
+
+<!-- ![](img/hdsr.png){.absolute top=0 left=550 width="40%"} -->
+<!-- ![](img/rss_b.png){.absolute top=100 left=0 width="70%"} -->
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+![](img/si.png){.absolute top=100 left=0 width="65%"}
+
+:::
+
+
+::: {.column width="30%"}
+
+::: {style="font-size: 100%"}
+
+<br>> Case studies <br> > Methods <br> > Tools
+
+:::
+
+:::
+
+:::
+
+
+
+
+::: {.notes}
+. 
+
+:::
+
+---
+
+::: {.flushright}
+**wide** call-to-action
+:::
+
+<!-- ![](img/hdsr.png){.absolute top=0 left=550 width="40%"} -->
+<!-- ![](img/rss_b.png){.absolute top=100 left=0 width="70%"} -->
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+![](img/si.png){.absolute top=100 left=0 width="65%"}
+
+:::
+
+
+::: {.column width="30%"}
+
+::: {style="font-size: 100%"}
+
+<br>
+EoI for papers <br>
+-- Spring 2025 <br>
+
+:::
+
+:::
+
+:::
+
+
+---
+
+::: {.columns}
+
+
+::: {.column width="60%"}
+
+
+
+```{r}
+#| echo: false
+#| eval: true
+days |> filter(Day=="ws") |> select(-c(Day, Author)) |> 
+gt(groupname_col = "Objective") |> 
+  cols_align("left", Objective) |>
+    gt_theme_gisruk() |>
+    fmt_markdown(c(Activity)) |>
+    cols_width(matches("When") ~ pct(25)) |>
+    cols_width(matches("Activity") ~ pct(75)) |>
+    tab_options(data_row.padding = px(.5),
+              table.font.size = px(16),
+              column_labels.font.size = px(14), table.align="left", row_group.font.size = px(14))  
+```
+
+
+
+:::
+
+
+::: {.column width="40%"}
+
+
+**workshop**<br> **agenda**
+:::
+
+:::
+
+---
+
+
