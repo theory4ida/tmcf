@@ -263,7 +263,7 @@ Inject scepticims of stat practice...
 <br>
 
 *Our TMCF*: <br>
-**A research agenda for exploratory research**
+**Forking paths and data-driven science**
 
 
 :::
@@ -317,10 +317,10 @@ And how do we get there?
 
 ::: {.column width="30%"}
 
-::: {style="font-size: 120%"}
+::: {style="font-size: 110%"}
 
 
-<br> > Explore <br> > Pre-register <br> > Test
+<br> > explore <span style='font-size:.8em; '>**~ EDA** </span> <br> > pre-register <br> > test <span style='font-size:.8em; '>**~ CDA** </span>
 
 :::
 
@@ -350,11 +350,11 @@ And how do we get there?
 
 ::: {.notes}
 
-Science Reform:
+Science Reform response to reprdoducibility crisis in empirical science in 2010s
 
-Structural change / standards in how science is conducted, reported, and rewarded.
+Structural changes / standards in how science is conducted, reported, and rewarded.
 
-Aim : Establish empirical rigour, replicable and testable analysis  
+Aim to Establish empirical rigour, replicable and testable analysis  
 
 BUT : 
 
@@ -370,7 +370,17 @@ If exploratory analysis is limited and shallow, then can end up testing poorly s
 :::
 
 
+---
 
+<br><br>
+
+::: {style="font-size: 110%"}
+
+> *Many of the human errors we point out in data analysis can be attributed to a **lack of ability to entertain multiple possibilities**. We like to **suppress and reduce  uncertainty**, not maintain it as we go.*
+>
+> Jessica Hullman, 2024
+
+:::
 
 
 ---
@@ -396,7 +406,15 @@ If exploratory analysis is limited and shallow, then can end up testing poorly s
 
 :::
 
+
+::: {.notes}
+
+Argue for expand role of exploratory research -- 
+
+:::
+
 ---
+
 
 
 ::: {.columns}
@@ -447,17 +465,24 @@ If exploratory analysis is limited and shallow, then can end up testing poorly s
 
 ::: {.notes}
 
+When doing **good** data-driven research we need to consider these two things at the same time.
+
 Rigour :
 
--- do the things/recipes we associate with rigour really lead to more defensible, better science?
--- straightjacket, risk getting trapped in local minima + mechanics of pre-registration
+-- established, well-justified and thoroughly considered analysis plans
+
 
 Richness :
 
 -- descriptive detail that underpins the inferences we make necessary for generalising / transfer
 -- if context under which data / findings generated not properly detailed, should we be surprised about a replication crisis? 
 
-Many of the human errors we point out in data analysis can be attributed to a lack of ability to entertain multiple possibilities. We like to suppress and reduce uncertainty, not maintain it as we go.
+
+We ask:
+
+-- do the things/recipes we associate with rigour really lead to more defensible, better science?
+-- straightjacket, risk getting trapped in local minima + mechanics of pre-registration
+
 
 
 :::
@@ -521,18 +546,33 @@ Many of the human errors we point out in data analysis can be attributed to a la
 ---
 
 
+::: {.flushright}
 
-::: {style="font-size: 80%"}
-<span style='font-size:1.2em;'>1. **Modelling paradigms**</span> <br>
+**tmcf themes**
+
+:::
+
+
+::: {.columns}
+
+::: {.column width="90%"}
+
+::: {style="font-size: 70%; background-color: #f0f0f0;"}
+<span style='font-size:1.1em;'>1. **Modelling paradigms**</span> <br>
 Establish what is **distinctive** about modelling in **data-driven science** by mapping out archetypal data-driven projects and the analysis practices they use.
 <br><br>
 
-<span style='font-size:1.2em;'>2. **Inference and replicability**</span> <br>
+<span style='font-size:1.1em;'>2. **Inference and replicability**</span> <br>
 Develop ways of **documenting the context** under which analytical findings are made – a grammar for **structuring exploratory research** findings – so that inferences can be reported.
 <br><br>
 
-<span style='font-size:1.2em;'>3. **Tools** </span><br>
+<span style='font-size:1.1em;'>3. **Tools** </span><br>
 For progressing **from analysis to communication**: documenting interactive data analysis processes with integrity – balancing claims to knowledge with informational complexity.
+
+:::
+
+
+:::
 
 :::
 
@@ -569,6 +609,12 @@ Applied data scientists doing problem-driven research; methods-oriented data sci
 
 ---
 
+::: {.flushright}
+
+**tmcf staging**
+
+:::
+
 **Before** 
 <br> > Provocations <br> > 500-word position statements 
 
@@ -590,8 +636,13 @@ Avoid seminar series... more *doing*
 ---
 
 ::: {.flushright}
-<span style='font-size:1.2em;'>**Provocations**</span>
+<span style='font-size:1.0em;'>**provocations**</span>
 :::
+
+
+::: {.columns}
+
+::: {.column width="80%"}
 
 ::: {style="font-size: 65%; background-color: #f0f0f0;"}
 <span style='font-size:1.2em;'>1. **Modelling paradigms**</span> <br>
@@ -611,6 +662,10 @@ Avoid seminar series... more *doing*
 
 :::
 
+:::
+
+:::
+
 ::: {.notes}
 
 
@@ -619,17 +674,26 @@ Avoid seminar series... more *doing*
 ---
 
 ::: {.flushright}
-<span style='font-size:1.2em;'>**Provoking**</span>
+<span style='font-size:1.2em;'>**provoking**</span>
 :::
 
-![](img/provoking.jpeg){.absolute top=0 left=0 width="78%"}
+![](img/provoking.jpeg){.absolute top=0 left=0 width="70%"}
 
 
 ---
 
-> *All (good) analysis fundamentally requires human intervention. And that's a strength, not a weakness.*
+<!-- > *All (good) analysis fundamentally requires human intervention. And that's a strength, not a weakness.*
 
-> *If you look at your data before analysis, your p-values are wrong because you've spent researcher degrees of freedom. If you don't look at your data before analysis, your p-values are wrong because your model is wrong.*
+> *If you look at your data before analysis, your p-values are wrong because you've spent researcher degrees of freedom. If you don't look at your data before analysis, your p-values are wrong because your model is wrong.* -->
+
+
+::: {.flushright}
+<span style='font-size:1.0em;'>**provoking**: quotes</span>
+:::
+
+
+
+![](img/quotes.png){.absolute top=80 left=0 width="95%"}
 
 
 ::: {.notes}
@@ -641,11 +705,11 @@ Affinity mapping exercise.
 ---
 
 ::: {.flushright}
-<span style='font-size:1.2em;'>**Blogging**</span>
+<span style='font-size:1.2em;'>**blogging**</span>
 :::
 
 
-![](img/blogging.jpeg){.absolute top=0 left=0 width="80%"}
+![](img/blogging.jpeg){.absolute top=0 left=0 width="70%"}
 
 
 ::: {.notes}
@@ -664,19 +728,19 @@ Affinity mapping exercise.
 ---
 
 ::: {.flushright}
-<span style='font-size:1.2em;'>**Panelling**</span>
+<span style='font-size:1.2em;'>**panelling**</span>
 :::
 
 
-![](img/panelling.jpeg){.absolute top=0 left=0 width="80%"}
+![](img/panelling.jpeg){.absolute top=0 left=0 width="70%"}
 
 ---
 
 ::: {.flushright}
-<span style='font-size:1.2em;'>**Jogging**</span>
+<span style='font-size:1.2em;'>**jogging**</span>
 :::
 
-![](img/jogging.jpeg){.absolute top=0 left=0 width="80%"}
+![](img/jogging.jpeg){.absolute top=0 left=0 width="70%"}
 
 
 ---
@@ -701,6 +765,13 @@ gt(groupname_col = "Objective") |>
               column_labels.font.size = px(14), table.align="left", row_group.font.size = px(14))  
 ```
 
+:::
+
+
+::: {.column width="40%"}
+
+
+**workshop**<br> **agenda**
 :::
 
 :::
@@ -739,7 +810,7 @@ Write these up in four strategies for wide data analysis
 [**W**]idening </span>
 
 ::: {style="font-size: 90%"}
-> [**W**]idening the data analysis process involves considering a **broader range of approaches** to problem solving than might otherwise be adopted. The aim is to encourage a **mindset** that is open to exploration, interpretation, **multiple and complementary explanations** of phenomena. They may be specific **variations in some modelling parameterisation** or more **profound choices around methodological approach**. Widening requires an evaluative and self-reflective critical perspective in selecting the range of approaches to consider and to make choices of which to adopt in practice 
+> [**W**]idening the data analysis process involves considering a **broader range of approaches** than might otherwise be adopted. The aim is to encourage a **mindset** that is open to exploration, interpretation, **multiple and complementary explanations** []...] They may be specific **variations in some modelling parameterisation** or more **profound choices around methodological approach**. 
 :::
 
 ::: {.notes}
@@ -763,7 +834,7 @@ Might be more fundamentally different approaches -- two different paradigms for
 [**I**]nteracting </span>
 
 ::: {style="font-size: 90%"}
-> [**I**]nteracting recognises and embraces the potential of human decision-making in every step of the data analysis workflow. We broaden its scope beyond the use of graphical systems for human-computer interaction to include **all points where a human decision shapes and responds to the analytic process**. This might be in the parameterisation of a model, the choice of data source, the synthesis of results -- a **touchpoint in the workflow** that ties analysis to its underlying goals. By emphasising this broader view of interaction we open the myriad of choices that shape all data analysis to examination and reflection.
+> [**I**]nteracting [...] embraces the potential of **human decision-making** in every step of the data analysis workflow. We broaden its scope [...] to include **all points where a human decision shapes and responds to the analytic process**. This might be in the parameterisation of a model, the choice of data source, the synthesis of results -- a **touchpoint in the workflow** that ties analysis to its underlying goals.
 :::
 
 ::: {.notes}
@@ -785,7 +856,7 @@ Interacting is where we make decisions to cut data in different ways -- so this 
 [**D**]etailing </span>
 
 
-> [**D**]etailing involves providing explicit accounts of the data analysis process in order to support **scrutiny and interpretation and epistemological reflection**. This added richness supports transparency and encourages an acknowledgment that human decision-making is present throughout the analysis process. That detail may include **rich descriptive documentation of process and context**, justifications of **choices made, interpretations of results** and reflections on the workflow.
+> [**D**]etailing [...] providing explicit accounts of the data analysis process in order to support **scrutiny and interpretation and epistemological reflection**. [...] [D]etail may include **rich descriptive documentation of process and context**, justifications of **choices made, interpretations of results** and reflections on the workflow.
 
 
 ::: {.notes}
@@ -805,7 +876,7 @@ But also the context of our findings -- if we detail that context in a thorough 
 <span style='font-size:1.1em;'>
 [**E**]nabling </span>
 
-> [**E**]nabling involves making the adoption of widening, interacting and detailing strategies as easy as possible. We argue that even with a strong case for **widening** and deepening a data analysis workflow, this **may not be implemented** in practice **if the cost of doing so is perceived as too high**. In this paper we propose and speculate on a number of possible mechanisms by which we might enable more rigorous data analysis and provide a call to action to develop **new enabling tools and practices**.
+> [**E**]nabling involves making the **adoption of** widening, interacting and detailing **strategies as easy as possible**. [...] **wide** data analysis **may not be implemented** in practice **if the cost of doing so is perceived as too high**. In this paper we propose  [...] mechanisms by which we might enable more rigorous data analysis and provide a call to action to develop **new enabling tools and practices**.
 
 ---
 
@@ -869,9 +940,12 @@ Kale et al. (2019) Hypothetical Outcome Plots Help Untrained Observers Judge Tre
 
 <!-- via *Data Feminism* (D’ignazio and Klein 2020) -->
 
-<span style='font-size:1.0em;'>**Widening questions**</span> <br>
+<!-- <span style='font-size:1.0em;'>**Widening questions**</span> <br> -->
 
-::: {style="font-size: 65%; background-color: #f0f0f0;"}
+
+![](img/prompting.png){.absolute top=110 left=0 width="90%"}
+
+<!-- ::: {style="font-size: 65%; background-color: #f0f0f0;"}
 **data** <br>
 Can you think of anything not currently captured in your data that could be relevant?
 Whose perspectives have been excluded from the data collection/categorization?
@@ -890,7 +964,7 @@ Are there other approaches to the task that might yield different but meaningful
 Are there critiques of your methodological approach? Do they apply here?
 Would bringing in a wider team of people, from different methodological traditions, result in alternative methodological approaches?
 How might your findings and interpretation compare with those arrived at via other
-methodological approaches?
+methodological approaches? -->
 
 
 <!-- <span style='font-size:1.2em;'>**Interacting**</span> <br>
@@ -906,7 +980,7 @@ How can you help future analysts learn from your data and analysis decisions and
 How can you capture the propagation of data, method and methodological decisions through the analysis and interpretation process?
 Is it feasible to provide details of the provenance of the data used and how might this be most effectively and efficiently conveyed? -->
 
-:::
+<!-- ::: -->
 
 
 ::: {.notes}
@@ -928,21 +1002,19 @@ Data Feminism -- D'Ignazio and Klein
 <br><br><br><br><br><br><br><br><br><br>
 
 ::: {style="font-size: 55%;"}
-Wood et al. (2019) Design Exposition with Literate Visualization. *IEEE Transactions on Visualization and Computer Graphics*
+Wood et al. (2019) Design Exposition with Literate Visualization, <br> *IEEE Transactions on Visualization and Computer Graphics*
 
 :::
 
 ----
 
 
-
-
 ::: {.flushright}
 **wide** case study
 :::
 
-![](img/polls.png){.absolute top=70 left=0 width="70%"}
-![](img/polls_legend.png){.absolute top=100 left=680 width="15%"}
+![](img/polls.png){.absolute top=70 left=0 width="68%"}
+![](img/polls_legend.png){.absolute top=100 left=680 width="14%"}
 
 
 ::: {.notes}
